@@ -3,42 +3,42 @@
   <xs:include schemaLocation="tiposDistDFe_v1.00.xsd"/>
   <xs:element name="retDistDFeInt">
     <xs:annotation>
-      <xs:documentation>Schema do resultado do pedido de distribuiÃ§Ã£o de DF-e de interesse</xs:documentation>
+      <xs:documentation>Schema do resultado do pedido de distribuição de DF-e de interesse</xs:documentation>
     </xs:annotation>
     <xs:complexType>
       <xs:sequence>
         <xs:element name="tpAmb" type="TAmb">
           <xs:annotation>
             <xs:documentation>
-            IdentificaÃ§Ã£o do Ambiente:
-            1 - ProduÃ§Ã£o
-            2 - HomologaÃ§Ã£o
+            Identificação do Ambiente:
+            1 - Produção
+            2 - Homologação
             </xs:documentation>
           </xs:annotation>
         </xs:element>
         <xs:element name="verAplic" type="TVerAplic">
           <xs:annotation>
-            <xs:documentation>VersÃ£o do Web Service NFeDistribuicaoDFe</xs:documentation>
+            <xs:documentation>Versão do Web Service NFeDistribuicaoDFe</xs:documentation>
           </xs:annotation>
         </xs:element>
         <xs:element name="cStat" type="TStat">
           <xs:annotation>
-            <xs:documentation>CÃ³digo do status de processamento da requisiÃ§Ã£o</xs:documentation>
+            <xs:documentation>Código do status de processamento da requisição</xs:documentation>
           </xs:annotation>
         </xs:element>
         <xs:element name="xMotivo" type="TMotivo">
           <xs:annotation>
-            <xs:documentation>DescriÃ§Ã£o literal do status do processamento da requisiÃ§Ã£o</xs:documentation>
+            <xs:documentation>Descrição literal do status do processamento da requisição</xs:documentation>
           </xs:annotation>
         </xs:element>
         <xs:element name="dhResp" type="xs:dateTime">
           <xs:annotation>
-            <xs:documentation>Data e Hora de processamento da requisiÃ§Ã£o no formato AAAA-MM-DDTHH:MM:SS</xs:documentation>
+            <xs:documentation>Data e Hora de processamento da requisição no formato AAAA-MM-DDTHH:MM:SS</xs:documentation>
           </xs:annotation>
         </xs:element>
         <xs:element name="ultNSU" type="TNSU">
           <xs:annotation>
-            <xs:documentation>Ãšltimo NSU pesquisado no Ambiente Nacional. Se for o caso, o solicitante pode continuar a consulta a partir deste NSU para obter novos resultados.</xs:documentation>
+            <xs:documentation>Último NSU pesquisado no Ambiente Nacional. Se for o caso, o solicitante pode continuar a consulta a partir deste NSU para obter novos resultados.</xs:documentation>
           </xs:annotation>
         </xs:element>
         <xs:element name="maxNSU" type="TNSU">
@@ -48,13 +48,13 @@
         </xs:element>
         <xs:element name="loteDistDFeInt" minOccurs="0">
           <xs:annotation>
-            <xs:documentation>Conjunto de informaÃ§Ãµes resumidas e documentos fiscais eletrÃ´nicos de interesse da pessoa ou empresa. </xs:documentation>
+            <xs:documentation>Conjunto de informações resumidas e documentos fiscais eletrônicos de interesse da pessoa ou empresa. </xs:documentation>
           </xs:annotation>
           <xs:complexType>
             <xs:sequence maxOccurs="50">
               <xs:element name="docZip">
                 <xs:annotation>
-                  <xs:documentation>InformaÃ§Ã£o resumida ou documento fiscal eletrÃ´nico de interesse da pessoa ou empresa. O conteÃºdo desta tag estarÃ¡ compactado no padrÃ£o gZip. O tipo do campo Ã© base64Binary.</xs:documentation>
+                  <xs:documentation>Informação resumida ou documento fiscal eletrônico de interesse da pessoa ou empresa. O conteúdo desta tag estará compactado no padrão gZip. O tipo do campo é base64Binary.</xs:documentation>
                 </xs:annotation>
                 <xs:complexType>
                   <xs:simpleContent>
@@ -66,7 +66,7 @@
                       </xs:attribute>
                       <xs:attribute name="schema" type="xs:string" use="required">
                         <xs:annotation>
-                          <xs:documentation>IdentificaÃ§Ã£o do Schema XML que serÃ¡ utilizado para validar o XML existente no conteÃºdo da tag docZip. Vai identificar o tipo do documento e sua versÃ£o. Exemplos: resNFe_v1.00.xsd, procNFe_v3.10.xsd, resEvento_1.00.xsd, procEventoNFe_v1.00.xsd</xs:documentation>
+                          <xs:documentation>Identificação do Schema XML que será utilizado para validar o XML existente no conteúdo da tag docZip. Vai identificar o tipo do documento e sua versão. Exemplos: resNFe_v1.00.xsd, procNFe_v3.10.xsd, resEvento_1.00.xsd, procEventoNFe_v1.00.xsd</xs:documentation>
                         </xs:annotation>
                       </xs:attribute>
                     </xs:extension>

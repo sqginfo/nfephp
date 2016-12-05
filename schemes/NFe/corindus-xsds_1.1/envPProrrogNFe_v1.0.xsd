@@ -3,41 +3,41 @@
   <xs:include schemaLocation="tiposBasico_v3.10.xsd"/>
   <xs:element name="detEvento">
     <xs:annotation>
-      <xs:documentation>InformaÃ§Ãµes do Pedido de ProrrogaÃ§Ã£o</xs:documentation>
+      <xs:documentation>Informações do Pedido de Prorrogação</xs:documentation>
     </xs:annotation>
     <xs:complexType>
       <xs:sequence>
         <xs:element name="descEvento">
           <xs:annotation>
-            <xs:documentation>Pedido de ProrrogaÃ§Ã£o ou Pedido de ProrrogacaoÂ”</xs:documentation>
+            <xs:documentation>Pedido de Prorrogação ou Pedido de Prorrogacao”</xs:documentation>
           </xs:annotation>
           <xs:simpleType>
             <xs:restriction base="xs:string">
-              <xs:enumeration value="Pedido de ProrrogaÃ§Ã£o" />
+              <xs:enumeration value="Pedido de Prorrogação" />
               <xs:enumeration value="Pedido de Prorrogacao" />
             </xs:restriction>
           </xs:simpleType>
         </xs:element>
         <xs:element name="nProt" type="TProt" >
           <xs:annotation>
-            <xs:documentation>Informar o nÃºmero do Protocolo de AutorizaÃ§Ã£o da NF-e a ser Prorrogada. (vide item 5.6).</xs:documentation>
+            <xs:documentation>Informar o número do Protocolo de Autorização da NF-e a ser Prorrogada. (vide item 5.6).</xs:documentation>
           </xs:annotation>
         </xs:element>
         <xs:element maxOccurs="990" minOccurs="1" name="itemPedido">
           <xs:annotation>
-            <xs:documentation>Item do Pedido de ProrrogaÃ§Ã£o. Recomenda-se agrupar a maior quantidade de itens em cada Pedido de ProrrogaÃ§Ã£o</xs:documentation>
+            <xs:documentation>Item do Pedido de Prorrogação. Recomenda-se agrupar a maior quantidade de itens em cada Pedido de Prorrogação</xs:documentation>
           </xs:annotation>
           <xs:complexType>
             <xs:sequence>
               <xs:element name="qtdeItem" type="TDec_1104v">
                 <xs:annotation>
-                  <xs:documentation>Quantidade do item que serÃ¡ solicitado a prorrogaÃ§Ã£o de prazo</xs:documentation>
+                  <xs:documentation>Quantidade do item que será solicitado a prorrogação de prazo</xs:documentation>
                 </xs:annotation>
               </xs:element>
             </xs:sequence>
             <xs:attribute name="numItem">
               <xs:annotation>
-                <xs:documentation>NÃºmero do item da NF-e. O nÃºmero do item deverÃ¡ ser o mesmo nÃºmero do item na NF-e</xs:documentation>
+                <xs:documentation>Número do item da NF-e. O número do item deverá ser o mesmo número do item na NF-e</xs:documentation>
               </xs:annotation>
               <xs:simpleType>
                 <xs:restriction base="xs:string">
@@ -51,7 +51,7 @@
       </xs:sequence>
       <xs:attribute name="versao" >
         <xs:annotation>
-          <xs:documentation>VersÃ£o do Pedido de ProrrogaÃ§Ã£o</xs:documentation>
+          <xs:documentation>Versão do Pedido de Prorrogação</xs:documentation>
         </xs:annotation>
         <xs:simpleType>
           <xs:restriction base="xs:string">

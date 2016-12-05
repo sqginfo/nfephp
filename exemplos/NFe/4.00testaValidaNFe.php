@@ -14,9 +14,9 @@ $pathXml = "D:/xampp/htdocs/GIT-nfephp-org/nfephp/xmls/NF-e/homologacao/enviadas
 $aResposta = array();
 
 if (! $nfe->verificaValidade($pathXml, $aResposta)) {
-    echo "<h1>NFe INV√ÅLIDA!!</h1>";
+    echo "<h1>NFe INV¡LIDA!!</h1>";
 } else {
-    echo "<h1>NFe V√°lida.</h1>";
+    echo "<h1>NFe V·lida.</h1>";
 }
 echo '<br><br><pre>';
 echo htmlspecialchars($nfe->soapDebug);

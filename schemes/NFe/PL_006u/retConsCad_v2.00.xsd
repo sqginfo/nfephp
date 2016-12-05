@@ -3,7 +3,7 @@
 	<xs:include schemaLocation="leiauteConsultaCadastro_v2.00.xsd"/>
 	<xs:element name="retConsCad" type="TRetConsCad">
 		<xs:annotation>
-			<xs:documentation>Schema XML de validaÃ§Ã£o do retorno da consulta cadastro contribuintes</xs:documentation>
+			<xs:documentation>Schema XML de validação do retorno da consulta cadastro contribuintes</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 </xs:schema>

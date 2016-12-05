@@ -20,12 +20,12 @@
 								<xs:element name="CPF" type="TCpf"/>
 								<xs:element name="idEstrangeiro">
 									<xs:annotation>
-										<xs:documentation>Identificador do destinat√°rio, em caso de comprador estrangeiro</xs:documentation>
+										<xs:documentation>Identificador do destinat·rio, em caso de comprador estrangeiro</xs:documentation>
 									</xs:annotation>
 									<xs:simpleType>
 										<xs:restriction base="xs:string">
 											<xs:whiteSpace value="preserve"/>
-											<xs:pattern value="([!-√ø]{0}|[!-√ø]{5,20})?"/>
+											<xs:pattern value="([!-ˇ]{0}|[!-ˇ]{5,20})?"/>
 										</xs:restriction>
 									</xs:simpleType>
 								</xs:element>
@@ -58,7 +58,7 @@
 	</xs:element>
 	<xs:element name="tpAutor">
 		<xs:annotation>
-			<xs:documentation>Neste evento, aceitar apenas 1. 1=Empresa Emitente; 2=Empresa Destinat√°ria; 3=Empresa; 5=Fisco; 6=RFB; 9=Outros √ìrg√£os</xs:documentation>
+			<xs:documentation>Neste evento, aceitar apenas 1. 1=Empresa Emitente; 2=Empresa Destinat·ria; 3=Empresa; 5=Fisco; 6=RFB; 9=Outros ”rg„os</xs:documentation>
 		</xs:annotation>
 		<xs:simpleType>
 			<xs:restriction base="xs:string">
@@ -69,17 +69,17 @@
 	</xs:element>
 	<xs:element name="verAplic" type="TVerAplic">
 		<xs:annotation>
-			<xs:documentation>Vers√£o do Aplicativo do Autor do Evento</xs:documentation>
+			<xs:documentation>Vers„o do Aplicativo do Autor do Evento</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="dhEmi" type="TDateTimeUTC">
 		<xs:annotation>
-			<xs:documentation>Data de emiss√£o no formato UTC.  AAAA-MM-DDThh:mm:ssTZD</xs:documentation>
+			<xs:documentation>Data de emiss„o no formato UTC.  AAAA-MM-DDThh:mm:ssTZD</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="tpNF">
 		<xs:annotation>
-			<xs:documentation>Tipo do Documento Fiscal (0 - entrada; 1 - sa√≠da)</xs:documentation>
+			<xs:documentation>Tipo do Documento Fiscal (0 - entrada; 1 - saÌda)</xs:documentation>
 		</xs:annotation>
 		<xs:simpleType>
 			<xs:restriction base="xs:string">
@@ -92,7 +92,7 @@
 	<xs:element name="cOrgaoAutor" type="TCodUfIBGE"/>
 	<xs:element name="IE">
 		<xs:annotation>
-			<xs:documentation>Informar a IE. Para IE do destinat√°rio somente quando o contribuinte possuir uma inscri√ß√£o estadual</xs:documentation>
+			<xs:documentation>Informar a IE. Para IE do destinat·rio somente quando o contribuinte possuir uma inscriÁ„o estadual</xs:documentation>
 		</xs:annotation>
 		<xs:simpleType>
 			<xs:restriction base="xs:string">
@@ -103,7 +103,7 @@
 	</xs:element>
 	<xs:element name="UF" type="TUf">
 		<xs:annotation>
-			<xs:documentation>Sigla UF do destinat√°rio. Informar "EX" no caso de opera√ß√£o com o exterior</xs:documentation>
+			<xs:documentation>Sigla UF do destinat·rio. Informar "EX" no caso de operaÁ„o com o exterior</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 	<xs:element name="vNF" type="TDec_1302">
@@ -118,7 +118,7 @@
 	</xs:element>
 	<xs:element name="vST" type="TDec_1302">
 		<xs:annotation>
-			<xs:documentation>Valor total do ICMS de Substitui√ß√£o Tribut√°ria</xs:documentation>
+			<xs:documentation>Valor total do ICMS de SubstituiÁ„o Tribut·ria</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 </xs:schema>

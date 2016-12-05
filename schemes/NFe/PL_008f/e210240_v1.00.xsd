@@ -2,13 +2,13 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.portalfiscal.inf.br/nfe" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" targetNamespace="http://www.portalfiscal.inf.br/nfe" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:element name="detEvento">
 		<xs:annotation>
-			<xs:documentation>Schema XML de valida√ß√£o do evento de Recusa de Recebimento (Opera√ß√£o n√£o Realizada)</xs:documentation>
+			<xs:documentation>Schema XML de validaÁ„o do evento de Recusa de Recebimento (OperaÁ„o n„o Realizada)</xs:documentation>
 		</xs:annotation>
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="descEvento">
 					<xs:annotation>
-						<xs:documentation>Descri√ß√£o do Evento:"Opera√ß√£o n√£o Realizada"</xs:documentation>
+						<xs:documentation>DescriÁ„o do Evento:"OperaÁ„o n„o Realizada"</xs:documentation>
 					</xs:annotation>
 					<xs:simpleType>
 						<xs:restriction base="xs:string">
@@ -26,7 +26,7 @@
 							<xs:whiteSpace value="preserve"/>
 							<xs:minLength value="15"/>
 							<xs:maxLength value="255"/>
-							<xs:pattern value="[!-√ø]{1}[ -√ø]{0,}[!-√ø]{1}|[!-√ø]{1}"/>
+							<xs:pattern value="[!-ˇ]{1}[ -ˇ]{0,}[!-ˇ]{1}|[!-ˇ]{1}"/>
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>

@@ -6,7 +6,7 @@ require_once '../../bootstrap.php';
 use NFePHP\NFe\ToolsNFe;
 
 $nfe = new ToolsNFe('../../config/config.json');
-//$nfe->ativaContingencia('GO','ContingÃªncia Ativada pela SEFAZ GO desde 08/10/2010 18:00:00','');
+//$nfe->ativaContingencia('GO','Contingência Ativada pela SEFAZ GO desde 08/10/2010 18:00:00','');
 //$nfe->desativaContingencia();
 $nfe->setModelo('55');
 

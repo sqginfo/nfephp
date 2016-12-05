@@ -225,7 +225,7 @@ VURh6kJDAMVhhB5URXSnHhuGrKGi
 
     /**
      * @expectedException NFePHP\Common\Exception\RuntimeException
-     * @expectedExceptionMessage Data de validade vencida! [Valido atÃ© 02/10/10]
+     * @expectedExceptionMessage Data de validade vencida! [Valido até 02/10/10]
      */
     public function testValidadeCertificado()
     {

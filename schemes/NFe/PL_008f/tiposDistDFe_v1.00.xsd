@@ -2,7 +2,7 @@
 <xs:schema xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.portalfiscal.inf.br/nfe" targetNamespace="http://www.portalfiscal.inf.br/nfe" elementFormDefault="qualified" attributeFormDefault="unqualified">
   <xs:simpleType name="TNSU">
     <xs:annotation>
-      <xs:documentation>Tipo nÃºmero sequencial Ãºnico</xs:documentation>
+      <xs:documentation>Tipo número sequencial único</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:token">
       <xs:pattern value="[0-9]{15}"/>
@@ -19,7 +19,7 @@
   </xs:simpleType>
   <xs:simpleType name="TVerDistDFe">
     <xs:annotation>
-      <xs:documentation>Tipo VersÃ£o dos leiautes do Web Service NFeDistribuicaoDFe</xs:documentation>
+      <xs:documentation>Tipo Versão dos leiautes do Web Service NFeDistribuicaoDFe</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:whiteSpace value="preserve"/>
@@ -38,7 +38,7 @@
   </xs:simpleType>
   <xs:simpleType name="TCodUfIBGE">
     <xs:annotation>
-      <xs:documentation>Tipo CÃ³digo da UF da tabela do IBGE</xs:documentation>
+      <xs:documentation>Tipo Código da UF da tabela do IBGE</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:whiteSpace value="preserve"/>
@@ -73,7 +73,7 @@
   </xs:simpleType>
   <xs:simpleType name="TCOrgaoIBGE">
     <xs:annotation>
-      <xs:documentation>Tipo CÃ³digo de orgÃ£o (UF da tabela do IBGE + 90 RFB)</xs:documentation>
+      <xs:documentation>Tipo Código de orgão (UF da tabela do IBGE + 90 RFB)</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:whiteSpace value="preserve"/>
@@ -111,7 +111,7 @@
   </xs:simpleType>
   <xs:simpleType name="TCnpj">
     <xs:annotation>
-      <xs:documentation>Tipo NÃºmero do CNPJ</xs:documentation>
+      <xs:documentation>Tipo Número do CNPJ</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:whiteSpace value="preserve"/>
@@ -121,7 +121,7 @@
   </xs:simpleType>
   <xs:simpleType name="TCpf">
     <xs:annotation>
-      <xs:documentation>Tipo NÃºmero do CPF</xs:documentation>
+      <xs:documentation>Tipo Número do CPF</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:whiteSpace value="preserve"/>
@@ -131,7 +131,7 @@
   </xs:simpleType>
   <xs:simpleType name="TVerAplic">
     <xs:annotation>
-      <xs:documentation>Tipo VersÃ£o do Aplicativo</xs:documentation>
+      <xs:documentation>Tipo Versão do Aplicativo</xs:documentation>
     </xs:annotation>
     <xs:restriction base="TString">
       <xs:minLength value="1"/>
@@ -140,7 +140,7 @@
   </xs:simpleType>
   <xs:simpleType name="TStat">
     <xs:annotation>
-      <xs:documentation>Tipo CÃ³digo da Mensagem enviada</xs:documentation>
+      <xs:documentation>Tipo Código da Mensagem enviada</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:whiteSpace value="preserve"/>
@@ -159,16 +159,16 @@
   </xs:simpleType>
   <xs:simpleType name="TString">
     <xs:annotation>
-      <xs:documentation> Tipo string genÃ©rico</xs:documentation>
+      <xs:documentation> Tipo string genérico</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:whiteSpace value="preserve"/>
-      <xs:pattern value="[!-Ã¿]{1}[ -Ã¿]{0,}[!-Ã¿]{1}|[!-Ã¿]{1}"/>
+      <xs:pattern value="[!-ÿ]{1}[ -ÿ]{0,}[!-ÿ]{1}|[!-ÿ]{1}"/>
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="TChNFe">
     <xs:annotation>
-      <xs:documentation>Tipo Chave da Nota Fiscal EletrÃ´nica</xs:documentation>
+      <xs:documentation>Tipo Chave da Nota Fiscal Eletrônica</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:whiteSpace value="preserve"/>
@@ -178,7 +178,7 @@
   </xs:simpleType>
   <xs:simpleType name="TProt">
     <xs:annotation>
-      <xs:documentation>Tipo NÃºmero do Protocolo de Status</xs:documentation>
+      <xs:documentation>Tipo Número do Protocolo de Status</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:whiteSpace value="preserve"/>
@@ -197,7 +197,7 @@
   </xs:simpleType>
   <xs:simpleType name="TIe">
     <xs:annotation>
-      <xs:documentation>Tipo InscriÃ§Ã£o Estadual do Emitente // alterado EM 24/10/08 para aceitar ISENTO</xs:documentation>
+      <xs:documentation>Tipo Inscrição Estadual do Emitente // alterado EM 24/10/08 para aceitar ISENTO</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:whiteSpace value="preserve"/>
@@ -207,7 +207,7 @@
   </xs:simpleType>
   <xs:simpleType name="TDec_1302">
     <xs:annotation>
-      <xs:documentation>Tipo Decimal com 15 dÃ­gitos, sendo 13 de corpo e 2 decimais</xs:documentation>
+      <xs:documentation>Tipo Decimal com 15 dígitos, sendo 13 de corpo e 2 decimais</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:whiteSpace value="preserve"/>

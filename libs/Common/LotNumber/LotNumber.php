@@ -3,7 +3,7 @@
 namespace NFePHP\Common\LotNumber;
 
 /**
- * Classe auxiliar para tratar os lotes usados na comunicaÃ§Ã£o com a SEFAZ
+ * Classe auxiliar para tratar os lotes usados na comunicação com a SEFAZ
  *
  * @category  NFePHP
  * @package   NFePHP\Common\LotNumber

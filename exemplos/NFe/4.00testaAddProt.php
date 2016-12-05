@@ -8,7 +8,7 @@ use NFePHP\NFe\ToolsNFe;
 $nfe = new ToolsNFe('../../config/config.json');
 $aResposta = array();
 
-$indSinc = '1'; //0=asÃ­ncrono, 1=sÃ­ncrono
+$indSinc = '1'; //0=asíncrono, 1=síncrono
 $chave = '52160522234907000158650010000002001000002009';
 $recibo = '146326307016930';
 $pathNFefile = "D:/xampp/htdocs/GIT-nfephp-org/nfephp/xmls/NF-e/homologacao/assinadas/{$chave}-nfe.xml";

@@ -43,7 +43,7 @@ class NatSoap
     protected $enableSVRS = false;
     protected $enableSVCAN = false;
     protected $enableSVCRS = false;
-    protected $enableSCAN = false; //serÃ¡ desativado em 12/2014
+    protected $enableSCAN = false; //será desativado em 12/2014
    
     private $certKEY;
     private $pubKEY;
@@ -62,11 +62,11 @@ class NatSoap
     {
         try {
             if ($certificateKey == '' || $privateKey == '' || $publicKey == '') {
-                $msg = 'O path para as chaves deve ser passado na instÃ¢nciaÃ§Ã£o da classe.';
+                $msg = 'O path para as chaves deve ser passado na instânciação da classe.';
                 throw new Exception\InvalidArgumentException($msg);
             }
             if ($pathWsdl == '') {
-                $msg = 'O path para os arquivos WSDL deve ser passado na instÃ¢nciaÃ§Ã£o da classe.';
+                $msg = 'O path para os arquivos WSDL deve ser passado na instânciação da classe.';
                 throw new Exception\InvalidArgumentException($msg);
             }
             $this->pubKEY = $publicKey;
@@ -81,17 +81,17 @@ class NatSoap
     }//fim __construct
     
     /**
-     * Estabelece comunicaÃ§ao com servidor SOAP 1.1 ou 1.2 da SEFAZ,
-     * usando as chaves publica e privada parametrizadas na contruÃ§Ã£o da classe.
-     * Conforme Manual de IntegraÃ§Ã£o VersÃ£o 4.0.1
+     * Estabelece comunicaçao com servidor SOAP 1.1 ou 1.2 da SEFAZ,
+     * usando as chaves publica e privada parametrizadas na contrução da classe.
+     * Conforme Manual de Integração Versão 4.0.1
      *
      * @param  string  $urlsefaz
      * @param  string  $namespace
      * @param  string  $cabecalho
      * @param  string  $dados
      * @param  string  $metodo
-     * @param  integer $ambiente  tipo de ambiente 1 - produÃ§Ã£o e 2 - homologaÃ§Ã£o
-     * @param  string  $UF        unidade da federaÃ§Ã£o, necessÃ¡rio para diferenciar AM, MT e PR
+     * @param  integer $ambiente  tipo de ambiente 1 - produção e 2 - homologação
+     * @param  string  $UF        unidade da federação, necessário para diferenciar AM, MT e PR
      * @return mixed false se houve falha ou o retorno em xml do SEFAZ
      */
     public function send(
@@ -104,13 +104,13 @@ class NatSoap
     ) {
         try {
             if (!class_exists("SoapClient")) {
-                $msg = "A classe SOAP nÃ£o estÃ¡ disponÃ­vel no PHP, veja a configuraÃ§Ã£o.";
+                $msg = "A classe SOAP não está disponível no PHP, veja a configuração.";
                 throw new Exception\RuntimeException($msg);
             }
             $soapFault = '';
             //ativa retorno de erros soap
             use_soap_error_handler(true);
-            //versÃ£o do SOAP
+            //versão do SOAP
             $soapver = SOAP_1_2;
             if ($tpAmb == 1) {
                 $ambiente = 'producao';
@@ -144,7 +144,7 @@ class NatSoap
             } else {
                 $tout = $this->soapTimeout;
             }
-            //completa a url do serviÃ§o para baixar o arquivo WSDL
+            //completa a url do serviço para baixar o arquivo WSDL
             $sefazURL = $urlsefaz.'?WSDL';
             $this->soapDebug = $urlsefaz;
             $options = array(
@@ -163,10 +163,10 @@ class NatSoap
             );
             //instancia a classe soap
             $oSoapClient = new CorrectedSoapClient($sefazURL, $options);
-            //monta o cabeÃ§alho da mensagem
+            //monta o cabeçalho da mensagem
             $varCabec = new SoapVar($cabecalho, XSD_ANYXML);
             $header = new SoapHeader($namespace, 'nfeCabecMsg', $varCabec);
-            //instancia o cabeÃ§alho
+            //instancia o cabeçalho
             $oSoapClient->__setSoapHeaders($header);
             //monta o corpo da mensagem soap
             $varBody = new SoapVar($dados, XSD_ANYXML);

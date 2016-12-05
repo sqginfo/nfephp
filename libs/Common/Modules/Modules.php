@@ -3,7 +3,7 @@
 namespace NFePHP\Common\Modules;
 
 /**
- * Classe auxiliar para obter informa√ß√µes dos modulos instalados no PHP
+ * Classe auxiliar para obter informaÁıes dos modulos instalados no PHP
  *
  * @category  NFePHP
  * @package   NFePHP\Common\Modules
@@ -53,7 +53,7 @@ class Modules
     
     /**
      * verifyRequiredModules
-     * Verifica se os modulos requeridos pela API est√£o instalados
+     * Verifica se os modulos requeridos pela API est„o instalados
      *
      * @param  string $lista
      * @return bool
@@ -82,15 +82,15 @@ class Modules
         foreach ($aReq as $req) {
             if (! extension_loaded($req)) {
                 $enabled = ($enabled && false);
-                $lista .= "$req n√£o est√° carregado no PHP.\n";
+                $lista .= "$req n„o est· carregado no PHP.\n";
             }
         }
         return $enabled;
     }
     
     /**
-     * Checagem r√°pida se o modulo est√° carregadp
-     * true se carregado ou false se n√£o
+     * Checagem r·pida se o modulo est· carregadp
+     * true se carregado ou false se n„o
      *
      * @param  string $moduleName
      * @return boolean
@@ -104,9 +104,9 @@ class Modules
     }
 
     /**
-     * Obt√™m os par√¢metros do modulo carregado
-     * Pode ser uma simples configura√ß√£o especificada por $setting
-     * ou todos os valores caso nada seja passado no par√¢metro
+     * ObtÍm os par‚metros do modulo carregado
+     * Pode ser uma simples configuraÁ„o especificada por $setting
+     * ou todos os valores caso nada seja passado no par‚metro
      *
      * @param  string $moduleName
      * @param  string $setting
@@ -114,16 +114,16 @@ class Modules
      */
     public function getModuleSetting($moduleName, $setting = '')
     {
-        //verifica se o modulo est√° carregado antes de continuar
+        //verifica se o modulo est· carregado antes de continuar
         if ($this->isLoaded($moduleName)==false) {
-            return 'Modulo n√£o carregado';
+            return 'Modulo n„o carregado';
         }
         if ($this->list[$moduleName][$setting]) {
             return $this->list[$moduleName][$setting];
         } elseif (empty($setting)) {
             return $this->list[$moduleName];
         }
-        return 'Par√¢metros n√£o localizados';
+        return 'Par‚metros n„o localizados';
     }
     
     /**
@@ -141,7 +141,7 @@ class Modules
     }
     
     /**
-     * Fun√ß√£o para padroniza√ß√£o do numero de vers√µes de 2.7.2 para 020702
+     * FunÁ„o para padronizaÁ„o do numero de versıes de 2.7.2 para 020702
      *
      * @param  string $ver
      * @return string
@@ -180,7 +180,7 @@ class Modules
     
     /**
      * Rotina de teste dos molulos instalados
-     * se a vers√£o √© suficiente e se est√£o habilitados
+     * se a vers„o È suficiente e se est„o habilitados
      *
      * @param  string $name
      * @param  string $alias

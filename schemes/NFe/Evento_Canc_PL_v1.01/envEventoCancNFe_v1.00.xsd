@@ -3,7 +3,7 @@
 	<xs:include schemaLocation="leiauteEventoCancNFe_v1.00.xsd"/>
 	<xs:element name="envEvento" type="TEnvEvento">
 		<xs:annotation>
-			<xs:documentation>Schema XML de validaÃ§Ã£o do lote de envio do evento cancelamento</xs:documentation>
+			<xs:documentation>Schema XML de validação do lote de envio do evento cancelamento</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 </xs:schema>

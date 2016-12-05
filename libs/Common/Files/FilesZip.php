@@ -3,7 +3,7 @@
 namespace NFePHP\Common\Files;
 
 /**
- * Classe auxiliar para criar, listar e testar os diret√≥rios utilizados pela API
+ * Classe auxiliar para criar, listar e testar os diretÛrios utilizados pela API
  *
  * @category  NFePHP
  * @package   NFePHP\Common\Files
@@ -19,7 +19,7 @@ class FilesZip
 {
     /**
      * unZipTmpFile
-     * Descompacta strings GZIP usando arquivo tempor√°rio e SO
+     * Descompacta strings GZIP usando arquivo tempor·rio e SO
      *
      * @param  string $datazip Dados compactados com gzip
      * @return string arquivo descompactado
@@ -37,19 +37,19 @@ class FilesZip
         do {
             $tempName = uniqid('temp_');
         } while (file_exists($tempName));
-        //grava a string compactada no arquivo tempor√°rio
+        //grava a string compactada no arquivo tempor·rio
         if (file_put_contents($tempName, $data)) {
             try {
                 ob_start();
                 //efetua a leitura do arquivo descompactando e jogando o resultado
                 //bo cache
                 @readgzfile($tempName);
-                //descarrega o cache na vari√°vel
+                //descarrega o cache na vari·vel
                 $uncompressed = ob_get_clean();
             } catch (\Exception $e) {
                 $ex = $e;
             }
-            //remove o arquivo tempor√°rio
+            //remove o arquivo tempor·rio
             if (file_exists($tempName)) {
                 unlink($tempName);
             }
@@ -75,34 +75,34 @@ class FilesZip
         $len = strlen($data);
         if ($len < 18 || strcmp(substr($data, 0, 2), "\x1f\x8b")) {
             throw new Exception\RuntimeException(
-                "N√£o est√° no formato GZIP."
+                "N„o est· no formato GZIP."
             );
         }
-        $method = ord(substr($data, 2, 1));  // metodo de compress√£o
+        $method = ord(substr($data, 2, 1));  // metodo de compress„o
         $flags  = ord(substr($data, 3, 1));  // Flags
         if ($flags & 31 != $flags) {
             throw new Exception\RuntimeException(
-                "N√£o s√£o permitidos bits reservados."
+                "N„o s„o permitidos bits reservados."
             );
         }
-        // NOTA: $mtime pode ser negativo (limita√ß√µes nos inteiros do PHP)
+        // NOTA: $mtime pode ser negativo (limitaÁıes nos inteiros do PHP)
         $mtime = unpack("V", substr($data, 4, 4));
         $mtime = $mtime[1];
         $headerlen = 10;
         $extralen  = 0;
         $extra     = "";
         if ($flags & 4) {
-            // dados estras prefixados de 2-byte no cabe√ßalho
+            // dados estras prefixados de 2-byte no cabeÁalho
             if ($len - $headerlen - 2 < 8) {
                 throw new Exception\RuntimeException(
-                    "Dados inv√°lidos."
+                    "Dados inv·lidos."
                 );
             }
             $extralen = unpack("v", substr($data, 8, 2));
             $extralen = $extralen[1];
             if ($len - $headerlen - 2 - $extralen < 8) {
                 throw new Exception\RuntimeException(
-                    "Dados inv√°lidos."
+                    "Dados inv·lidos."
                 );
             }
             $extra = substr($data, 10, $extralen);
@@ -113,14 +113,14 @@ class FilesZip
         if ($flags & 8) {
             // C-style string
             if ($len - $headerlen - 1 < 8) {
-                $msg = "Dados inv√°lidos.";
+                $msg = "Dados inv·lidos.";
                 $this->pSetError($msg);
                 return false;
             }
             $filenamelen = strpos(substr($data, $headerlen), chr(0));
             if ($filenamelen === false || $len - $headerlen - $filenamelen - 1 < 8) {
                 throw new Exception\RuntimeException(
-                    "Dados inv√°lidos."
+                    "Dados inv·lidos."
                 );
             }
             $filename = substr($data, $headerlen, $filenamelen);
@@ -129,16 +129,16 @@ class FilesZip
         $commentlen = 0;
         $comment = "";
         if ($flags & 16) {
-            // C-style string COMMENT data no cabe√ßalho
+            // C-style string COMMENT data no cabeÁalho
             if ($len - $headerlen - 1 < 8) {
                 throw new Exception\RuntimeException(
-                    "Dados inv√°lidos."
+                    "Dados inv·lidos."
                 );
             }
             $commentlen = strpos(substr($data, $headerlen), chr(0));
             if ($commentlen === false || $len - $headerlen - $commentlen - 1 < 8) {
                 throw new Exception\RuntimeException(
-                    "Formato de cabe√ßalho inv√°lido."
+                    "Formato de cabeÁalho inv·lido."
                 );
             }
             $comment = substr($data, $headerlen, $commentlen);
@@ -146,10 +146,10 @@ class FilesZip
         }
         $headercrc = "";
         if ($flags & 2) {
-            // 2-bytes de menor ordem do CRC32 esta presente no cabe√ßalho
+            // 2-bytes de menor ordem do CRC32 esta presente no cabeÁalho
             if ($len - $headerlen - 2 < 8) {
                 throw new Exception\RuntimeException(
-                    "Dados inv√°lidos."
+                    "Dados inv·lidos."
                 );
             }
             $calccrc = crc32(substr($data, 0, $headerlen)) & 0xffff;
@@ -157,21 +157,21 @@ class FilesZip
             $headercrc = $headercrc[1];
             if ($headercrc != $calccrc) {
                 throw new Exception\RuntimeException(
-                    "Checksum do cabe√ßalho falhou."
+                    "Checksum do cabeÁalho falhou."
                 );
             }
             $headerlen += 2;
         }
-        // Rodap√© GZIP
+        // RodapÈ GZIP
         $datacrc = unpack("V", substr($data, -8, 4));
         $datacrc = sprintf('%u', $datacrc[1] & 0xFFFFFFFF);
         $isize = unpack("V", substr($data, -4));
         $isize = $isize[1];
-        // decompress√£o
+        // decompress„o
         $bodylen = $len-$headerlen-8;
         if ($bodylen < 1) {
             throw new Exception\RuntimeException(
-                "BUG da implementa√ß√£o."
+                "BUG da implementaÁ„o."
             );
         }
         $body = substr($data, $headerlen, $bodylen);
@@ -179,22 +179,22 @@ class FilesZip
         if ($bodylen > 0) {
             switch ($method) {
                 case 8:
-                    // Por hora somente √© suportado esse metodo de compress√£o
+                    // Por hora somente È suportado esse metodo de compress„o
                     $data = gzinflate($body, null);
                     break;
                 default:
                     throw new Exception\RuntimeException(
-                        "M√©todo de compress√£o desconhecido (n√£o suportado)."
+                        "MÈtodo de compress„o desconhecido (n„o suportado)."
                     );
             }
         }
-        // conteudo zero-byte √© permitido
+        // conteudo zero-byte È permitido
         // Verificar CRC32
         $crc   = sprintf("%u", crc32($data));
         $crcOK = $crc == $datacrc;
         $lenOK = $isize == strlen($data);
         if (!$lenOK || !$crcOK) {
-            $msg = ( $lenOK ? '' : 'Verifica√ß√£o do comprimento FALHOU. ').( $crcOK ? '' : 'Checksum FALHOU.');
+            $msg = ( $lenOK ? '' : 'VerificaÁ„o do comprimento FALHOU. ').( $crcOK ? '' : 'Checksum FALHOU.');
             throw new Exception\RuntimeException(
                 $msg
             );

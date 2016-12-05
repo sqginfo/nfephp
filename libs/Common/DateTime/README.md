@@ -1,8 +1,8 @@
 Class DateTime
 =============
-Esta classe auxiliar prov√™ tr√™s fun√ß√µes b√°sicas para o tratamento de datas e horas para os sistemas da SEFAZ.
+Esta classe auxiliar provÍ trÍs funÁıes b·sicas para o tratamento de datas e horas para os sistemas da SEFAZ.
 
-√â requerido PHP >= 5.3
+… requerido PHP >= 5.3
 
 Namespace
 =============
@@ -10,7 +10,7 @@ Namespace
 Common/DateTime;
 ```
 
-M√©todos
+MÈtodos
 ==========
 
 tzdBR
@@ -18,34 +18,34 @@ tzdBR
 ```php
 string DateTime::tzdBR(string $siglaUF)
 ```
-Esta fun√ß√£o est√°tica retorna o "Time Zone Designator" de qualquer unidade da federa√ß√£o como uma string no formato "-03:00", a $siglaUF pode ser a sigla de qualquer estado brasileiro (ex. SP, MG, PR, etc..), caso n√£o seja passado nenhum valor v√°lido o retorno ser√° uma string vazia.
-O Time Zone Default do <b>ambiente PHP ser√° modificado tamb√©m</b>, caso seja passado um valor v√°lido.
-Par√¢metros
+Esta funÁ„o est·tica retorna o "Time Zone Designator" de qualquer unidade da federaÁ„o como uma string no formato "-03:00", a $siglaUF pode ser a sigla de qualquer estado brasileiro (ex. SP, MG, PR, etc..), caso n„o seja passado nenhum valor v·lido o retorno ser· uma string vazia.
+O Time Zone Default do <b>ambiente PHP ser· modificado tambÈm</b>, caso seja passado um valor v·lido.
+Par‚metros
 --------
 <b>siglaUF</b>
 
-string com a sigla da unidade da federa√ß√£o em letras maiusculas, caso seja passado uma sigla invalida ou vazia ser√° retornado uma string vazia 
+string com a sigla da unidade da federaÁ„o em letras maiusculas, caso seja passado uma sigla invalida ou vazia ser· retornado uma string vazia 
 
 convertSefazTimeToTimestamp
 --------
 ```php
 int DateTime::convertSefazTimeToTimestamp(string $dataHora)
 ```
-Esta fun√ß√£o est√°tica retorna um "timestamp" para uma data no formato usado pela SEFAZ "YYYY-MM-DDThh:mm:ssTZ".
-Par√¢metros
+Esta funÁ„o est·tica retorna um "timestamp" para uma data no formato usado pela SEFAZ "YYYY-MM-DDThh:mm:ssTZ".
+Par‚metros
 --------
 <b>dataHora</b>
 
-string com o par√¢metro data extra√≠do do xml da SEFAZ.
+string com o par‚metro data extraÌdo do xml da SEFAZ.
 
 convertTimestampToSefazTime
 --------
 ```php
 string DateTime::convertTimestampToSefazTime(int $timestamp)
 ```
-Esta fun√ß√£o est√°tica retorna um string no formato de data usado pela SEFAZ "YYYY-MM-DDThh:mm:ssTZ", a partir de um "timestamp".
-Par√¢metros
+Esta funÁ„o est·tica retorna um string no formato de data usado pela SEFAZ "YYYY-MM-DDThh:mm:ssTZ", a partir de um "timestamp".
+Par‚metros
 --------
 <b>timestamp</b>
 
-integer timestamp UNIX para ser convertido ao padr√£o usado pela SEFAZ. Caso nenhum parametro seja passado ser√° retornado a data e hora atual no dito padr√£o, , incluindo o Time Zone default, portanto antes de usar essa fun√ß√£o √© recomend√°vel que a primeira fun√ß√£o "tzdBR" seja usada ou que o Time Zone Default esteja configurado corretamente.
+integer timestamp UNIX para ser convertido ao padr„o usado pela SEFAZ. Caso nenhum parametro seja passado ser· retornado a data e hora atual no dito padr„o, , incluindo o Time Zone default, portanto antes de usar essa funÁ„o È recomend·vel que a primeira funÁ„o "tzdBR" seja usada ou que o Time Zone Default esteja configurado corretamente.

@@ -14,14 +14,14 @@ class PdfNFePHP extends FPDF
     private $Cset="";                                          // grupo C do conjunto de caracteres legiveis
     private $SetFrom;                                          // converter de
     private $SetTo;                                            // converter para
-    private $JStart = array("A"=>103, "B"=>104, "C"=>105);     // Caracteres de sele√ß√£o do grupo 128
+    private $JStart = array("A"=>103, "B"=>104, "C"=>105);     // Caracteres de seleÁ„o do grupo 128
     private $JSwap = array("A"=>101, "B"=>100, "C"=>99);       // Caracteres de troca de grupo
 
     public function __construct($orientation = 'P', $unit = 'mm', $format = 'A4')
     {
         //passar parametros para a classe principal
         parent::FPDF($orientation, $unit, $format);
-        // composi√ß√£o dos caracteres do barcode 128
+        // composiÁ„o dos caracteres do barcode 128
         $this->T128[] = array(2, 1, 2, 2, 2, 2);           //0 : [ ]
         $this->T128[] = array(2, 2, 2, 1, 2, 2);           //1 : [!]
         $this->T128[] = array(2, 2, 2, 2, 2, 1);           //2 : ["]
@@ -243,7 +243,7 @@ class PdfNFePHP extends FPDF
 
     /**
      * Rotate
-     * Rotaciona para impress√£o paisagem (landscape)
+     * Rotaciona para impress„o paisagem (landscape)
      *
      * @package FPDF
      * @name    Rotate
@@ -273,7 +273,7 @@ class PdfNFePHP extends FPDF
             $cy=($this->h-$y)*$this->k;
             $this->_out(sprintf('q %.5F %.5F %.5F %.5F %.2F %.2F cm 1 0 0 1 %.2F %.2F cm', $c, $s, -$s, $c, $cx, $cy, -$cx, -$cy));
         }
-    } //fim fun√ß√£o rotate
+    } //fim funÁ„o rotate
 
     /**
      * RoundedRect
@@ -368,7 +368,7 @@ class PdfNFePHP extends FPDF
      * @package FPDF
      * @name    DashedRect
      * @version 1.0
-     * @author  Antoine Mich√©a
+     * @author  Antoine MichÈa
      * @param   number $x1
      * @param   number $y1
      * @param   number $x2
@@ -674,17 +674,17 @@ class PdfNFePHP extends FPDF
                 //Ajusta a escala horizontal
                 $this->_out(sprintf('BT %.2F Tz ET', $horiz_scale));
             } else {
-                //Calcula o espa√ßamento de caracteres em pontos
+                //Calcula o espaÁamento de caracteres em pontos
                 $char_space=($w-$this->cMargin*2-$str_width)/max($this->_MBGetStringLength($txt)-1, 1)*$this->k;
-                //Ajusta o espa√ßamento de caracteres
+                //Ajusta o espaÁamento de caracteres
                 $this->_out(sprintf('BT %.2F Tc ET', $char_space));
             }
             //Sobrescreve o alinhamento informado (desde que o texto caiba na celula)
             $align='';
         }
-        //Passa para o m√©todo cell
+        //Passa para o mÈtodo cell
         $this->Cell($w, $h, $txt, $border, $ln, $align, $fill, $link);
-        //Reseta o espa√ßamento de caracteres e a escala horizontal
+        //Reseta o espaÁamento de caracteres e a escala horizontal
         if ($fit) {
             $this->_out('BT '.($scale ? '100 Tz' : '0 Tc').' ET');
         }
@@ -692,7 +692,7 @@ class PdfNFePHP extends FPDF
 
     /**
      * CellFitScale
-     * Celula com escalamento horizontal somente se necess√°rio
+     * Celula com escalamento horizontal somente se necess·rio
      *
      * @package FPDF
      * @name    CellFitScale
@@ -714,7 +714,7 @@ class PdfNFePHP extends FPDF
 
     /**
      * CellFitScaleForce
-     * Celula com escalamento for√ßado
+     * Celula com escalamento forÁado
      *
      * @package FPDF
      * @name    CellFitScaleForce
@@ -736,7 +736,7 @@ class PdfNFePHP extends FPDF
 
     /**
      * CellFitSpace
-     * Celula com espa√ßamento de caracteres somente se necess√°rio
+     * Celula com espaÁamento de caracteres somente se necess·rio
      *
      * @package FPDF
      * @name    CellFitSpace
@@ -758,7 +758,7 @@ class PdfNFePHP extends FPDF
     
     /**
      * CellFitSpaceForce
-     * Celula com espa√ßamento de caracteres for√ßado
+     * Celula com espaÁamento de caracteres forÁado
      *
      * @package FPDF
      * @name    CellFitSpaceForce
@@ -817,18 +817,18 @@ class PdfNFePHP extends FPDF
      * @name    DashedHLine
      * @version 1.0.1
      * @author  Roberto L. Machado <linux.rlm at gmail dot com>
-     * @param   number $x Posi√ß√£o horizontal inicial, em mm
-     * @param   number $y Posi√ß√£o vertical inicial, em mm
+     * @param   number $x PosiÁ„o horizontal inicial, em mm
+     * @param   number $y PosiÁ„o vertical inicial, em mm
      * @param   number $w Comprimento da linha, em mm
      * @param   number $h Espessura da linha, em mm
-     * @param   number $n Numero de tra√ßos na se√ß√£o da linha com o comprimento $w
+     * @param   number $n Numero de traÁos na seÁ„o da linha com o comprimento $w
      * @return  none
      */
     public function DashedHLine($x, $y, $w, $h, $n)
     {
         $this->SetDrawColor(110);
         $this->SetLineWidth($h);
-        $wDash=($w/$n)/2; // comprimento dos tra√ßos
+        $wDash=($w/$n)/2; // comprimento dos traÁos
         for ($i=$x; $i<=$x+$w; $i += $wDash+$wDash) {
             for ($j=$i; $j<= ($i+$wDash); $j++) {
                 if ($j <= ($x+$w-1)) {
@@ -837,7 +837,7 @@ class PdfNFePHP extends FPDF
             }
         }
         $this->SetDrawColor(0);
-    } //fim fun√ß√£o DashedHLine
+    } //fim funÁ„o DashedHLine
 
     /**
     * DashedVLine
@@ -848,11 +848,11 @@ class PdfNFePHP extends FPDF
     * @version 1.0
     * @author  Roberto L. Machado <linux.rlm at gmail dot com>
     * @author  Guilherme Calabria Filho <guiga86 at gmail dot com>
-    * @param   number $x      Posi√ß√£o horizontal inicial, em mm
-    * @param   number $y      Posi√ß√£o vertical inicial, em mm
+    * @param   number $x      PosiÁ„o horizontal inicial, em mm
+    * @param   number $y      PosiÁ„o vertical inicial, em mm
     * @param   number $w      Comprimento da linha, em mm
     * @param   number $yfinal Espessura da linha, em mm
-    * @param   number $n      Numero de tra√ßos na se√ß√£o da linha com o comprimento $w
+    * @param   number $n      Numero de traÁos na seÁ„o da linha com o comprimento $w
     * @return  none
     */
     public function DashedVLine($x, $y, $w, $yfinal, $n)
@@ -869,7 +869,7 @@ class PdfNFePHP extends FPDF
             $y += 3;
             $n--;
         }
-    } //fim fun√ß√£o DashedVLine
+    } //fim funÁ„o DashedVLine
     
     
 

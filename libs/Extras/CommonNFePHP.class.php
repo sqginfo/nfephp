@@ -21,7 +21,7 @@ class CommonNFePHP
         if (!isset($this->emit)) {
             return;
         }
-        //se nÃ£o foi passado o caminho para o logo procurar diretorio abaixo
+        //se não foi passado o caminho para o logo procurar diretorio abaixo
         $imgPath = "logos/" . $this->emit->getElementsByTagName("CNPJ")->item(0)->nodeValue . ".jpg";
         if (file_exists($imgPath)) {
             $this->logomarca = $imgPath;
@@ -80,7 +80,7 @@ class CommonNFePHP
 
     /**
      * pSimpleGetDate
-     * Recupera e reformata a data do padrÃ£o da NFe para dd/mm/aaaa
+     * Recupera e reformata a data do padrão da NFe para dd/mm/aaaa
      *
      * @author Marcos Diez
      * @param  DOM    $theObj
@@ -133,8 +133,8 @@ class CommonNFePHP
      * pYmd2dmy
      * Converte datas no formato YMD (ex. 2009-11-02) para o formato brasileiro 02/11/2009)
      *
-     * @param  string $data ParÃ¢metro extraido da NFe
-     * @return string Formatada para apresentaÃ§Ã£o da data no padrÃ£o brasileiro
+     * @param  string $data Parâmetro extraido da NFe
+     * @return string Formatada para apresentação da data no padrão brasileiro
      */
     protected function pYmd2dmy($data = '')
     {
@@ -151,10 +151,10 @@ class CommonNFePHP
 
     /**
      * pConvertTime
-     * Converte a informaÃ§Ã£o de data e tempo contida na NFe
+     * Converte a informação de data e tempo contida na NFe
      *
-     * @param  string $DH InformaÃ§Ã£o de data e tempo extraida da NFe
-     * @return timestamp UNIX Para uso com a funÃ§ao date do php
+     * @param  string $DH Informação de data e tempo extraida da NFe
+     * @return timestamp UNIX Para uso com a funçao date do php
      */
     protected function pConvertTime($DH = '')
     {
@@ -176,11 +176,11 @@ class CommonNFePHP
 
     /**
      * pFormat
-     * FunÃ§Ã£o de formataÃ§Ã£o de strings onde o cerquilha # Ã© um coringa
-     * que serÃ¡ substituido por digitos contidos em campo.
+     * Função de formatação de strings onde o cerquilha # é um coringa
+     * que será substituido por digitos contidos em campo.
      *
      * @param  string $campo   String a ser formatada
-     * @param  string $mascara Regra de formatÃ§Ã£o da string (ex. ##.###.###/####-##)
+     * @param  string $mascara Regra de formatção da string (ex. ##.###.###/####-##)
      * @return string Retorna o campo formatado
      */
     protected function pFormat($campo = '', $mascara = '')
@@ -188,7 +188,7 @@ class CommonNFePHP
         if ($campo == '' || $mascara == '') {
             return $campo;
         }
-        //remove qualquer formataÃ§Ã£o que ainda exista
+        //remove qualquer formatação que ainda exista
         $sLimpo = preg_replace("(/[' '-./ t]/)", '', $campo);
         // pega o tamanho da string e da mascara
         $tCampo = strlen($sLimpo);
@@ -208,23 +208,23 @@ class CommonNFePHP
             }
         }
         if ($z > $tCampo) {
-            //o campo Ã© menor que esperado
+            //o campo é menor que esperado
             $flag=true;
         }
-        //cria uma variÃ¡vel grande o suficiente para conter os dados
+        //cria uma variável grande o suficiente para conter os dados
         $sRetorno = '';
         $sRetorno = str_pad($sRetorno, $tCampo+$tMask, " ", STR_PAD_LEFT);
         //pega o tamanho da string de retorno
         $tRetorno = strlen($sRetorno);
         //se houve entrada de dados
         if ($sLimpo != '' && $mascara !='') {
-            //inicia com a posiÃ§Ã£o do ultimo digito da mascara
+            //inicia com a posição do ultimo digito da mascara
             $x = $tMask;
             $y = $tCampo;
             $cI = 0;
             for ($i = $tMaior-1; $i >= 0; $i--) {
                 if ($cI < $z) {
-                    // e o digito da mascara Ã© # trocar pelo digito do campo
+                    // e o digito da mascara é # trocar pelo digito do campo
                     // se o inicio da string da mascara for atingido antes de terminar
                     // o campo considerar #
                     if ($x > 0) {
@@ -233,7 +233,7 @@ class CommonNFePHP
                         $digMask = '#';
                     }
                     //se o fim do campo for atingido antes do fim da mascara
-                    //verificar se Ã© ( se nÃ£o for nÃ£o use
+                    //verificar se é ( se não for não use
                     if ($digMask=='#') {
                         $cI++;
                         if ($y > 0) {
@@ -284,28 +284,28 @@ class CommonNFePHP
 
     /**
      * pTextBox
-     * Cria uma caixa de texto com ou sem bordas. Esta funÃ§Ã£o perimite o alinhamento horizontal
+     * Cria uma caixa de texto com ou sem bordas. Esta função perimite o alinhamento horizontal
      * ou vertical do texto dentro da caixa.
-     * AtenÃ§Ã£o : Esta funÃ§Ã£o Ã© dependente de outras classes de FPDF
+     * Atenção : Esta função é dependente de outras classes de FPDF
      * Ex. $this->pTextBox(2,20,34,8,'Texto',array('fonte'=>$this->fontePadrao,
      * 'size'=>10,'style='B'),'C','L',FALSE,'http://www.nfephp.org')
      *
-     * @param  number  $x       PosiÃ§Ã£o horizontal da caixa, canto esquerdo superior
-     * @param  number  $y       PosiÃ§Ã£o vertical da caixa, canto esquerdo superior
+     * @param  number  $x       Posição horizontal da caixa, canto esquerdo superior
+     * @param  number  $y       Posição vertical da caixa, canto esquerdo superior
      * @param  number  $w       Largura da caixa
      * @param  number  $h       Altura da caixa
-     * @param  string  $text    ConteÃºdo da caixa
-     * @param  array   $aFont   Matriz com as informaÃ§Ãµes para formataÃ§Ã£o do texto com fonte, tamanho e estilo
+     * @param  string  $text    Conteúdo da caixa
+     * @param  array   $aFont   Matriz com as informações para formatação do texto com fonte, tamanho e estilo
      * @param  string  $vAlign  Alinhamento vertical do texto, T-topo C-centro B-base
      * @param  string  $hAlign  Alinhamento horizontal do texto, L-esquerda, C-centro, R-direita
      * @param  boolean $border  TRUE ou 1 desenha a borda, FALSE ou 0 Sem borda
      * @param  string  $link    Insere um hiperlink
-     * @param  boolean $force   Se for true forÃ§a a caixa com uma unica linha e para isso atera o tamanho do fonte atÃ© caber no espaÃ§o, se falso mantem o tamanho do fonte e usa quantas linhas forem necessÃ¡rias
-     * e para isso atera o tamanho do fonte atÃ© caber no espaÃ§o,
-     * se falso mantem o tamanho do fonte e usa quantas linhas forem necessÃ¡rias
+     * @param  boolean $force   Se for true força a caixa com uma unica linha e para isso atera o tamanho do fonte até caber no espaço, se falso mantem o tamanho do fonte e usa quantas linhas forem necessárias
+     * e para isso atera o tamanho do fonte até caber no espaço,
+     * se falso mantem o tamanho do fonte e usa quantas linhas forem necessárias
      * @param  number  $hmax
-     * @param  number  $vOffSet incremento forÃ§ado na na posiÃ§Ã£o Y
-     * @return number $height Qual a altura necessÃ¡ria para desenhar esta textBox
+     * @param  number  $vOffSet incremento forçado na na posição Y
+     * @return number $height Qual a altura necessária para desenhar esta textBox
      */
     protected function pTextBox(
         $x,
@@ -332,7 +332,7 @@ class CommonNFePHP
             $text = '';
         }
         if (is_string($text)) {
-            //remover espaÃ§os desnecessÃ¡rios
+            //remover espaços desnecessários
             $text = trim($text);
             //converter o charset para o fpdf
             $text = utf8_decode($text);
@@ -348,7 +348,7 @@ class CommonNFePHP
         //calcular o incremento
         $incY = $this->pdf->FontSize; //tamanho da fonte na unidade definida
         if (!$force) {
-            //verificar se o texto cabe no espaÃ§o
+            //verificar se o texto cabe no espaço
             $n = $this->pdf->WordWrap($text, $w);
         } else {
             $n = 1;
@@ -413,33 +413,33 @@ class CommonNFePHP
             }
         }
         return ($y1-$y)-$incY;
-    } // fim funÃ§Ã£o __textBox
+    } // fim função __textBox
 
     /**
      * pTextBox90
-     * Cria uma caixa de texto com ou sem bordas. Esta funÃ§Ã£o permite o alinhamento horizontal
-     * ou vertical do texto dentro da caixa, rotacionando-o em 90 graus, essa funÃ§Ã£o precisa que
-     * a classe PDF contenha a funÃ§Ã£o Rotate($angle,$x,$y);
-     * AtenÃ§Ã£o : Esta funÃ§Ã£o Ã© dependente de outras classes de FPDF
+     * Cria uma caixa de texto com ou sem bordas. Esta função permite o alinhamento horizontal
+     * ou vertical do texto dentro da caixa, rotacionando-o em 90 graus, essa função precisa que
+     * a classe PDF contenha a função Rotate($angle,$x,$y);
+     * Atenção : Esta função é dependente de outras classes de FPDF
      * Ex. $this->__textBox90(2,20,34,8,'Texto',array('fonte'=>$this->fontePadrao,
      * 'size'=>10,'style='B'),'C','L',FALSE,'http://www.nfephp.org')
      *
-     * @param  number  $x       PosiÃ§Ã£o horizontal da caixa, canto esquerdo superior
-     * @param  number  $y       PosiÃ§Ã£o vertical da caixa, canto esquerdo superior
+     * @param  number  $x       Posição horizontal da caixa, canto esquerdo superior
+     * @param  number  $y       Posição vertical da caixa, canto esquerdo superior
      * @param  number  $w       Largura da caixa
      * @param  number  $h       Altura da caixa
-     * @param  string  $text    ConteÃºdo da caixa
-     * @param  array   $aFont   Matriz com as informaÃ§Ãµes para formataÃ§Ã£o do texto com fonte, tamanho e estilo
+     * @param  string  $text    Conteúdo da caixa
+     * @param  array   $aFont   Matriz com as informações para formatação do texto com fonte, tamanho e estilo
      * @param  string  $vAlign  Alinhamento vertical do texto, T-topo C-centro B-base
      * @param  string  $hAlign  Alinhamento horizontal do texto, L-esquerda, C-centro, R-direita
      * @param  boolean $border  TRUE ou 1 desenha a borda, FALSE ou 0 Sem borda
      * @param  string  $link    Insere um hiperlink
-     * @param  boolean $force   Se for true forÃ§a a caixa com uma unica linha e para isso atera o tamanho do fonte atÃ© caber no espaÃ§o, se falso mantem o tamanho do fonte e usa quantas linhas forem necessÃ¡rias
-     * linha e para isso atera o tamanho do fonte atÃ© caber no espaÃ§o,
-     * se falso mantem o tamanho do fonte e usa quantas linhas forem necessÃ¡rias
+     * @param  boolean $force   Se for true força a caixa com uma unica linha e para isso atera o tamanho do fonte até caber no espaço, se falso mantem o tamanho do fonte e usa quantas linhas forem necessárias
+     * linha e para isso atera o tamanho do fonte até caber no espaço,
+     * se falso mantem o tamanho do fonte e usa quantas linhas forem necessárias
      * @param  number  $hmax
-     * @param  number  $vOffSet incremento forÃ§ado na na posiÃ§Ã£o Y
-     * @return number $height Qual a altura necessÃ¡ria para desenhar esta textBox
+     * @param  number  $vOffSet incremento forçado na na posição Y
+     * @return number $height Qual a altura necessária para desenhar esta textBox
      */
     protected function pTextBox90(
         $x,
@@ -468,7 +468,7 @@ class CommonNFePHP
             $text = '';
         }
         if (is_string($text)) {
-            //remover espaÃ§os desnecessÃ¡rios
+            //remover espaços desnecessários
             $text = trim($text);
             //converter o charset para o fpdf
             $text = utf8_decode($text);
@@ -484,7 +484,7 @@ class CommonNFePHP
         //calcular o incremento
         $incY = $this->pdf->FontSize; //tamanho da fonte na unidade definida
         if (!$force) {
-            //verificar se o texto cabe no espaÃ§o
+            //verificar se o texto cabe no espaço
             $n = $this->pdf->WordWrap($text, $w);
         } else {
             $n = 1;
@@ -548,7 +548,7 @@ class CommonNFePHP
                 break;
             }
         }
-        //Zerando rotaÃ§Ã£o
+        //Zerando rotação
         $this->pdf->Rotate(0, $x, $y);
         return ($y1-$y)-$incY;
     }

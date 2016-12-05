@@ -4,13 +4,13 @@
   <xs:include schemaLocation="tiposDistDFe_v1.00.xsd"/>
   <xs:element name="resEvento">
     <xs:annotation>
-      <xs:documentation>Schema da estrutura XML gerada pelo Ambiente Nacional com o conjunto de informaÃ§Ãµes resumidas de um evento de NF-e</xs:documentation>
+      <xs:documentation>Schema da estrutura XML gerada pelo Ambiente Nacional com o conjunto de informações resumidas de um evento de NF-e</xs:documentation>
     </xs:annotation>
     <xs:complexType>
       <xs:sequence>
         <xs:element name="cOrgao" type="TCOrgaoIBGE">
           <xs:annotation>
-            <xs:documentation>CÃ³digo do Ã³rgÃ£o de recepÃ§Ã£o do Evento. Utilizar a Tabela do IBGE extendida, utilizar 91 para identificar o Ambiente Nacional</xs:documentation>
+            <xs:documentation>Código do órgão de recepção do Evento. Utilizar a Tabela do IBGE extendida, utilizar 91 para identificar o Ambiente Nacional</xs:documentation>
           </xs:annotation>
         </xs:element>
         <xs:choice>
@@ -48,7 +48,7 @@
         </xs:element>
         <xs:element name="nSeqEvento">
           <xs:annotation>
-            <xs:documentation>SeqÃ¼encial do evento para o mesmo tipo de evento.  Para maioria dos eventos serÃ¡ 1, nos casos em que possa existir mais de um evento, como Ã© o caso da carta de correÃ§Ã£o, o autor do evento deve numerar de forma seqÃ¼encial</xs:documentation>
+            <xs:documentation>Seqüencial do evento para o mesmo tipo de evento.  Para maioria dos eventos será 1, nos casos em que possa existir mais de um evento, como é o caso da carta de correção, o autor do evento deve numerar de forma seqüencial</xs:documentation>
           </xs:annotation>
           <xs:simpleType>
             <xs:restriction base="xs:string">
@@ -59,7 +59,7 @@
         </xs:element>
         <xs:element name="xEvento">
           <xs:annotation>
-            <xs:documentation>DescriÃ§Ã£o do Evento</xs:documentation>
+            <xs:documentation>Descrição do Evento</xs:documentation>
           </xs:annotation>
           <xs:simpleType>
             <xs:restriction base="TString">
@@ -70,12 +70,12 @@
         </xs:element>
         <xs:element name="dhRecbto" type="TDateTimeUTC">
           <xs:annotation>
-            <xs:documentation>Data e hora de autorizaÃ§Ã£o do evento no formato AAAA-MM-DDTHH:MM:SSTZD</xs:documentation>
+            <xs:documentation>Data e hora de autorização do evento no formato AAAA-MM-DDTHH:MM:SSTZD</xs:documentation>
           </xs:annotation>
         </xs:element>
         <xs:element name="nProt" type="TProt">
           <xs:annotation>
-            <xs:documentation>NÃºmero do Protocolo do evento. 1 posiÃ§Ã£o (1 â€“ Secretaria de Fazenda Estadual 2 â€“ Receita Federal); 2 - cÃ³diga da UF - 2 posiÃ§Ãµes ano; 10 seqÃ¼encial no ano</xs:documentation>
+            <xs:documentation>Número do Protocolo do evento. 1 posição (1 - Secretaria de Fazenda Estadual 2 - Receita Federal); 2 - códiga da UF - 2 posições ano; 10 seqüencial no ano</xs:documentation>
           </xs:annotation>
         </xs:element>
       </xs:sequence>
@@ -84,7 +84,7 @@
   </xs:element>
   <xs:simpleType name="TVerResEvento">
     <xs:annotation>
-      <xs:documentation>Tipo VersÃ£o do leiate resNFe</xs:documentation>
+      <xs:documentation>Tipo Versão do leiate resNFe</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:whiteSpace value="preserve"/>

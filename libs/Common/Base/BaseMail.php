@@ -61,7 +61,7 @@ class BaseMail
     
     /**
      * __construct
-     * M√©todo construtor configura o transporte do email
+     * MÈtodo construtor configura o transporte do email
      *
      * @param  type $aMailConf
      * @throws Exception\InvalidArgumentException
@@ -69,7 +69,7 @@ class BaseMail
     public function __construct($aMailConf = array())
     {
         if (count($aMailConf) == 0) {
-            $msg = 'Os par√¢metros de configura√ß√£o para email devem ser passados em um array.';
+            $msg = 'Os par‚metros de configuraÁ„o para email devem ser passados em um array.';
             throw new Exception\InvalidArgumentException($msg);
         }
         $this->aMailConf = $aMailConf;
@@ -143,7 +143,7 @@ class BaseMail
         $textPart = new MimePart($msgTxt);
         $textPart->encoding = Mime::ENCODING_QUOTEDPRINTABLE;
         $textPart->type = "text/plain; charset=UTF-8";
-        //monatgem do conte√∫do da mensagem
+        //monatgem do conte˙do da mensagem
         $this->content = new MimeMessage();
         $this->content->addPart($textPart);
         $this->content->addPart($htmlPart);
@@ -164,7 +164,7 @@ class BaseMail
             $this->aMailConf['mailFromName']
         );
         foreach ($aMail as $mail) {
-            //destinat√°rios
+            //destinat·rios
             $message->addTo($mail);
         }
         //assunto
@@ -194,7 +194,7 @@ class BaseMail
     
     /**
      * zRemakeFilename
-     * Caso n√£o seja passado um nome de arquivo ent√£o
+     * Caso n„o seja passado um nome de arquivo ent„o
      * pega o nome do arquivo do path
      *
      * @param  string $pathFile

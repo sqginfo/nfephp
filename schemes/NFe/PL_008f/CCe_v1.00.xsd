@@ -5,7 +5,7 @@
 	<xs:include schemaLocation="leiauteCCe_v1.00.xsd"/>
 	<xs:element name="evento" type="TEvento">
 		<xs:annotation>
-			<xs:documentation>Schema XML de validaÃ§Ã£o do evento Carta de CorreÃ§Ã£o</xs:documentation>
+			<xs:documentation>Schema XML de validação do evento Carta de Correção</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 </xs:schema>
