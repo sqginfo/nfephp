@@ -17,19 +17,6 @@
             "homepage": "https://github.com/nfephp-org/nfephp/graphs/contributors"
         }
     ],
-    "repositories": [
-        {
-            "type":"package",
-            "package": {
-              "name": "sqginfo/html2text",
-              "version":"0.3.4.1",
-              "dist": {
-                  "url": "https://github.com/sqginfo/html2text/archive/0.3.4.1.zip",
-                  "type": "zip"
-                }
-            }
-        },
-    ],
     "require": {
         "php": ">=5.5.0",
         "ext-dom": "*",
