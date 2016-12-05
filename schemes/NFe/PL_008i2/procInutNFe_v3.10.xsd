@@ -3,7 +3,7 @@
 	<xs:include schemaLocation="leiauteInutNFe_v3.10.xsd"/>
 	<xs:element name="ProcInutNFe" type="TProcInutNFe">
 		<xs:annotation>
-			<xs:documentation>Pedido de inutilização de númeração de  NF-e processado</xs:documentation>
+			<xs:documentation>Pedido de inutilizaÃ§Ã£o de nÃºmeraÃ§Ã£o de  NF-e processado</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 </xs:schema>
