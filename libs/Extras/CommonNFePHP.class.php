@@ -335,7 +335,7 @@ class CommonNFePHP
             //remover espaços desnecessários
             $text = trim($text);
             //converter o charset para o fpdf
-            $text = utf8_decode($text);
+            //$text = utf8_decode($text);
         } else {
             $text = (string) $text;
         }
@@ -471,7 +471,7 @@ class CommonNFePHP
             //remover espaços desnecessários
             $text = trim($text);
             //converter o charset para o fpdf
-            $text = utf8_decode($text);
+            //$text = utf8_decode($text);
         } else {
             $text = (string) $text;
         }
