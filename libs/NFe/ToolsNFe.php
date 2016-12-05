@@ -230,7 +230,7 @@ class ToolsNFe extends BaseTools
         $mail = new MailNFe($this->aMailConf);
         // Se não for informado o caminho do PDF, monta um através do XML
         if ($comPdf && $this->modelo == '55' && $pathPdf == '') {
-            $docxml = Files\FilesFolders::readFile($pathXml);
+                $docxml = Files\FilesFolders::readFile($pathXml);
             $danfe = new Extras\Danfe($docxml, 'P', 'A4', $this->aDocFormat['pathLogoFile'], 'I', '');
             $id = $danfe->montaDANFE();
             $pathPdf = $this->aConfig['pathNFeFiles']
@@ -466,7 +466,13 @@ class ToolsNFe extends BaseTools
         //carrega o cancelamento
         //pode ser um evento ou resultado de uma consulta com multiplos eventos
         $doccanc = new Dom();
-        $doccanc->loadXMLFile($pathCancfile);
+        if (file_exists($pathCancfile)) {
+            //carrega o XML pelo caminho do arquivo informado
+            $doccanc->loadXMLFile($pathCancfile);
+        } else {
+            //carrega o XML pelo conteúdo
+            $doccanc->loadXMLString($pathCancfile);
+        }
         $retEvento = $doccanc->getElementsByTagName('retEvento')->item(0);
         $eventos = $retEvento->getElementsByTagName('infEvento');
         foreach ($eventos as $evento) {
