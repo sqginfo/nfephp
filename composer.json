@@ -23,10 +23,9 @@
             "package": {
               "name": "sqginfo/html2text",
               "version":"0.3.4.1",
-              "source": {
-                  "url": "https://github.com/sqginfo/html2text.git",
-                  "type": "git",
-                  "reference":"0.3.4.1"
+              "dist": {
+                  "url": "https://github.com/sqginfo/html2text/archive/0.3.4.1.zip",
+                  "type": "zip"
                 }
             }
         },
