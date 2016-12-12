@@ -12,7 +12,7 @@ $aResposta = array();
 $nSerie = 1;
 $nIni = 8;
 $nFin = 8;
-$xJust = 'teste de inutilizaÃ§Ã£o de notas fiscais em homologacao';
+$xJust = 'teste de inutilização de notas fiscais em homologacao';
 $tpAmb = '2';
 $xml = $nfe->sefazInutiliza($nSerie, $nIni, $nFin, $xJust, $tpAmb, $aResposta);
 echo '<br><br><PRE>';

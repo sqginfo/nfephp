@@ -17,8 +17,8 @@ class DateTime
 {
     /**
      * tzdBR
-     * Para esta fun√ß√£o funcionar corretamente √© importante
-     * que os pacotes referentes ao Horario de ver√£o estejam
+     * Para esta funÁ„o funcionar corretamente È importante
+     * que os pacotes referentes ao Horario de ver„o estejam
      * atualizados instalados e ativos no sistema operacional
      *
      * @param  string $siglaUF
@@ -68,17 +68,17 @@ class DateTime
     
     /**
      * convertSefazTimeToTimestamp
-     * Converte a imforma√ß√£o de data e tempo contida na NFe
+     * Converte a imformaÁ„o de data e tempo contida na NFe
      *
-     * @param  string $DH Informa√ß√£o de data e tempo extraida da NFe
-     * @return timestamp UNIX Para uso com a fun√ßao date do php
+     * @param  string $DH InformaÁ„o de data e tempo extraida da NFe
+     * @return timestamp UNIX Para uso com a funÁao date do php
      */
     public static function convertSefazTimeToTimestamp($dataHora = '')
     {
         if ($dataHora == '') {
             return '';
         }
-        //inserido devido a casos de m√° forma√ß√£o do xml com
+        //inserido devido a casos de m· formaÁ„o do xml com
         //TZD +00:00 por exemplo
         $dataHora = str_replace('+', '-', $dataHora);
         $aDH = explode('T', $dataHora);

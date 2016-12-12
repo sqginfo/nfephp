@@ -3,22 +3,22 @@
 namespace NFePHP\install;
 
 /**
- * Este arquivo √© parte do projeto NFePHP - Nota Fiscal eletr√¥nica em PHP.
+ * Este arquivo È parte do projeto NFePHP - Nota Fiscal eletrÙnica em PHP.
  *
- * Este programa √© um software livre: voc√™ pode redistribuir e/ou modific√°-lo
- * sob os termos da Licen√ßa P√∫blica Geral GNU (GPL)como √© publicada pela Funda√ß√£o
- * para o Software Livre, na vers√£o 3 da licen√ßa, ou qualquer vers√£o posterior
+ * Este programa È um software livre: vocÍ pode redistribuir e/ou modific·-lo
+ * sob os termos da LicenÁa P˙blica Geral GNU (GPL)como È publicada pela FundaÁ„o
+ * para o Software Livre, na vers„o 3 da licenÁa, ou qualquer vers„o posterior
  * e/ou
- * sob os termos da Licen√ßa P√∫blica Geral Menor GNU (LGPL) como √© publicada pela Funda√ß√£o
- * para o Software Livre, na vers√£o 3 da licen√ßa, ou qualquer vers√£o posterior.
+ * sob os termos da LicenÁa P˙blica Geral Menor GNU (LGPL) como È publicada pela FundaÁ„o
+ * para o Software Livre, na vers„o 3 da licenÁa, ou qualquer vers„o posterior.
  *
- * Este programa √© distribu√≠do na esperan√ßa que ser√° √∫til, mas SEM NENHUMA
- * GARANTIA; nem mesmo a garantia expl√≠cita definida por qualquer VALOR COMERCIAL
- * ou de ADEQUA√á√ÉO PARA UM PROP√ìSITO EM PARTICULAR,
- * veja a Licen√ßa P√∫blica Geral GNU para mais detalhes.
+ * Este programa È distribuÌdo na esperanÁa que ser· ˙til, mas SEM NENHUMA
+ * GARANTIA; nem mesmo a garantia explÌcita definida por qualquer VALOR COMERCIAL
+ * ou de ADEQUA«√O PARA UM PROP”SITO EM PARTICULAR,
+ * veja a LicenÁa P˙blica Geral GNU para mais detalhes.
  *
- * Voc√™ deve ter recebido uma c√≥pia da Licen√ßa Publica GNU e da
- * Licen√ßa P√∫blica Geral Menor GNU (LGPL) junto com este programa.
+ * VocÍ deve ter recebido uma cÛpia da LicenÁa Publica GNU e da
+ * LicenÁa P˙blica Geral Menor GNU (LGPL) junto com este programa.
  *
  * @package   NFePHP
  * @name      index.php
@@ -46,7 +46,7 @@ use NFePHP\Common\Files\FilesFolders;
 
 $htmod = Configure::chkModules();
 
-//variaveis da configura√ß√£o
+//variaveis da configuraÁ„o
 $tpAmb = 2;
 $pathXmlUrlFileNFe = 'nfe_ws3_mod55.xml';
 $pathXmlUrlFileCTe = 'cte_ws2.xml';
@@ -249,11 +249,11 @@ $selUF .= "</select>";
 
 $selAmb = "<select id=\"tpAmb\" name=\"tpAmb\" size=\"1\">";
 if ($tpAmb == 1) {
-    $selAmb .= "<option value=\"1\" selected>Produ√ß√£o</option>";
-    $selAmb .= "<option value=\"2\">Homologa√ß√£o</option>";
+    $selAmb .= "<option value=\"1\" selected>ProduÁ„o</option>";
+    $selAmb .= "<option value=\"2\">HomologaÁ„o</option>";
 } else {
-    $selAmb .= "<option value=\"1\">Produ√ß√£o</option>";
-    $selAmb .= "<option value=\"2\" selected>Homologa√ß√£o</option>";
+    $selAmb .= "<option value=\"1\">ProduÁ„o</option>";
+    $selAmb .= "<option value=\"2\" selected>HomologaÁ„o</option>";
 }
 $selAmb .= "</select>";
 
@@ -269,10 +269,10 @@ $selDocFormat .= "</select>";
 
 $selDocSouthpaw = "<select id=\"southpaw\" name=\"southpaw\" size=\"1\">";
 if ($southpaw) {
-    $selDocSouthpaw .= "<option value=\"0\">N√ÉO</option>";
+    $selDocSouthpaw .= "<option value=\"0\">N√O</option>";
     $selDocSouthpaw .= "<option value=\"1\" SELECTED>SIM</option>";
 } else {
-    $selDocSouthpaw .= "<option value=\"0\" SELECTED>N√ÉO</option>";
+    $selDocSouthpaw .= "<option value=\"0\" SELECTED>N√O</option>";
     $selDocSouthpaw .= "<option value=\"1\">SIM</option>";
 }
 $selDocSouthpaw .= "</select>";
@@ -295,10 +295,10 @@ $selLogoPosition .= "</select>";
 
 $selMailAuth = "<select id=\"mailAuth\" name=\"mailAuth\" size=\"1\">";
 if ($mailAuth) {
-    $selMailAuth .= "<option value=\"0\" >N√ÉO</option>";
+    $selMailAuth .= "<option value=\"0\" >N√O</option>";
     $selMailAuth .= "<option value=\"1\" SELECTED>SIM</option>";
 } else {
-    $selMailAuth .= "<option value=\"0\" SELECTED>N√ÉO</option>";
+    $selMailAuth .= "<option value=\"0\" SELECTED>N√O</option>";
     $selMailAuth .= "<option value=\"1\">SIM</option>";
 }
 $selMailAuth .= "</select>";
@@ -407,16 +407,16 @@ function changeAlerts(key, flag, msg) {
 </head>
 <body>
     <div id="content">
-        <h1>Configurador do Ambiente NFePHP (vers√£o <?php echo $configureVer?>)</h1>    
+        <h1>Configurador do Ambiente NFePHP (vers„o <?php echo $configureVer?>)</h1>    
     </div>    
 <div id="content">
 <form id="formconf" name="formconf" method="post" action="saveconfig.php">    
 <div id="tabs">
   <ul>
-    <li><a href="#tabs-1">M√≥dulos</a></li>
+    <li><a href="#tabs-1">MÛdulos</a></li>
     <li><a href="#tabs-2">Emitente</a></li>
     <li><a href="#tabs-3">Pastas</a></li>
-    <li><a href="#tabs-4">Impress√£o</a></li>
+    <li><a href="#tabs-4">Impress„o</a></li>
     <li><a href="#tabs-5">Webservices</a></li>
     <li><a href="#tabs-6">Schemas</a></li>
     <li><a href="#tabs-7">Email</a></li>
@@ -424,130 +424,130 @@ function changeAlerts(key, flag, msg) {
     <li><a href="#tabs-9">Finalizar</a></li>
   </ul>
   <div id="tabs-1">
-    <h2 align="right">Verifica√ß√£o dos M√≥dulos</h2>
+    <h2 align="right">VerificaÁ„o dos MÛdulos</h2>
     <div id="esquerda">
     <?php echo $htmod;?>
     </div>
     <div id="direita">
-        <h3>O uso do NFePHP requer v√°rios modulos do PHP para que possa funcionar. Ou seja podem haver problemas no uso da API dependendo do Sistema Operacional e da atualiza√ß√£o de cada um dos m√≥dulos requeridos.</h3>
-        <h3>Alguns problemas conhecidos se referem ao cURL que √© usado para a comunica√ß√£o SOAP, dependendo do S.O. o mesmo pode estar compilado para usar NSS ao inv√©s do OpenSSL que √© o padr√£o. E o NSS tem alguns problemas com o formato PKCS#8 das chaves privadas exportadas pelo PHP.</h3>
-        <h3>Outro problema conhecido diz respeito a vers√£o do PHP e tamb√©m ao cURL. Em alguns casos o PHP n√£o reconhece de forma autom√°tica qual √© o protocolo de encripata√ß√£o da conex√£o (SSLv3, TLSv1, TLSv1.1, etc..) e algumas SEFAZ est√£o usando v√°rios desses protocolos diferentes. Se o PHP n√£o puder reconhecer o protoclo de forma autonoma, ser√° necess√°rio usar os recursos da API para for√ßar o uso do protocolo correto, caso a caso.</h3>
-        <h3>Portanto √© recomend√°vel que seja usado o S.O. mais atualizado poss√≠vel. Testes foram feitos usando DEBIAN (wheezy e Jessie) e UBUNTU 14.04 LTS em ambos os casos a API funcionou perfeitamente, e usando apenas os pacotes da distribui√ß√£o sem a necessidade de baixar pacotes de outras fontes ou compila-los de fonte mais atualizada.</h3>
+        <h3>O uso do NFePHP requer v·rios modulos do PHP para que possa funcionar. Ou seja podem haver problemas no uso da API dependendo do Sistema Operacional e da atualizaÁ„o de cada um dos mÛdulos requeridos.</h3>
+        <h3>Alguns problemas conhecidos se referem ao cURL que È usado para a comunicaÁ„o SOAP, dependendo do S.O. o mesmo pode estar compilado para usar NSS ao invÈs do OpenSSL que È o padr„o. E o NSS tem alguns problemas com o formato PKCS#8 das chaves privadas exportadas pelo PHP.</h3>
+        <h3>Outro problema conhecido diz respeito a vers„o do PHP e tambÈm ao cURL. Em alguns casos o PHP n„o reconhece de forma autom·tica qual È o protocolo de encripataÁ„o da conex„o (SSLv3, TLSv1, TLSv1.1, etc..) e algumas SEFAZ est„o usando v·rios desses protocolos diferentes. Se o PHP n„o puder reconhecer o protoclo de forma autonoma, ser· necess·rio usar os recursos da API para forÁar o uso do protocolo correto, caso a caso.</h3>
+        <h3>Portanto È recomend·vel que seja usado o S.O. mais atualizado possÌvel. Testes foram feitos usando DEBIAN (wheezy e Jessie) e UBUNTU 14.04 LTS em ambos os casos a API funcionou perfeitamente, e usando apenas os pacotes da distribuiÁ„o sem a necessidade de baixar pacotes de outras fontes ou compila-los de fonte mais atualizada.</h3>
         <p></p>
-        <h3>Outros modulos podem ser necess√°rios em fun√ß√£o dos pacotes usados e instalados via Composer (vide composer.json)</h3>
+        <h3>Outros modulos podem ser necess·rios em funÁ„o dos pacotes usados e instalados via Composer (vide composer.json)</h3>
     </div>
     <div class="clear"> </div>
   </div>
   <div id="tabs-2">
     <h2 align="right">Cadastro do Emitente</h2>
     <div id="esquerda">
-    <span title="Indique o ambiente padr√£o (1-Produ√ß√£o ou 2-Homologa√ß√£o)">Ambiente</span><br>
+    <span title="Indique o ambiente padr„o (1-ProduÁ„o ou 2-HomologaÁ„o)">Ambiente</span><br>
     <?php echo $selAmb;?><br>
-    <span title="Indique a Raz√£o Social Completa do Emitente">Raz√£o Social do Emitente</span><br>
+    <span title="Indique a Raz„o Social Completa do Emitente">Raz„o Social do Emitente</span><br>
     <input type="text" id="razaosocial" name="razaosocial" placeholder="Nome completo do emitente" maxlength="60" value="<?php echo $razaosocial;?>" required /><br>
     <span title="Indique o Nome Fantasia Completo do Emitente">Nome Fantasia</span><br>
     <input type="text" id="nomefantasia" name="nomefantasia" placeholder="Nome fantasia do emitente" maxlength="60" value="<?php echo $nomefantasia;?>" required /><br>
-    <span title="Indique o CNPJ do emitente SEM FORMATA√á√ÉO">CNPJ do Emitente</span><br>
-    <input type="text" id="cnpj" name="cnpj" placeholder="CNPJ sem formata√ß√£o" maxlength="14" value="<?php echo $cnpj;?>" required /><br>
-    <span title="Indique a Inscri√ß√£o Estadual do emitente SEM FORMATA√á√ÉO">IE do Emitente</span><br>
-    <input type="text" id="ie" name="ie" placeholder="IE sem formata√ß√£o ou o literal 'ISENTO'" maxlength="14" value="<?php echo $ie;?>" required /><br>
-    <span title="Indique a Inscri√ß√£o Municipal do emitente SEM FORMATA√á√ÉO">IM do Emitente</span><br>
-    <input type="text" id="im" name="im" placeholder="IM sem formata√ß√£o" maxlength="15" value="<?php echo $im;?>" /><br>
-    <span title="Indique a Inscri√ß√£o Estadual (Subst. Tribut√°rio)">IE (Subst. Tribut√°rio)</span><br>
-    <input type="text" id="iest" name="iest" placeholder="IE (Subst. Tribut√°rio)" maxlength="14" value="<?php echo $iest;?>"/><br>
-    <span title="Indique o C√≥digo Nacional de Atividade Econ√¥mica do emitente SEM FORMATA√á√ÉO">CNAE do Emitente</span><br>
-    <input type="text" id="cnae" name="cnae" placeholder="CNAE Principal sem formata√ß√£o" maxlength="7" value="<?php echo $cnae;?>" /><br>
-    <span title="Selecione o estado do Emitente">Unidade da Federa√ß√£o</span><br>
+    <span title="Indique o CNPJ do emitente SEM FORMATA«√O">CNPJ do Emitente</span><br>
+    <input type="text" id="cnpj" name="cnpj" placeholder="CNPJ sem formataÁ„o" maxlength="14" value="<?php echo $cnpj;?>" required /><br>
+    <span title="Indique a InscriÁ„o Estadual do emitente SEM FORMATA«√O">IE do Emitente</span><br>
+    <input type="text" id="ie" name="ie" placeholder="IE sem formataÁ„o ou o literal 'ISENTO'" maxlength="14" value="<?php echo $ie;?>" required /><br>
+    <span title="Indique a InscriÁ„o Municipal do emitente SEM FORMATA«√O">IM do Emitente</span><br>
+    <input type="text" id="im" name="im" placeholder="IM sem formataÁ„o" maxlength="15" value="<?php echo $im;?>" /><br>
+    <span title="Indique a InscriÁ„o Estadual (Subst. Tribut·rio)">IE (Subst. Tribut·rio)</span><br>
+    <input type="text" id="iest" name="iest" placeholder="IE (Subst. Tribut·rio)" maxlength="14" value="<?php echo $iest;?>"/><br>
+    <span title="Indique o CÛdigo Nacional de Atividade EconÙmica do emitente SEM FORMATA«√O">CNAE do Emitente</span><br>
+    <input type="text" id="cnae" name="cnae" placeholder="CNAE Principal sem formataÁ„o" maxlength="7" value="<?php echo $cnae;?>" /><br>
+    <span title="Selecione o estado do Emitente">Unidade da FederaÁ„o</span><br>
     <?php echo $selUF;?><br>
-    <span title="Indique o Regime Tribut√°rio (1-Simples Nacional;2-Simples Nacional, excesso sublimite de receita bruta;3-Regime Normal.)">Regime Tribut√°rio</span><br>
+    <span title="Indique o Regime Tribut·rio (1-Simples Nacional;2-Simples Nacional, excesso sublimite de receita bruta;3-Regime Normal.)">Regime Tribut·rio</span><br>
     <?php echo $selRegime;?><br>
-    <span title="Indique o path real para a pasta dos certificados. Esta pasta deve ter permiss√µes de escrita pelo usu√°rio do servidor web. Ex. www-data">Path dos Certificados</span><br>
+    <span title="Indique o path real para a pasta dos certificados. Esta pasta deve ter permissıes de escrita pelo usu·rio do servidor web. Ex. www-data">Path dos Certificados</span><br>
     <input type="text" id="pathCertsFiles" name="pathCertsFiles" placeholder="Caminho para a pasta"  value="<?php echo $pathCertsFiles;?>" required /><label id="lblCerts"></label><br>
     <span title="Indique o nome do certificado que foi salvo na pasta dos certificados">Nome do arquivo pfx (Certificado)</span><br>
     <input type="text" id="certPfxName" name="certPfxName" placeholder="Nome do arquivo PFX"  value="<?php echo $certPfxName;?>" required /><br>
-    <span title="Indique a senha configurada quando voc√™ criou o certificado">Senha do Certificado</span><br>
+    <span title="Indique a senha configurada quando vocÍ criou o certificado">Senha do Certificado</span><br>
     <input type="password" id="certPassword" name="certPassword" placeholder="senha" size="10" value="<?php echo $certPassword;?>" required /><button value="certtest" type="submit">Testar</button><br>
-    <span title="Indique a palavra passe que voc√™ quer usar para encriptar os arquivos PEM do certificado">Palavra Passe</span><br>
-    <input type="password" id="certPhrase" name="certPhrase" placeholder="n√£o usado" size="35" value="<?php echo $certPhrase;?>" readonly /><br>
-    <span title="Indique o endere√ßo para acessar a base do seu sistema">URL do Site</span><br>
+    <span title="Indique a palavra passe que vocÍ quer usar para encriptar os arquivos PEM do certificado">Palavra Passe</span><br>
+    <input type="password" id="certPhrase" name="certPhrase" placeholder="n„o usado" size="35" value="<?php echo $certPhrase;?>" readonly /><br>
+    <span title="Indique o endereÁo para acessar a base do seu sistema">URL do Site</span><br>
     <input type="text" id="siteUrl" name="siteUrl" placeholder="Site url"  value="<?php echo $siteUrl;?>" required /><br>
-    <span title="Indique o token para pesquisa no IBPT, requer cadastramento pr√©vio">Token IBPT</span><br>
+    <span title="Indique o token para pesquisa no IBPT, requer cadastramento prÈvio">Token IBPT</span><br>
     <input type="text" id="tokenIBPT" name="tokenIBPT" placeholder="token para IBPT"  value="<?php echo $tokenIBPT;?>" /><br>
-    <span title="Indique o C√≥digo de Seguran√ßa do Contribuinte (antigo Token) para montagem do QRCode nas NFCe, requer cadastramento pr√©vio na SEFAZ">CSC - C√≥digo de Seguran√ßa do Contribuinte (antigo Token)</span><br>
-    <input type="text" id="tokenNFCe" name="tokenNFCe" placeholder="C√≥digo de Seguran√ßa do Contribuinte (antigo Token) para NFCe"  value="<?php echo $tokenNFCe;?>" /><br>
-    <span title="Indique o Identificador do CSC ‚Äì C√≥digo de Seguran√ßa do Contribuinte no Banco de Dados da SEFAZ para NFCe, 6 digitos numericos com zeros a esquerda">Identificador do CSC NFCe</span><br>
-    <input type="text" id="tokenNFCeId" name="tokenNFCeId" placeholder="Identificador do CSC, necess√°rio para validar o CSC." size="8" value="<?php echo $tokenNFCeId;?>" /><br>
+    <span title="Indique o CÛdigo de SeguranÁa do Contribuinte (antigo Token) para montagem do QRCode nas NFCe, requer cadastramento prÈvio na SEFAZ">CSC - CÛdigo de SeguranÁa do Contribuinte (antigo Token)</span><br>
+    <input type="text" id="tokenNFCe" name="tokenNFCe" placeholder="CÛdigo de SeguranÁa do Contribuinte (antigo Token) para NFCe"  value="<?php echo $tokenNFCe;?>" /><br>
+    <span title="Indique o Identificador do CSC - CÛdigo de SeguranÁa do Contribuinte no Banco de Dados da SEFAZ para NFCe, 6 digitos numericos com zeros a esquerda">Identificador do CSC NFCe</span><br>
+    <input type="text" id="tokenNFCeId" name="tokenNFCeId" placeholder="Identificador do CSC, necess·rio para validar o CSC." size="8" value="<?php echo $tokenNFCeId;?>" /><br>
     </div>
     <div id="direita">
-        <h3>Estes campos referen-se a os dados principais do emitente e todos os campos em amarelo s√£o OBRIGAT√ìRIOS.</h3>
-        <h3>Raz√£o Social - indicar a Raz√£o Social do emitente exatamente igual ao seu registro na SEFAZ, alguns simbolos poder√£o ser substituidos por seus equivalentes em entidades html (ex. &amp;)</h3>
-        <h3>Nome Fantasia - indicar o Nome Fantasia do emitente exatamente igual ao seu registro na SEFAZ, alguns simbolos poder√£o ser substituidos por seus equivalentes em entidades html (ex. &amp;)</h3>
-        <h3>Inscri√ß√£o Estadual - indicar o n√∫mero de <u>Cadastrado de Contribuintes do ICMS</u>, pode ser informado o literal ‚ÄúISENTO‚Äù para os contribuintes do ICMS isentos de inscri√ß√£o no Cadastro de Contribuintes de ICMS.</h3>
-        <h3>Inscri√ß√£o Municipal - inidicar o n√∫mero de <u>Cadastro de Contribuintes do ISSQN</u>, necess√°rio para emiss√£o de NF-e conjugada, com itens de produtos sujeitos ao ICMS e itens de servi√ßos sujeitos ao ISSQN.</h3>
-        <h3>Inscri√ß√£o Estadual do Substituto Tribut√°rio - indicar o n√∫mero de <u>Cadastrado de Contribuintes do ICMS</u> do estado de Destino (Substituto), para quem pretender efetuar vendas interestaduais de mercadorias sujeitas √† substitui√ß√£o tribut√°ria.</h3>
-        <h3>Regime Tribut√°rio - selecione a op√ß√£o de regime tribut√°rio em que o emissor atua (MEI - Microempreendedor Individual atua no regime 'Simples Nacional').</h3>
-        <h3>CNAE - indicar o <u>C√≥digo Nacional de Atividade Econ√¥mica</u> principal do emitente, necess√°rio quando a Inscri√ß√£o Municipal for informada.</h3>
-        <h3>CSC - <u>C√≥digo de Seguran√ßa do Contribuinte</u>, √© obrigat√≥rio informar para quem deseja emitir NFC-e, √© fornecido pelas SEFAZ (ou pode ser gerado atrav√©s da API se sua SEFAZ possui o servi√ßo por WebService).</h3>
+        <h3>Estes campos referen-se a os dados principais do emitente e todos os campos em amarelo s„o OBRIGAT”RIOS.</h3>
+        <h3>Raz„o Social - indicar a Raz„o Social do emitente exatamente igual ao seu registro na SEFAZ, alguns simbolos poder„o ser substituidos por seus equivalentes em entidades html (ex. &amp;)</h3>
+        <h3>Nome Fantasia - indicar o Nome Fantasia do emitente exatamente igual ao seu registro na SEFAZ, alguns simbolos poder„o ser substituidos por seus equivalentes em entidades html (ex. &amp;)</h3>
+        <h3>InscriÁ„o Estadual - indicar o n˙mero de <u>Cadastrado de Contribuintes do ICMS</u>, pode ser informado o literal "ISENTO" para os contribuintes do ICMS isentos de inscriÁ„o no Cadastro de Contribuintes de ICMS.</h3>
+        <h3>InscriÁ„o Municipal - inidicar o n˙mero de <u>Cadastro de Contribuintes do ISSQN</u>, necess·rio para emiss„o de NF-e conjugada, com itens de produtos sujeitos ao ICMS e itens de serviÁos sujeitos ao ISSQN.</h3>
+        <h3>InscriÁ„o Estadual do Substituto Tribut·rio - indicar o n˙mero de <u>Cadastrado de Contribuintes do ICMS</u> do estado de Destino (Substituto), para quem pretender efetuar vendas interestaduais de mercadorias sujeitas ‡ substituiÁ„o tribut·ria.</h3>
+        <h3>Regime Tribut·rio - selecione a opÁ„o de regime tribut·rio em que o emissor atua (MEI - Microempreendedor Individual atua no regime 'Simples Nacional').</h3>
+        <h3>CNAE - indicar o <u>CÛdigo Nacional de Atividade EconÙmica</u> principal do emitente, necess·rio quando a InscriÁ„o Municipal for informada.</h3>
+        <h3>CSC - <u>CÛdigo de SeguranÁa do Contribuinte</u>, È obrigatÛrio informar para quem deseja emitir NFC-e, È fornecido pelas SEFAZ (ou pode ser gerado atravÈs da API se sua SEFAZ possui o serviÁo por WebService).</h3>
         <h3></h3>
-        <h3>Dica: Utilize o site da Receita Federal para verificar os dados cadastrais do CNPJ, <a href="http://www.receita.fazenda.gov.br/PessoaJuridica/CNPJ/cnpjreva/Cnpjreva_Solicitacao.asp" title="Emiss√£o de Comprovante de Inscri√ß√£o e de Situa√ß√£o Cadastral - Receita Federal" target="_blank">clique aqui</a>.</h3>
+        <h3>Dica: Utilize o site da Receita Federal para verificar os dados cadastrais do CNPJ, <a href="http://www.receita.fazenda.gov.br/PessoaJuridica/CNPJ/cnpjreva/Cnpjreva_Solicitacao.asp" title="Emiss„o de Comprovante de InscriÁ„o e de SituaÁ„o Cadastral - Receita Federal" target="_blank">clique aqui</a>.</h3>
     </div>
     <div class="clear"> </div>
   </div>
   <div id="tabs-3">
     <h2 align="right">Estrutura de Pastas (Files)</h2>
     <div id="esquerda">
-    <span title="Indique o path completo para a pasta onde ficar√£o das NFe. Essa pasta dever√° ser criada manualmente e ter permiss√µes de escrita pelo usu√°rio do servidor web.">Pasta das NFe</span><br>
+    <span title="Indique o path completo para a pasta onde ficar„o das NFe. Essa pasta dever· ser criada manualmente e ter permissıes de escrita pelo usu·rio do servidor web.">Pasta das NFe</span><br>
     <input type="text" id="pathNFeFiles" name="pathNFeFiles" placeholder="Pasta das NFe"  value="<?php echo $pathNFeFiles;?>" required /><label id="lblNFe"></label><br>
-    <span title="Indique o path completo para a pasta onde ficar√£o das CTe. Essa pasta dever√° ser criada manualmente e ter permiss√µes de escrita pelo usu√°rio do servidor web.">Pasta das CTe</span><br>
+    <span title="Indique o path completo para a pasta onde ficar„o das CTe. Essa pasta dever· ser criada manualmente e ter permissıes de escrita pelo usu·rio do servidor web.">Pasta das CTe</span><br>
     <input type="text" id="pathCTeFiles" name="pathCTeFiles" placeholder="Pasta das CTe"  value="<?php echo $pathCTeFiles;?>" required /><label id="lblCTe"></label><br>
-    <span title="Indique o path completo para a pasta onde ficar√£o das MDFe. Essa pasta dever√° ser criada manualmente e ter permiss√µes de escrita pelo usu√°rio do servidor web.">Pasts das MDFe</span><br>
+    <span title="Indique o path completo para a pasta onde ficar„o das MDFe. Essa pasta dever· ser criada manualmente e ter permissıes de escrita pelo usu·rio do servidor web.">Pasts das MDFe</span><br>
     <input type="text" id="pathMDFeFiles" name="pathMDFeFiles" placeholder="Pasta das MDFe"  value="<?php echo $pathMDFeFiles;?>" required /><label id="lblMDFe"></label><br>
-    <span title="Indique o path completo para a pasta onde ficar√£o das CLe. Essa pasta dever√° ser criada manualmente e ter permiss√µes de escrita pelo usu√°rio do servidor web.">Pasta das CLe</span><br>
+    <span title="Indique o path completo para a pasta onde ficar„o das CLe. Essa pasta dever· ser criada manualmente e ter permissıes de escrita pelo usu·rio do servidor web.">Pasta das CLe</span><br>
     <input type="text" id="pathCLeFiles" name="pathCLeFiles" placeholder="Pasta das CLe"  value="<?php echo $pathCLeFiles;?>" required /><label id="lblCLe"></label><br>
-    <span title="Indique o path completo para a pasta onde ficar√£o das NFSe. Essa pasta dever√° ser criada manualmente e ter permiss√µes de escrita pelo usu√°rio do servidor web.">Pasta das NFSe</span><br>
+    <span title="Indique o path completo para a pasta onde ficar„o das NFSe. Essa pasta dever· ser criada manualmente e ter permissıes de escrita pelo usu·rio do servidor web.">Pasta das NFSe</span><br>
     <input type="text" id="pathNFSeFiles" name="pathNFSeFiles" placeholder="Pasta das NFSe"  value="<?php echo $pathNFSeFiles;?>" required /><label id="lblNFSe"></label><br>
-    <p>Teste de Escrita e Estrutura√ß√£o das pastas. Este teste ir√° verificar as permiss√µes de escrita e criar√° toda a estrutura necess√°ria nas pastas indicadas</p>
+    <p>Teste de Escrita e EstruturaÁ„o das pastas. Este teste ir· verificar as permissıes de escrita e criar· toda a estrutura necess·ria nas pastas indicadas</p>
     <button value="test" type="submit">Testar</button>
     </div>
     <div id="direita">
-        <h3>A estrutura de pastas √© onde os arquivos xml s√£o salvos, sejam NFe, NFCe, CTe, MDFe, CLe, ou NFSe, bem como todos os arquivos xml relatvos as mensagens da comunica√ßao SOAP, tanto as enviadas como as recebidas. Tanto para ambiente de produ√ß√£o como de homologa√ß√£o.</h3>
-        <h3>As pastas indicadas devem ser criadas manualmente anteriormente e com permiss√µes pr√©-configuradas para permitir o acesso de escrita por parte do usu√°rio do servidor web.</h3>
+        <h3>A estrutura de pastas È onde os arquivos xml s„o salvos, sejam NFe, NFCe, CTe, MDFe, CLe, ou NFSe, bem como todos os arquivos xml relatvos as mensagens da comunicaÁao SOAP, tanto as enviadas como as recebidas. Tanto para ambiente de produÁ„o como de homologaÁ„o.</h3>
+        <h3>As pastas indicadas devem ser criadas manualmente anteriormente e com permissıes prÈ-configuradas para permitir o acesso de escrita por parte do usu·rio do servidor web.</h3>
         <h3>Cada pasta desta estrutura tem uma finalidade e podem ou nao estar sendo utilizadas. Em geral sao utilizadas as pastas:</h3>
         <h3>enviadas/aprovadas - XML de documentos aprovados pela SEFAZ (esses arquivos devem ser mantidos por pelo menos 5 anos)</h3>
         <h3>enviadas/denegadas - XML de documentos DENEGADOS pela SEFAZ (esses arquivos devem ser mantidos por pelo menos 5 anos)</h3>
         <h3>recebidas - XML dos documentos recebidos de terceiros (esses arquivos devem ser mantidos por pelo menos 5 anos)</h3>
-        <h3>temporarias - XML da comunica√ß√£o, tanto mensagens enviadas como recebidas.</h3>
-        <p><i>NOTA: A pasta das temporarias √© sem duvida a mais carregada de todas e com certeza ir√° requerer limpezas peri√≥dicas.</i></p>
+        <h3>temporarias - XML da comunicaÁ„o, tanto mensagens enviadas como recebidas.</h3>
+        <p><i>NOTA: A pasta das temporarias È sem duvida a mais carregada de todas e com certeza ir· requerer limpezas periÛdicas.</i></p>
     </div>
     <div class="clear"> </div>
   </div>
   <div id="tabs-4">
-    <h2 align="right">Configura√ß√µes para Impress√£o</h2>
+    <h2 align="right">ConfiguraÁıes para Impress„o</h2>
     <div id="esquerda">
-    <span title="">Formato Padr√£o na impress√£o</span><br>
+    <span title="">Formato Padr„o na impress„o</span><br>
     <?php echo $selDocFormat ?><br>
     <span title="">Tamanho do Papel (A4 apenas)</span><br>
     <input type="text" id="paper" name="paper" size="4" value="<?php echo $paper;?>" readonly /><br>
     <span title="">Imprimir o Canhoto</span><br>
     <?php echo $selDocSouthpaw ?><br>
-    <span title="">Posi√ß√£o do Logo</span><br>
+    <span title="">PosiÁ„o do Logo</span><br>
     <?php echo $selLogoPosition ?><br>
-    <span title="A fonte a ser usada √© obrigatoriamente TIMES. Exig√™ncia da SEFAZ.">Fonte</span><br>
+    <span title="A fonte a ser usada È obrigatoriamente TIMES. ExigÍncia da SEFAZ.">Fonte</span><br>
     <input type="text" id="font" name="font" size="10" value="<?php echo $font;?>" readonly /><br>
-    <span title="Normalmente n√£o usado mas teria que complementar o script para permitir a impress√£o direta. Pois esse recurso depende do sistema operacional.">Impressora</span><br>
+    <span title="Normalmente n„o usado mas teria que complementar o script para permitir a impress„o direta. Pois esse recurso depende do sistema operacional.">Impressora</span><br>
     <input type="text" id="printer" name="printer" placeholder="Nome da Impressora" size="30" value="<?php echo $printer;?>" /><br>
-    <span title="Imagem com a logomarca, dever√° ser um aquivo JPEG ou PNG">Logo (80x80px ou 160x50px jpg, gif ou png)</span><br>
+    <span title="Imagem com a logomarca, dever· ser um aquivo JPEG ou PNG">Logo (80x80px ou 160x50px jpg, gif ou png)</span><br>
     <input type="text" id="pathLogoFile" name="pathLogoFile" placeholder="Path completo para o arquivo com o logo" value="<?php echo $pathLogoFile;?>" />
     <input type="hidden" name="pathLogoNFe" value="<?php echo $pathLogoNFe;?>" readonly />
     <input type="hidden" name="pathLogoNFCe" value="<?php echo $pathLogoNFCe;?>" readonly />
     <br>
     </div>
     <div id="direita">
-        <h3>Para a impress√£o dos documentos auxiliares seja para NFe, CTe, MDFe ou CLe, est√° definido em documenta√ß√£o oficial o uso obrigat√≥rio de papel A4 e do tipo de letras "Times" (serifados), isso √© fixo e n√£o pode ser mudado.</h3>
-        <h3>O formato de impress√£o seja ele "Portraite" ou "Landscape" √© definido tamb√©m pelo campo &lt;tpImp&gt; do XML, portanto essa defini√ß√£o aqui estabelecida N√ÉO sobrep√µe a especifica√ß√£o contida no XML, e nem √© v√°lida para qualquer documento auxiliar.</h3>
-        <h3>A impress√£o de documentos auxiliares da NFC-e deve ser feita em impressoras comum (n√£o fiscal) t√©rmicas, laser ou deskjet de 80 colunas.</h3>
-        <h3>Por enquanto a API n√£o envia os dados direto para impressora, e por tanto a DANFCE s√≥ √© impressa em PDF ou HTML.</h3>
-        <h3>Caso n√£o seja informado uma imagem para logo, ser√° usado as imagens padr√£o para cada tipo de documento NF-e e NFC-e.</h3>
+        <h3>Para a impress„o dos documentos auxiliares seja para NFe, CTe, MDFe ou CLe, est· definido em documentaÁ„o oficial o uso obrigatÛrio de papel A4 e do tipo de letras "Times" (serifados), isso È fixo e n„o pode ser mudado.</h3>
+        <h3>O formato de impress„o seja ele "Portraite" ou "Landscape" È definido tambÈm pelo campo &lt;tpImp&gt; do XML, portanto essa definiÁ„o aqui estabelecida N√O sobrepıe a especificaÁ„o contida no XML, e nem È v·lida para qualquer documento auxiliar.</h3>
+        <h3>A impress„o de documentos auxiliares da NFC-e deve ser feita em impressoras comum (n„o fiscal) tÈrmicas, laser ou deskjet de 80 colunas.</h3>
+        <h3>Por enquanto a API n„o envia os dados direto para impressora, e por tanto a DANFCE sÛ È impressa em PDF ou HTML.</h3>
+        <h3>Caso n„o seja informado uma imagem para logo, ser· usado as imagens padr„o para cada tipo de documento NF-e e NFC-e.</h3>
     </div>
     <div class="clear"> </div>
 
@@ -555,19 +555,19 @@ function changeAlerts(key, flag, msg) {
   <div id="tabs-5">
     <h2 align="right">Webservices</h2>
     <div id="esquerda">
-    <span title="Arquivo de configura√ß√£o dos Webservices para NFe.">WebServices NFe</span><br>
+    <span title="Arquivo de configuraÁ„o dos Webservices para NFe.">WebServices NFe</span><br>
     <input type="text" id="pathXmlUrlFileNFe" name="pathXmlUrlFileNFe" placeholder="Path para nfe_ws3_mod55.xml" size="30" value="<?php echo $pathXmlUrlFileNFe;?>" required /><br>
-    <span title="Arquivo de configura√ß√£o dos Webservices para CTe.">WebServices CTe</span><br>
+    <span title="Arquivo de configuraÁ„o dos Webservices para CTe.">WebServices CTe</span><br>
     <input type="text" id="pathXmlUrlFileCTe" name="pathXmlUrlFileCTe" placeholder="Path para cte_ws1.xml" size="30" value="<?php echo $pathXmlUrlFileCTe;?>" required /><br>
-    <span title="Arquivo de configura√ß√£o dos Webservices para MDFe.">WebServices MDFe</span><br>
+    <span title="Arquivo de configuraÁ„o dos Webservices para MDFe.">WebServices MDFe</span><br>
     <input type="text" id="pathXmlUrlFileMDFe" name="pathXmlUrlFileMDFe" placeholder="Path para mdfe_ws1.xml" size="30" value="<?php echo $pathXmlUrlFileMDFe;?>" required /><br>
-    <span title="Arquivo de configura√ß√£o dos Webservices para CLe.">WebServices CLe</span><br>
+    <span title="Arquivo de configuraÁ„o dos Webservices para CLe.">WebServices CLe</span><br>
     <input type="text" id="pathXmlUrlFileCLe" name="pathXmlUrlFileCLe" placeholder="Path para cle_ws1.xml" size="30" value="<?php echo $pathXmlUrlFileCLe;?>" /><br>
-    <span title="Arquivo de configura√ß√£o dos Webservices para NFSe.">WebServices NFSe</span><br>
+    <span title="Arquivo de configuraÁ„o dos Webservices para NFSe.">WebServices NFSe</span><br>
     <input type="text" id="pathXmlUrlFileNFSe" name="pathXmlUrlFileNFSe" placeholder="Path para nfse_ws.xml" size="30" value="<?php echo $pathXmlUrlFileNFSe;?>" /><br>
     </div>
     <div id="direita">
-      <h3>Os endere√ßos dos webservices est√£o arquivados em arquivos xml na pasta config.</h3>
+      <h3>Os endereÁos dos webservices est„o arquivados em arquivos xml na pasta config.</h3>
     </div>
     <div class="clear"> </div>
   </div>
@@ -586,72 +586,72 @@ function changeAlerts(key, flag, msg) {
     <input type="text" id="schemesNFSe" name="schemesNFSe" placeholder="pasta dos arquivos xsd"  value="<?php echo $schemesNFSe;?>" /><br>
     </div>
     <div id="direita">
-        <h3>Os esquemas s√£o arquivos xml (termina√ß√£o xsd) que cont√™m as regras de formata√ß√£o para cada campo de um determinado xml.</h3>
+        <h3>Os esquemas s„o arquivos xml (terminaÁ„o xsd) que contÍm as regras de formataÁ„o para cada campo de um determinado xml.</h3>
     </div>
     <div class="clear"> </div>
 
   </div>
   <div id="tabs-7">
-    <h2 align="right">Configura√ß√µes de Email</h2>
+    <h2 align="right">ConfiguraÁıes de Email</h2>
     <div id="esquerda">
-    <span title="Indique se √© necess√°ria a autentica√ß√£o ">Autentica√ß√£o</span><br>
+    <span title="Indique se È necess·ria a autenticaÁ„o ">AutenticaÁ„o</span><br>
     <?php echo $selMailAuth;?><br>
-    <span title="Indique o endere√ßo de email que ser√° usado para envio dos documentos eletr√¥nicos. Ex. nfe@seudominio.com.br">Endere√ßo de E-mail</span><br>
-    <input type="text" id="mailUser" name="mailUser" placeholder="Nome do usu√°rio do e-mail" size="250" value="<?php echo $mailUser;?>" /><br>
-    <span title="Indique a senha de acesso da caixa postal do endere√ßo de e-mail">Senha de E-mail</span><br>
-    <input type="password" id="mailPass" name="mailPass" placeholder="Senha do usu√°rio" size="12" value="<?php echo $mailPass;?>" /><br>
+    <span title="Indique o endereÁo de email que ser· usado para envio dos documentos eletrÙnicos. Ex. nfe@seudominio.com.br">EndereÁo de E-mail</span><br>
+    <input type="text" id="mailUser" name="mailUser" placeholder="Nome do usu·rio do e-mail" size="250" value="<?php echo $mailUser;?>" /><br>
+    <span title="Indique a senha de acesso da caixa postal do endereÁo de e-mail">Senha de E-mail</span><br>
+    <input type="password" id="mailPass" name="mailPass" placeholder="Senha do usu·rio" size="12" value="<?php echo $mailPass;?>" /><br>
     <span title="Indique o URL do Servidor SMTP Ex. smtp.seudominio.com.br">SMTP Server</span><br>
     <input type="text" id="mailSmtp" name="mailSmtp" placeholder="Servidor SMTP" size="50" value="<?php echo $mailSmtp;?>" /><br>
     <span title="Indique ">From (E-mail)</span><br>
-    <input type="text" id="mailFromMail" name="mailFromMail" placeholder="E-mail de identifica√ß√£o (Geralmente o mesmo utilizado para o envio)" size="250" value="<?php echo $mailFromMail;?>" /><br>
+    <input type="text" id="mailFromMail" name="mailFromMail" placeholder="E-mail de identificaÁ„o (Geralmente o mesmo utilizado para o envio)" size="250" value="<?php echo $mailFromMail;?>" /><br>
     <span title="Indique ">From (Nome)</span><br>
-    <input type="text" id="mailFromName" name="mailFromName" placeholder="Nome de identifica√ß√£o do E-mail" size="50" value="<?php echo $mailFromName;?>" /><br>
+    <input type="text" id="mailFromName" name="mailFromName" placeholder="Nome de identificaÁ„o do E-mail" size="50" value="<?php echo $mailFromName;?>" /><br>
     <span title="Indique ">Reply (E-mail)</span><br>
-    <input type="text" id="mailReplayToMail" name="mailReplayToMail" placeholder="E-mail especifico para respostas (Se vazio, ser√° utilizado o From)" size="250" value="<?php echo $mailReplayToMail;?>" /><br>
+    <input type="text" id="mailReplayToMail" name="mailReplayToMail" placeholder="E-mail especifico para respostas (Se vazio, ser· utilizado o From)" size="250" value="<?php echo $mailReplayToMail;?>" /><br>
     <span title="Indique ">Reply (Nome)</span><br>
-    <input type="text" id="mailReplayToName" name="mailReplayToName" placeholder="Nome de identifica√ß√£o do e-mail de respostas" size="50" value="<?php echo $mailReplayToName;?>" /><br>
+    <input type="text" id="mailReplayToName" name="mailReplayToName" placeholder="Nome de identificaÁ„o do e-mail de respostas" size="50" value="<?php echo $mailReplayToName;?>" /><br>
     <span title="Indique ">Protocol</span><br>
     <?php echo $selMailProt;?><br>
     <span title="Indique ">Port</span><br>
     <input type="text" id="mailPort" name="mailPort" placeholder="Numero da porta" size="50" value="<?php echo $mailPort;?>" /><br>
   </div>
     <div id="direita">
-        <h3>As configura√ß√£o de email se referem a uma caixa postal criada pare enviar e receber os XML dos documetos fiscais da empresa como determina a legisla√ß√£o fiscal.</h3>
+        <h3>As configuraÁ„o de email se referem a uma caixa postal criada pare enviar e receber os XML dos documetos fiscais da empresa como determina a legislaÁ„o fiscal.</h3>
     </div>
     <div class="clear"> </div>
   </div>
   <div id="tabs-8">
-    <h2 align="right">Configura√ß√µes de Proxy</h2>
+    <h2 align="right">ConfiguraÁıes de Proxy</h2>
     <div id="esquerda">
     <span title="Indique o numero IP do proxy server da sua rede interna, caso exista">Proxy IP</span><br>
     <input type="text" id="proxyIp" name="proxyIp" placeholder="Numero IP do seu proxy server" size="20" value="<?php echo $proxyIp;?>" /><br>
     <span title="Indique o numero da porta do proxy server da sua rede interna, caso exista">Proxy Port</span><br>
     <input type="text" id="proxyPort" name="proxyPort" placeholder="Numero da porta que seu proxy escuta" size="20" value="<?php echo $proxyPort;?>" /><br>
-    <span title="Indique o nome do usu√°rio autorizado a usar o proxy, caso exija autentica√ß√£o">Proxy User</span><br>
-    <input type="text" id="proxyUser" name="proxyUser" placeholder="Nome do usu√°rio" size="20" value="<?php echo $proxyUser;?>" /><br>
-    <span title="Indique a senha de acesso do usu√°rio autorizado, caso exija autentica√ß√£o">Proxy Pass</span><br>
+    <span title="Indique o nome do usu·rio autorizado a usar o proxy, caso exija autenticaÁ„o">Proxy User</span><br>
+    <input type="text" id="proxyUser" name="proxyUser" placeholder="Nome do usu·rio" size="20" value="<?php echo $proxyUser;?>" /><br>
+    <span title="Indique a senha de acesso do usu·rio autorizado, caso exija autenticaÁ„o">Proxy Pass</span><br>
     <input type="password" id="proxyPass" name="proxyPass" placeholder="Senha de acesso" size="20" value="<?php echo $proxyPass;?>" /><br>
     </div>
     <div id="direita">
-        <h3>Aqui devem inclusas as configura√ß√µes caso o sistema esteja instalado em um ambiente de rede cujo acesso a internet seja feito atraves de um servidor proxy. Caso n√£o exista um servidor proxy na rede interna deixe esses campos em BRANCO.</h3>
+        <h3>Aqui devem inclusas as configuraÁıes caso o sistema esteja instalado em um ambiente de rede cujo acesso a internet seja feito atraves de um servidor proxy. Caso n„o exista um servidor proxy na rede interna deixe esses campos em BRANCO.</h3>
         <h3>No campo "Proxy IP" deve ser indcado o numero IP do servidor Proxy ex. 192.168.0.200</h3>
         <h3>No campo "Proxy Port" (numero da Porta) indicar a porta que o servidor proxy escuta ex. 3128 (squid)</h3>
-        <h3>No campo "Proxy User" deve ser indicado o nome do usu√°rio autorizado a acessar a internet, se o proxy for autenticado, caso contrario deixe em BRANCO.</h3>
-        <h3>No campo "Proxy Pass" indicar a senha de acesso do usu√°rio, deixe em branco caso n√£o seja exigida a senha.</h3>
+        <h3>No campo "Proxy User" deve ser indicado o nome do usu·rio autorizado a acessar a internet, se o proxy for autenticado, caso contrario deixe em BRANCO.</h3>
+        <h3>No campo "Proxy Pass" indicar a senha de acesso do usu·rio, deixe em branco caso n„o seja exigida a senha.</h3>
     </div>
     <div class="clear"> </div>
   </div>
   <div id="tabs-9">
     <div id="esquerda">
-    <p>Clique no bot√£o abaixo para  salvar essas configura√ß√µes e criar o arquivo config/config.json</p>
+    <p>Clique no bot„o abaixo para  salvar essas configuraÁıes e criar o arquivo config/config.json</p>
     <input type="text" id="configfolder" name="configfolder" placeholder="Path completo para a pasta"  value="<?php echo $configfolder;?>" /><br>
-    <button value="save" type="submit">Salvar Configura√ß√£o</button>
+    <button value="save" type="submit">Salvar ConfiguraÁ„o</button>
     </div>
     <div id="direita">
-        <h3>O arquivo de configura√ß√£o "config.json" ser√° salvo na pasta indicada no path e tamb√©m na pasta "default" do NFePHP, caso n√£o sejas as mesmas.</h3>
-        <h3>A ideia por traz do uso do formato json foi permitir de maneira mais facil usar a base de dados pra guardar os dados de configura√ß√£o para o uso da API, sem ter recorrer a um arquivo mantido em pastas.</h3>
-        <h3>Se bem executado isso pode facilitar em muito o uso no mesmo servidor para multiplos clientes, al√©m de prover um grau um pouco maior de seguran√ßa.</h3>
-        <p><i>NOTA: os dados passar√£o por valida√ß√µes antes da grava√ß√£o. Caso n√£o atendam as regras os dados ser√£o rejeitados. Mantenha o arquivo config.json em local seguro fora do acesso de intrusos.</i></p>
+        <h3>O arquivo de configuraÁ„o "config.json" ser· salvo na pasta indicada no path e tambÈm na pasta "default" do NFePHP, caso n„o sejas as mesmas.</h3>
+        <h3>A ideia por traz do uso do formato json foi permitir de maneira mais facil usar a base de dados pra guardar os dados de configuraÁ„o para o uso da API, sem ter recorrer a um arquivo mantido em pastas.</h3>
+        <h3>Se bem executado isso pode facilitar em muito o uso no mesmo servidor para multiplos clientes, alÈm de prover um grau um pouco maior de seguranÁa.</h3>
+        <p><i>NOTA: os dados passar„o por validaÁıes antes da gravaÁ„o. Caso n„o atendam as regras os dados ser„o rejeitados. Mantenha o arquivo config.json em local seguro fora do acesso de intrusos.</i></p>
     </div>
   <div class="clear"> </div>
   </div>

@@ -3,13 +3,13 @@
 	<xs:include schemaLocation="tiposBasico_v1.03.xsd"/>
 	<xs:element name="detEvento">
 		<xs:annotation>
-			<xs:documentation>Schema XML de validaÃ§Ã£o do evento do cancelamento 1101111</xs:documentation>
+			<xs:documentation>Schema XML de validação do evento do cancelamento 1101111</xs:documentation>
 		</xs:annotation>
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="descEvento">
 					<xs:annotation>
-						<xs:documentation>DescriÃ§Ã£o do Evento - â€œCancelamentoâ€</xs:documentation>
+						<xs:documentation>Descrição do Evento - "Cancelamento"</xs:documentation>
 					</xs:annotation>
 					<xs:simpleType>
 						<xs:restriction base="xs:string">
@@ -20,7 +20,7 @@
 				</xs:element>
 				<xs:element name="nProt" type="TProt">
 					<xs:annotation>
-						<xs:documentation>NÃºmero do Protocolo de Status da NF-e. 1 posiÃ§Ã£o (1 â€“ Secretaria de Fazenda Estadual 2 â€“ Receita Federal); 2 posiÃ§Ãµes ano; 10 seqÃ¼encial no ano.</xs:documentation>
+						<xs:documentation>Número do Protocolo de Status da NF-e. 1 posição (1 - Secretaria de Fazenda Estadual 2 - Receita Federal); 2 posições ano; 10 seqüencial no ano.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 				<xs:element name="xJust" type="TJust">

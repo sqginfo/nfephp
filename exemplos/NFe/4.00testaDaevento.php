@@ -1,7 +1,7 @@
 <?php
 /**
- * ATENÃ‡ÃƒO : Esse exemplo usa classe PROVISÃ“RIA que serÃ¡ removida assim que 
- * a nova classe DACCE estiver refatorada e a pasta EXTRAS serÃ¡ removida.
+ * ATENÇÃO : Esse exemplo usa classe PROVISÓRIA que será removida assim que 
+ * a nova classe DACCE estiver refatorada e a pasta EXTRAS será removida.
  */
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
@@ -14,7 +14,7 @@ $xml = '../xml/proccce.xml';
 
 $aEnd = array(
     'razao' => 'QQ Comercio e Ind. Ltda',
-    'logradouro' => 'Rua vinte e um de marÃ§o',
+    'logradouro' => 'Rua vinte e um de março',
     'numero' => '200',
     'complemento' => 'sobreloja',
     'bairro' => 'Nova Onda',

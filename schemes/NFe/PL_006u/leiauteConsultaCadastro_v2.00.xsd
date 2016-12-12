@@ -16,7 +16,7 @@
 					<xs:sequence>
 						<xs:element name="xServ">
 							<xs:annotation>
-								<xs:documentation>ServiÃ§o Solicitado</xs:documentation>
+								<xs:documentation>Serviço Solicitado</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="TServ">
@@ -35,7 +35,7 @@
 							</xs:annotation>
 							<xs:element name="IE" type="TIe">
 								<xs:annotation>
-									<xs:documentation>InscriÃ§Ã£o Estadual do contribuinte </xs:documentation>
+									<xs:documentation>Inscrição Estadual do contribuinte </xs:documentation>
 								</xs:annotation>
 							</xs:element>
 							<xs:element name="CNPJ" type="TCnpjVar">
@@ -68,17 +68,17 @@
 					<xs:sequence>
 						<xs:element name="verAplic" type="TVerAplic">
 							<xs:annotation>
-								<xs:documentation>VersÃ£o do Aplicativo que processou o pedido de consulta de cadastro</xs:documentation>
+								<xs:documentation>Versão do Aplicativo que processou o pedido de consulta de cadastro</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 						<xs:element name="cStat" type="TStat">
 							<xs:annotation>
-								<xs:documentation>CÃ³digo do status da mensagem enviada.</xs:documentation>
+								<xs:documentation>Código do status da mensagem enviada.</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 						<xs:element name="xMotivo" type="TMotivo">
 							<xs:annotation>
-								<xs:documentation>DescriÃ§Ã£o literal do status do serviÃ§o solicitado.</xs:documentation>
+								<xs:documentation>Descrição literal do status do serviço solicitado.</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 						<xs:element name="UF" type="TUfCons">
@@ -92,7 +92,7 @@
 							</xs:annotation>
 							<xs:element name="IE" type="TIe">
 								<xs:annotation>
-									<xs:documentation>InscriÃ§Ã£o Estadual do contribuinte </xs:documentation>
+									<xs:documentation>Inscrição Estadual do contribuinte </xs:documentation>
 								</xs:annotation>
 							</xs:element>
 							<xs:element name="CNPJ" type="TCnpjVar">
@@ -113,41 +113,41 @@
 						</xs:element>
 						<xs:element name="cUF" type="TCodUfIBGE">
 							<xs:annotation>
-								<xs:documentation>cÃ³digo da UF de atendimento</xs:documentation>
+								<xs:documentation>código da UF de atendimento</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 						<xs:element name="infCad" minOccurs="0" maxOccurs="unbounded">
 							<xs:annotation>
-								<xs:documentation>InformaÃ§Ãµes cadastrais do contribuinte consultado</xs:documentation>
+								<xs:documentation>Informações cadastrais do contribuinte consultado</xs:documentation>
 							</xs:annotation>
 							<xs:complexType>
 								<xs:sequence>
 									<xs:element name="IE" type="TIe">
 										<xs:annotation>
-											<xs:documentation>NÃºmero da InscriÃ§Ã£o Estadual do contribuinte</xs:documentation>
+											<xs:documentation>Número da Inscrição Estadual do contribuinte</xs:documentation>
 										</xs:annotation>
 									</xs:element>
 									<xs:choice>
 										<xs:element name="CNPJ" type="TCnpjVar">
 											<xs:annotation>
-												<xs:documentation>NÃºmero do CNPJ  do contribuinte</xs:documentation>
+												<xs:documentation>Número do CNPJ  do contribuinte</xs:documentation>
 											</xs:annotation>
 										</xs:element>
 										<xs:element name="CPF" type="TCpfVar">
 											<xs:annotation>
-												<xs:documentation>NÃºmero do CPF do contribuinte</xs:documentation>
+												<xs:documentation>Número do CPF do contribuinte</xs:documentation>
 											</xs:annotation>
 										</xs:element>
 									</xs:choice>
 									<xs:element name="UF" type="TUf">
 										<xs:annotation>
-											<xs:documentation>Sigla da UF de localizaÃ§Ã£o do contribuinte. Em algumas situaÃ§Ãµes, a UF de localizaÃ§Ã£o pode ser diferente da UF consultada. Ex. IE de Substituto TributÃ¡rio.</xs:documentation>
+											<xs:documentation>Sigla da UF de localização do contribuinte. Em algumas situações, a UF de localização pode ser diferente da UF consultada. Ex. IE de Substituto Tributário.</xs:documentation>
 										</xs:annotation>
 									</xs:element>
 									<xs:element name="cSit">
 										<xs:annotation>
-											<xs:documentation>SituaÃ§Ã£o cadastral do contribuinte:
-0 - nÃ£o habilitado
+											<xs:documentation>Situação cadastral do contribuinte:
+0 - não habilitado
 1 - habilitado</xs:documentation>
 										</xs:annotation>
 										<xs:simpleType>
@@ -160,12 +160,12 @@
 									<xs:element name="indCredNFe">
 										<xs:annotation>
 											<xs:documentation>Indicador de contribuinte credenciado a emitir NF-e.
-0 - NÃ£o credenciado para emissÃ£o da NF-e;
+0 - Não credenciado para emissão da NF-e;
 1 - Credenciado;
-2 - Credenciado com obrigatoriedade para todas operaÃ§Ãµes;
+2 - Credenciado com obrigatoriedade para todas operações;
 3 - Credenciado com obrigatoriedade parcial;
-4 â€“ a SEFAZ nÃ£o fornece a informaÃ§Ã£o.
-Este indicador significa apenas que o contribuinte Ã© credenciado para emitir NF-e na SEFAZ consultada.</xs:documentation>
+4 - a SEFAZ não fornece a informação.
+Este indicador significa apenas que o contribuinte é credenciado para emitir NF-e na SEFAZ consultada.</xs:documentation>
 										</xs:annotation>
 										<xs:simpleType>
 											<xs:restriction base="xs:string">
@@ -181,12 +181,12 @@ Este indicador significa apenas que o contribuinte Ã© credenciado para emitir NF
 									<xs:element name="indCredCTe">
 										<xs:annotation>
 											<xs:documentation>Indicador de contribuinte credenciado a emitir CT-e.
-0 - NÃ£o credenciado para emissÃ£o da CT-e;
+0 - Não credenciado para emissão da CT-e;
 1 - Credenciado;
-2 - Credenciado com obrigatoriedade para todas operaÃ§Ãµes;
+2 - Credenciado com obrigatoriedade para todas operações;
 3 - Credenciado com obrigatoriedade parcial;
-4 â€“ a SEFAZ nÃ£o fornece a informaÃ§Ã£o.
-Este indicador significa apenas que o contribuinte Ã© credenciado para emitir CT-e na SEFAZ consultada.</xs:documentation>
+4 - a SEFAZ não fornece a informação.
+Este indicador significa apenas que o contribuinte é credenciado para emitir CT-e na SEFAZ consultada.</xs:documentation>
 										</xs:annotation>
 										<xs:simpleType>
 											<xs:restriction base="xs:string">
@@ -201,7 +201,7 @@ Este indicador significa apenas que o contribuinte Ã© credenciado para emitir CT
 									</xs:element>
 									<xs:element name="xNome">
 										<xs:annotation>
-											<xs:documentation>RazÃ£o Social ou nome do contribuinte</xs:documentation>
+											<xs:documentation>Razão Social ou nome do contribuinte</xs:documentation>
 										</xs:annotation>
 										<xs:simpleType>
 											<xs:restriction base="TString">
@@ -212,7 +212,7 @@ Este indicador significa apenas que o contribuinte Ã© credenciado para emitir CT
 									</xs:element>
 									<xs:element name="xFant" minOccurs="0">
 										<xs:annotation>
-											<xs:documentation>RazÃ£o Social ou nome do contribuinte</xs:documentation>
+											<xs:documentation>Razão Social ou nome do contribuinte</xs:documentation>
 										</xs:annotation>
 										<xs:simpleType>
 											<xs:restriction base="TString">
@@ -223,7 +223,7 @@ Este indicador significa apenas que o contribuinte Ã© credenciado para emitir CT
 									</xs:element>
 									<xs:element name="xRegApur" minOccurs="0">
 										<xs:annotation>
-											<xs:documentation>Regime de ApuraÃ§Ã£o do ICMS</xs:documentation>
+											<xs:documentation>Regime de Apuração do ICMS</xs:documentation>
 										</xs:annotation>
 										<xs:simpleType>
 											<xs:restriction base="xs:token">
@@ -244,32 +244,32 @@ Este indicador significa apenas que o contribuinte Ã© credenciado para emitir CT
 									</xs:element>
 									<xs:element name="dIniAtiv" type="xs:date" minOccurs="0">
 										<xs:annotation>
-											<xs:documentation>Data de inÃ­cio de atividades do contribuinte</xs:documentation>
+											<xs:documentation>Data de início de atividades do contribuinte</xs:documentation>
 										</xs:annotation>
 									</xs:element>
 									<xs:element name="dUltSit" type="xs:date" minOccurs="0">
 										<xs:annotation>
-											<xs:documentation>Data da Ãºltima modificaÃ§Ã£o da situaÃ§Ã£o cadastral do contribuinte.</xs:documentation>
+											<xs:documentation>Data da última modificação da situação cadastral do contribuinte.</xs:documentation>
 										</xs:annotation>
 									</xs:element>
 									<xs:element name="dBaixa" type="xs:date" minOccurs="0">
 										<xs:annotation>
-											<xs:documentation>Data de ocorrÃªncia da baixa do contribuinte.</xs:documentation>
+											<xs:documentation>Data de ocorrência da baixa do contribuinte.</xs:documentation>
 										</xs:annotation>
 									</xs:element>
 									<xs:element name="IEUnica" type="TIe" minOccurs="0">
 										<xs:annotation>
-											<xs:documentation>InscriÃ§Ã£o Estadual Ãšnica</xs:documentation>
+											<xs:documentation>Inscrição Estadual Única</xs:documentation>
 										</xs:annotation>
 									</xs:element>
 									<xs:element name="IEAtual" type="TIe" minOccurs="0">
 										<xs:annotation>
-											<xs:documentation>InscriÃ§Ã£o Estadual atual</xs:documentation>
+											<xs:documentation>Inscrição Estadual atual</xs:documentation>
 										</xs:annotation>
 									</xs:element>
 									<xs:element name="ender" type="TEndereco" minOccurs="0">
 										<xs:annotation>
-											<xs:documentation>EndereÃ§o</xs:documentation>
+											<xs:documentation>Endereço</xs:documentation>
 										</xs:annotation>
 									</xs:element>
 								</xs:sequence>
@@ -283,7 +283,7 @@ Este indicador significa apenas que o contribuinte Ã© credenciado para emitir CT
 	</xs:complexType>
 	<xs:complexType name="TEndereco">
 		<xs:annotation>
-			<xs:documentation>Tipo Dados do EndereÃ§o</xs:documentation>
+			<xs:documentation>Tipo Dados do Endereço</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="xLgr" minOccurs="0">
@@ -299,7 +299,7 @@ Este indicador significa apenas que o contribuinte Ã© credenciado para emitir CT
 			</xs:element>
 			<xs:element name="nro" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>NÃºmero</xs:documentation>
+					<xs:documentation>Número</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="TString">
@@ -332,12 +332,12 @@ Este indicador significa apenas que o contribuinte Ã© credenciado para emitir CT
 			</xs:element>
 			<xs:element name="cMun" type="TCodMunIBGE" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>CÃ³digo do municÃ­pio (utilizar a tabela do IBGE), informar 9999999 para operaÃ§Ãµes com o exterior.</xs:documentation>
+					<xs:documentation>Código do município (utilizar a tabela do IBGE), informar 9999999 para operações com o exterior.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="xMun" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Nome do municÃ­pio</xs:documentation>
+					<xs:documentation>Nome do município</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="TString">
@@ -395,7 +395,7 @@ Este indicador significa apenas que o contribuinte Ã© credenciado para emitir CT
 	</xs:simpleType>
 	<xs:simpleType name="TVerConsCad">
 		<xs:annotation>
-			<xs:documentation>Tipo VersÃ£o do Leiaute da Consulta Cadastro 2.00</xs:documentation>
+			<xs:documentation>Tipo Versão do Leiaute da Consulta Cadastro 2.00</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:token">
 			<xs:pattern value="2\.00"/>

@@ -2,14 +2,14 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.portalfiscal.inf.br/nfe" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" targetNamespace="http://www.portalfiscal.inf.br/nfe" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:element name="detEvento">
 		<xs:annotation>
-			<xs:documentation>Schema XML de validaÃ§Ã£o do evento da confirmaÃ§Ã£o de recebimento</xs:documentation>
+			<xs:documentation>Schema XML de validação do evento da confirmação de recebimento</xs:documentation>
 		</xs:annotation>
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="descEvento">
 					<xs:annotation>
-						<xs:documentation>DescriÃ§Ã£o do Evento:
-											 â€œConfirmacao de Recebimento"</xs:documentation>
+						<xs:documentation>Descrição do Evento:
+											 "Confirmacao de Recebimento"</xs:documentation>
 					</xs:annotation>
 					<xs:simpleType>
 						<xs:restriction base="xs:string">

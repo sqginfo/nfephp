@@ -8,14 +8,14 @@ use NFePHP\NFe\ToolsNFe;
 $nfe = new ToolsNFe('../../config/config.json');
 $nfe->setModelo('55');
 
-//210200 â€“ ConfirmaÃ§Ã£o da OperaÃ§Ã£o
-//210210 â€“ CiÃªncia da OperaÃ§Ã£o
-//210220 â€“ Desconhecimento da OperaÃ§Ã£o
-//210240 â€“ OperaÃ§Ã£o nÃ£o Realizada ===> Ã© obritatoria uma justificativa para esse caso
+//210200 - Confirmação da Operação
+//210210 - Ciência da Operação
+//210220 - Desconhecimento da Operação
+//210240 - Operação não Realizada ===> é obritatoria uma justificativa para esse caso
 $chave = '35150158716523000119550010000000071000000076';
 $tpAmb = '2';
 $xJust = '';
-$tpEvento = '210210'; //ciencia da operaÃ§Ã£o
+$tpEvento = '210210'; //ciencia da operação
 $aResposta = array();
 $xml = $nfe->sefazManifesta($chave, $tpAmb, $xJust = '', $tpEvento = '', $aResposta);
 echo '<br><br><PRE>';

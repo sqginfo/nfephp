@@ -21,7 +21,7 @@ class DomTest extends PHPUnit_Framework_TestCase
      * @expectedExceptionMessage DOMDocument::loadXML(): Start tag expected, '<' not found in Entity, line: 1
      * 
      * @expectedException NFePHP\Common\Exception\InvalidArgumentException
-     * @expectedExceptionMessage O arquivo indicado nÃ£o Ã© um XML!
+     * @expectedExceptionMessage O arquivo indicado não é um XML!
      */
     public function testFailLoadXMLString()
     {
@@ -103,7 +103,7 @@ class DomTest extends PHPUnit_Framework_TestCase
         $erros[] = array(
             "tag" => $name,
             "desc" => $descricao,
-            "erro" => "Preenchimento ObrigatÃ³rio!"
+            "erro" => "Preenchimento Obrigatório!"
         );
         $xml = '<test></test>';
         $this->dom->loadXMLString($xml);

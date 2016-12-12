@@ -3,24 +3,24 @@
   <xs:include schemaLocation="tiposBasico_v3.10.xsd"/>
   <xs:element name="detEvento">
     <xs:annotation>
-      <xs:documentation>InformaÃ§Ãµes do Cancelamento de Pedido de ProrrogaÃ§Ã£o</xs:documentation>
+      <xs:documentation>Informações do Cancelamento de Pedido de Prorrogação</xs:documentation>
     </xs:annotation>
     <xs:complexType>
       <xs:sequence>
         <xs:element name="descEvento">
           <xs:annotation>
-            <xs:documentation>Cancelamento de Pedido de ProrrogaÃ§Ã£oÂ” ou Â“Cancelamento de Pedido de ProrrogacaoÂ”</xs:documentation>
+            <xs:documentation>Cancelamento de Pedido de Prorrogação” ou “Cancelamento de Pedido de Prorrogacao”</xs:documentation>
           </xs:annotation>
           <xs:simpleType>
             <xs:restriction base="xs:string">
               <xs:enumeration value="Cancelamento de Pedido de Prorrogacao" />
-              <xs:enumeration value="Cancelamento de Pedido de ProrrogaÃ§Ã£o" />
+              <xs:enumeration value="Cancelamento de Pedido de Prorrogação" />
             </xs:restriction>
           </xs:simpleType>
         </xs:element>
         <xs:element name="idPedidoCancelado">
           <xs:annotation>
-            <xs:documentation>Identificador do evento a ser cancelado, a regra de formaÃ§Ã£o do Id Ã©: Â“IDÂ” + tpEvento + chave da NF-e + nSeqEvento</xs:documentation>
+            <xs:documentation>Identificador do evento a ser cancelado, a regra de formação do Id é: “ID” + tpEvento + chave da NF-e + nSeqEvento</xs:documentation>
           </xs:annotation>
           <xs:simpleType>
             <xs:restriction base="xs:ID">
@@ -30,13 +30,13 @@
         </xs:element>
         <xs:element name="nProt" type="TProt">
           <xs:annotation>
-            <xs:documentation>Informar o nÃºmero do Protocolo de AutorizaÃ§Ã£o do Pedido de ProrrogaÃ§Ã£oa ser cancelado.</xs:documentation>
+            <xs:documentation>Informar o número do Protocolo de Autorização do Pedido de Prorrogaçãoa ser cancelado.</xs:documentation>
           </xs:annotation>
         </xs:element>
       </xs:sequence>
       <xs:attribute name="versao">
         <xs:annotation>
-          <xs:documentation>VersÃ£o do Cancelamento de Pedido de ProrrogaÃ§Ã£o</xs:documentation>
+          <xs:documentation>Versão do Cancelamento de Pedido de Prorrogação</xs:documentation>
         </xs:annotation>
         <xs:simpleType>
           <xs:restriction base="xs:string">

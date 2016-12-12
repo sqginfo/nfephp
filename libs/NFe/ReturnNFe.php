@@ -3,7 +3,7 @@
 namespace NFePHP\NFe;
 
 /**
- * Classe auxiliar com funÃ§Ãµes de DOM extendidas
+ * Classe auxiliar com funções de DOM extendidas
  *
  * @category  NFePHP
  * @package   NFePHP\Common\Dom\ReturnNFe
@@ -50,7 +50,7 @@ class ReturnNFe
                 return self::zReadInutilizacaoNF2($dom);
                 break;
             case 'NfeStatusServico':
-                //NOTA: irÃ¡ ser desativado
+                //NOTA: irá ser desativado
                 return self::zReadStatusServico($dom);
                 break;
             case 'RecepcaoEPEC':
@@ -72,7 +72,7 @@ class ReturnNFe
     
     /**
      * checkForFault
-     * Verifica se a mensagem de retorno Ã© uma FAULT
+     * Verifica se a mensagem de retorno é uma FAULT
      * Normalmente essas falhas ocorrem devido a falhas internas
      * nos servidores da SEFAZ
      *
@@ -98,7 +98,7 @@ class ReturnNFe
      */
     protected static function zReadDownloadNF($dom)
     {
-        //retorno da funÃ§ao
+        //retorno da funçao
         $aResposta = array(
             'bStat' => false,
             'versao' => '',
@@ -156,7 +156,7 @@ class ReturnNFe
      */
     protected static function zReadCscNFCe($dom)
     {
-        //retorno da funÃ§ao
+        //retorno da funçao
         $aResposta = array(
             'bStat' => false,
             'versao' => '',
@@ -197,7 +197,7 @@ class ReturnNFe
      */
     protected static function zReadAutorizacaoLote($dom)
     {
-        //retorno da funÃ§ao
+        //retorno da funçao
         $aResposta = array(
             'bStat' => false,
             'versao' => '',
@@ -240,7 +240,7 @@ class ReturnNFe
      */
     protected static function zReadRetAutorizacaoLote($dom)
     {
-        //retorno da funÃ§ao
+        //retorno da funçao
         $aResposta = array(
             'bStat'=>false,
             'versao' => '',
@@ -359,7 +359,7 @@ class ReturnNFe
      */
     protected static function zReadConsultaNF2($dom)
     {
-        //retorno da funÃ§ao
+        //retorno da funçao
         $aResposta = array(
             'bStat' => false,
             'versao' => '',
@@ -460,7 +460,7 @@ class ReturnNFe
      */
     protected static function zReadStatusServico($dom)
     {
-        //retorno da funÃ§ao
+        //retorno da funçao
         $aResposta = array(
             'bStat' => false,
             'versao' => '',
@@ -502,7 +502,7 @@ class ReturnNFe
      */
     protected static function zReadRecepcaoEvento($dom)
     {
-        //retorno da funÃ§ao
+        //retorno da funçao
         $aResposta = array(
             'bStat' => false,
             'versao' => '',

@@ -19,7 +19,7 @@ class ToolsNFeTest extends PHPUnit_Framework_TestCase
         $data['pathCertsFiles'] = null;
         $config = json_encode($data);
 
-        $this->setExpectedException(RuntimeException::class, 'Data de validade vencida! [Valido atÃ© 02/10/10]');
+        $this->setExpectedException(RuntimeException::class, 'Data de validade vencida! [Valido até 02/10/10]');
         new ToolsNFe($config);
     }
 }

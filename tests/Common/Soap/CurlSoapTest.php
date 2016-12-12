@@ -34,7 +34,7 @@ class CurlSoapTest extends PHPUnit_Framework_TestCase
     
     /**
      * @expectedException NFePHP\Common\Exception\InvalidArgumentException
-     * @expectedExceptionMessage O protocolo SSL pode estar entre 0 e seis, inclusive, mas nÃ£o alÃ©m desses nÃºmeros.
+     * @expectedExceptionMessage O protocolo SSL pode estar entre 0 e seis, inclusive, mas não além desses números.
      */
     public function testExceptionAoPassarProtocoloSslMenorQueZero()
     {
@@ -43,7 +43,7 @@ class CurlSoapTest extends PHPUnit_Framework_TestCase
     
     /**
      * @expectedException NFePHP\Common\Exception\InvalidArgumentException
-     * @expectedExceptionMessage O protocolo SSL pode estar entre 0 e seis, inclusive, mas nÃ£o alÃ©m desses nÃºmeros.
+     * @expectedExceptionMessage O protocolo SSL pode estar entre 0 e seis, inclusive, mas não além desses números.
      */
     public function testExceptionAoPassarProtocoloSslMaiorQueSeis()
     {
@@ -52,7 +52,7 @@ class CurlSoapTest extends PHPUnit_Framework_TestCase
     
     /**
      * @expectedException NFePHP\Common\Exception\InvalidArgumentException
-     * @expectedExceptionMessage Alguns dos certificados nÃ£o foram encontrados ou o timeout pode nÃ£o ser numÃ©rico.
+     * @expectedExceptionMessage Alguns dos certificados não foram encontrados ou o timeout pode não ser numérico.
      */
     public function testExceptionAoPassarCertificados()
     {
@@ -70,7 +70,7 @@ class CurlSoapTest extends PHPUnit_Framework_TestCase
         $certKey = dirname(dirname(dirname(__FILE__))) . '/fixtures/certs/99999090910270_certKEY.pem';
         $timeout = '10';
         $args = array($priKey, $pubKey, $certKey, $timeout);
-        //cria uma funÃ§Ã£o "FAJUTA" de comunicaÃ§Ã£o com a SEFAZ
+        //cria uma função "FAJUTA" de comunicação com a SEFAZ
         $soap = $this->getMockBuilder('NFePHP\Common\Soap\CurlSoap')
             ->setConstructorArgs($args)
             ->setMethods(array('zCommCurl'))
@@ -83,7 +83,7 @@ class CurlSoapTest extends PHPUnit_Framework_TestCase
         //busca resposta
         $urlservice = 'https://homologacao.nfe.fazenda.sp.gov.br/ws/nfestatusservico2.asmx';
         $wsdl = $soap->getWsdl($urlservice);
-        //resultado padrÃ£o
+        //resultado padrão
         $wsdlfile = dirname(dirname(dirname(__FILE__))) .
             '/fixtures/xml/NFe/retornoGetWsdl_SP_nfeStatusServicoNF2.asmx';
         $wsdlstd = file_get_contents($wsdlfile);
@@ -98,7 +98,7 @@ class CurlSoapTest extends PHPUnit_Framework_TestCase
         $certKey = dirname(dirname(dirname(__FILE__))) . '/fixtures/certs/99999090910270_certKEY.pem';
         $timeout = '10';
         $args = array($priKey, $pubKey, $certKey, $timeout);
-        //cria uma funÃ§Ã£o "FAJUTA" de comunicaÃ§Ã£o com a SEFAZ
+        //cria uma função "FAJUTA" de comunicação com a SEFAZ
         $soap = $this->getMockBuilder('NFePHP\Common\Soap\CurlSoap')
             ->setConstructorArgs($args)
             ->setMethods(array('zCommCurl'))
@@ -125,7 +125,7 @@ class CurlSoapTest extends PHPUnit_Framework_TestCase
         $certKey = dirname(dirname(dirname(__FILE__))) . '/fixtures/certs/99999090910270_certKEY.pem';
         $timeout = '10';
         $args = array($priKey, $pubKey, $certKey, $timeout);
-        //cria uma funÃ§Ã£o "FAJUTA" de comunicaÃ§Ã£o com a SEFAZ
+        //cria uma função "FAJUTA" de comunicação com a SEFAZ
         $soap = $this->getMockBuilder('NFePHP\Common\Soap\CurlSoap')
             ->setConstructorArgs($args)
             ->setMethods(array('zCommCurl'))
@@ -156,7 +156,7 @@ class CurlSoapTest extends PHPUnit_Framework_TestCase
         $certKey = dirname(dirname(dirname(__FILE__))) . '/fixtures/certs/99999090910270_certKEY.pem';
         $timeout = '10';
         $args = array($priKey, $pubKey, $certKey, $timeout);
-        //cria uma funÃ§Ã£o "FAJUTA" de comunicaÃ§Ã£o com a SEFAZ
+        //cria uma função "FAJUTA" de comunicação com a SEFAZ
         $soap = $this->getMockBuilder('NFePHP\Common\Soap\CurlSoap')
             ->setConstructorArgs($args)
             ->setMethods(array('zCommCurl'))
@@ -177,14 +177,14 @@ class CurlSoapTest extends PHPUnit_Framework_TestCase
         $header = '<nfeCabecMsg xmlns="http://www.portalfiscal.inf.br/nfe/wsdl/NfeStatusServico2"><cUF>35</cUF><versaoDados>3.10</versaoDados></nfeCabecMsg>';
         $method = "nfeStatusServicoNF2";
         $body = '<nfeDadosMsg xmlns="http://www.portalfiscal.inf.br/nfe/wsdl/NfeStatusServico2"><consStatServ xmlns="http://www.portalfiscal.inf.br/nfe" versao="3.10"><tpAmb>2</tpAmb><cUF>35</cUF><xServ>STATUS</xServ></consStatServ></nfeDadosMsg>';
-        $respStd = '<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Header><nfeCabecMsg xmlns="http://www.portalfiscal.inf.br/nfe/wsdl/NfeStatusServico2"><cUF>35</cUF><versaoDados>3.10</versaoDados></nfeCabecMsg></soap:Header><soap:Body><nfeStatusServicoNF2Result xmlns="http://www.portalfiscal.inf.br/nfe/wsdl/NfeStatusServico2"><retConsStatServ versao="3.10" xmlns="http://www.portalfiscal.inf.br/nfe"><tpAmb>2</tpAmb><verAplic>SP_NFE_PL_008d</verAplic><cStat>107</cStat><xMotivo>ServiÃ§o em OperaÃ§Ã£o</xMotivo><cUF>35</cUF><dhRecbto>2014-12-01T15:28:29-02:00</dhRecbto><tMed>1</tMed></retConsStatServ></nfeStatusServicoNF2Result></soap:Body></soap:Envelope>';
+        $respStd = '<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Header><nfeCabecMsg xmlns="http://www.portalfiscal.inf.br/nfe/wsdl/NfeStatusServico2"><cUF>35</cUF><versaoDados>3.10</versaoDados></nfeCabecMsg></soap:Header><soap:Body><nfeStatusServicoNF2Result xmlns="http://www.portalfiscal.inf.br/nfe/wsdl/NfeStatusServico2"><retConsStatServ versao="3.10" xmlns="http://www.portalfiscal.inf.br/nfe"><tpAmb>2</tpAmb><verAplic>SP_NFE_PL_008d</verAplic><cStat>107</cStat><xMotivo>Serviço em Operação</xMotivo><cUF>35</cUF><dhRecbto>2014-12-01T15:28:29-02:00</dhRecbto><tMed>1</tMed></retConsStatServ></nfeStatusServicoNF2Result></soap:Body></soap:Envelope>';
         $resp = $soap->send($urlservice, $namespace, $header, $body, $method);
         $this->assertEquals($resp, $respStd);
     }
     
     /**
      * @expectedException NFePHP\Common\Exception\RuntimeException
-     * @expectedExceptionMessage NÃ£o houve retorno do Curl.
+     * @expectedExceptionMessage Não houve retorno do Curl.
      */
     public function testSendNaoHouveRetornoDoWebservice() 
     {

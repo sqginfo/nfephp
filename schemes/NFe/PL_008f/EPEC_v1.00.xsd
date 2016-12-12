@@ -3,7 +3,7 @@
 	<xs:include schemaLocation="leiauteEPEC_v1.00.xsd"/>
 	<xs:element name="evento" type="TEvento">
 		<xs:annotation>
-			<xs:documentation>Schema XML de validaÃ§Ã£o do Evento PrÃ©vio de EmissÃ£o em ContingÃªncia</xs:documentation>
+			<xs:documentation>Schema XML de validação do Evento Prévio de Emissão em Contingência</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 </xs:schema>

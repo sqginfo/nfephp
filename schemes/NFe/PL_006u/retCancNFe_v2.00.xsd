@@ -3,7 +3,7 @@
 	<xs:include schemaLocation="leiauteCancNFe_v2.00.xsd"/>
 	<xs:element name="retCancNFe" type="TRetCancNFe">
 		<xs:annotation>
-			<xs:documentation>Schema XML de validaÃ§Ã£o do retorno Pedido de Cancelamento da Nota Fiscal EletrÃ´nica</xs:documentation>
+			<xs:documentation>Schema XML de validação do retorno Pedido de Cancelamento da Nota Fiscal Eletrônica</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 </xs:schema>

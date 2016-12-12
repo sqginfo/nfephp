@@ -4,7 +4,7 @@
 	<xs:include schemaLocation="leiauteCCe_v1.00.xsd"/>
 	<xs:element name="procEventoNFe" type="TProcEvento">
 		<xs:annotation>
-			<xs:documentation>Schema XML de validaÃ§Ã£o do proc Carta de CorreÃ§Ã£o da NFe</xs:documentation>
+			<xs:documentation>Schema XML de validação do proc Carta de Correção da NFe</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 </xs:schema>

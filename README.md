@@ -8,70 +8,70 @@
 [![Latest Unstable Version](https://poser.pugx.org/nfephp-org/nfephp/v/unstable.svg)](https://packagist.org/packages/nfephp-org/nfephp)
 [![Total Downloads](https://poser.pugx.org/nfephp-org/nfephp/downloads)](https://packagist.org/packages/nfephp-org/nfephp)
 
-NFePHP √© uma API para gerenciamento das comunica√ß√µes entre o emitente de NFe e os servi√ßos dos SEFAZ estaduais. Inteiramente constru√≠do em PHP para rodar sob qualquer sistema operacional.
-Para come√ßar veja [nossas p√°ginas Wiki](https://github.com/nfephp-org/nfephp/wiki).
+NFePHP È uma API para gerenciamento das comunicaÁıes entre o emitente de NFe e os serviÁos dos SEFAZ estaduais. Inteiramente construÌdo em PHP para rodar sob qualquer sistema operacional.
+Para comeÁar veja [nossas p·ginas Wiki](https://github.com/nfephp-org/nfephp/wiki).
 
-N√£o deixe de se cadastrar no [grupo de discuss√£o do NFePHP](http://groups.google.com/group/nfephp)!
+N„o deixe de se cadastrar no [grupo de discuss„o do NFePHP](http://groups.google.com/group/nfephp)!
 
 ## PULL REQUESTS
-**Srs. neste reposit√≥rio somente ser√£o aceitos "PULL REQUESTS" relativos a BUGS e corre√ß√µes derivadas de mudan√ßas promovidas pelas SEFAZ.**
+**Srs. neste repositÛrio somente ser„o aceitos "PULL REQUESTS" relativos a BUGS e correÁıes derivadas de mudanÁas promovidas pelas SEFAZ.**
 
-N√£o mais ser√£o aceitas altera√ß√µes, melhorias no c√≥digo ou inclus√µes de novos recursos ou de novos servi√ßos, todas essas melhorias dever√£o ser encaminhadas para o novo reposit√≥rio SPED-XXX.
+N„o mais ser„o aceitas alteraÁıes, melhorias no cÛdigo ou inclusıes de novos recursos ou de novos serviÁos, todas essas melhorias dever„o ser encaminhadas para o novo repositÛrio SPED-XXX.
 
->Em breve (at√© meados de 2017), este reposit√≥rio deixar√° de receber qualquer contribui√ß√£o e ser√° descontinuado, em favor dos novos reposit√≥rios !!!
->Para manter a integridade da API nessa nova vers√£o (4.1.x-dev), est√£o sendo mantidos os "namespaces", as chamadas de m√©todos e seus parametros, que n√£o dever√£o ser alterados a n√£o ser por motivo de "for√ßa maior", como mudan√ßas da SEFAZ que forcem essa situa√ß√£o.
->No uso da nova vers√£o, aten√ß√£o deve ser dedicada a nomenclatura de classes, que foi simplificada, e nos recursos como impress√£o que foram deslocados para outro reposit√≥rio.  
+>Em breve (atÈ meados de 2017), este repositÛrio deixar· de receber qualquer contribuiÁ„o e ser· descontinuado, em favor dos novos repositÛrios !!!
+>Para manter a integridade da API nessa nova vers„o (4.1.x-dev), est„o sendo mantidos os "namespaces", as chamadas de mÈtodos e seus parametros, que n„o dever„o ser alterados a n„o ser por motivo de "forÁa maior", como mudanÁas da SEFAZ que forcem essa situaÁ„o.
+>No uso da nova vers„o, atenÁ„o deve ser dedicada a nomenclatura de classes, que foi simplificada, e nos recursos como impress„o que foram deslocados para outro repositÛrio.  
 
 
-## REESTRUTURA√á√ÉO DE REPOSIT√ìRIOS
+## REESTRUTURA«√O DE REPOSIT”RIOS
 
-**As estruturas de CTe, MDFe e outras foram removidas deste reposit√≥rio e levadas a seus novos reposit√≥rios veja:**
+**As estruturas de CTe, MDFe e outras foram removidas deste repositÛrio e levadas a seus novos repositÛrios veja:**
 
-[SPED NFe](https://github.com/nfephp-org/sped-nfe) Novo reposit√≥rio da classes de NFe (em fase de testes)
+[SPED NFe](https://github.com/nfephp-org/sped-nfe) Novo repositÛrio da classes de NFe (em fase de testes)
 
-[SPED CTe](https://github.com/nfephp-org/sped-cte) Novo reposit√≥rio das classes de CTe (em desenvolvimento)
+[SPED CTe](https://github.com/nfephp-org/sped-cte) Novo repositÛrio das classes de CTe (em desenvolvimento)
 
-[SPED MDFe](https://github.com/nfephp-org/sped-mdfe) Novo reposit√≥rio das classes de MDFe (em desenvolvimento)
+[SPED MDFe](https://github.com/nfephp-org/sped-mdfe) Novo repositÛrio das classes de MDFe (em desenvolvimento)
 
-[SPED NFSe](https://github.com/nfephp-org/sped-nfse) Novo reposit√≥rio das classes de NFSe (em desenvolvimento)
+[SPED NFSe](https://github.com/nfephp-org/sped-nfse) Novo repositÛrio das classes de NFSe (em desenvolvimento)
 
-Os demais componentes tamb√©m ter√£o reposit√≥rios novos, mas por ora ainda permanecem neste.
+Os demais componentes tambÈm ter„o repositÛrios novos, mas por ora ainda permanecem neste.
 
-[SPED COMMON](https://github.com/nfephp-org/sped-common) Novo reposit√≥rio das classes comuns usadas por todos ou v√°rios projetos. 
+[SPED COMMON](https://github.com/nfephp-org/sped-common) Novo repositÛrio das classes comuns usadas por todos ou v·rios projetos. 
 
-[SPED DA](https://github.com/nfephp-org/sped-da) Novo reposit√≥rio das classes que geram a impress√£o dos documentos. 
+[SPED DA](https://github.com/nfephp-org/sped-da) Novo repositÛrio das classes que geram a impress„o dos documentos. 
 
-[POSPRINT](https://github.com/nfephp-org/posprint) Framework para impress√£o com impressoras t√©rmicas POS (em desenvolvimento)
+[POSPRINT](https://github.com/nfephp-org/posprint) Framework para impress„o com impressoras tÈrmicas POS (em desenvolvimento)
 
-[SPED GNRE](https://github.com/nfephp-org/sped-gnre) Reposit√≥rio da classes de GNRE (vers√£o est√°vel)
+[SPED GNRE](https://github.com/nfephp-org/sped-gnre) RepositÛrio da classes de GNRE (vers„o est·vel)
 
-Al√©m desses outros reposit√≥rios est√£o em constru√ß√£o ou j√° disp√µem de bibliotecas
+AlÈm desses outros repositÛrios est„o em construÁ„o ou j· dispıem de bibliotecas
 
-[SPED EFD](https://github.com/nfephp-org/sped-efinanceira) Reposit√≥rio da classes de Sped EFD fiscal  (em desenvolvimento)
+[SPED EFD](https://github.com/nfephp-org/sped-efinanceira) RepositÛrio da classes de Sped EFD fiscal  (em desenvolvimento)
 
-[SPED RESTFUL](https://github.com/nfephp-org/sped-restful) Aplicativo RestFul para gera√ß√£o de documentos Sped (em desenvolvimento)
+[SPED RESTFUL](https://github.com/nfephp-org/sped-restful) Aplicativo RestFul para geraÁ„o de documentos Sped (em desenvolvimento)
 
 [SPED CONSOLE](https://github.com/nfephp-org/sped-console) Conjunto de recursos em linha de comando (em desenvolvimento)
 
-[SPED DOCS](https://github.com/nfephp-org/sped-docs) Conjunto da documenta√ß√£o dos pacotes NFePHP (ultrapassado, incompleto e parcial)
+[SPED DOCS](https://github.com/nfephp-org/sped-docs) Conjunto da documentaÁ„o dos pacotes NFePHP (ultrapassado, incompleto e parcial)
 
-[SPED EMISSOR](https://github.com/nfephp-org/sped-emissor) Aplicativo "front-end" para emiss√£o de documentos (n√£o iniciado)
+[SPED EMISSOR](https://github.com/nfephp-org/sped-emissor) Aplicativo "front-end" para emiss„o de documentos (n„o iniciado)
 
-[SPED eSOCIAL](https://github.com/nfephp-org/sped-esocial) Reposit√≥rio das classes para eSocial (apenas documenta√ß√£o)
+[SPED eSOCIAL](https://github.com/nfephp-org/sped-esocial) RepositÛrio das classes para eSocial (apenas documentaÁ„o)
 
-[SPED SERIALIZER](https://github.com/nfephp-org/sped-esocial) Repositorio de classes para serializa√ß√£o de XML (conceito)
+[SPED SERIALIZER](https://github.com/nfephp-org/sped-esocial) Repositorio de classes para serializaÁ„o de XML (conceito)
 
 Outros projetos relacionados, mas com finalidade especifica:
 
-[SPED eFINANCEIRA](https://github.com/nfephp-org/sped-efinanceira) Reposit√≥rio da classes de eFinanceira (vers√£o est√°vel)
+[SPED eFINANCEIRA](https://github.com/nfephp-org/sped-efinanceira) RepositÛrio da classes de eFinanceira (vers„o est·vel)
 
-[SPED eSFINGE](https://github.com/nfephp-org/sped-esfinge) Framework para integra√ß√£o com o sistema eSfinge do TCE/SC (vers√£o est√°vel)
+[SPED eSFINGE](https://github.com/nfephp-org/sped-esfinge) Framework para integraÁ„o com o sistema eSfinge do TCE/SC (vers„o est·vel)
 
 # CONTRIBUINDO
 
-Este √© um projeto totalmente *OpenSource*, para usa-lo e modifica-lo voc√™ n√£o paga absolutamente nada. Por√©m para continuarmos a mante-lo √© necess√°rio qua alguma contribui√ß√£o seja feita, seja auxiliando na codifica√ß√£o, na documenta√ß√£o ou na realiza√ß√£o de testes e identifica√ß√£o de falhas e BUGs.
+Este È um projeto totalmente *OpenSource*, para usa-lo e modifica-lo vocÍ n„o paga absolutamente nada. PorÈm para continuarmos a mante-lo È necess·rio qua alguma contribuiÁ„o seja feita, seja auxiliando na codificaÁ„o, na documentaÁ„o ou na realizaÁ„o de testes e identificaÁ„o de falhas e BUGs.
 
-Mas tamb√©m, caso voc√™ ache que qualquer informa√ß√£o obtida aqui, lhe foi √∫til e que isso vale de algum dinheiro e est√° disposto a doar algo, sinta-se livre para enviar qualquer quantia atrav√©s de :
+Mas tambÈm, caso vocÍ ache que qualquer informaÁ„o obtida aqui, lhe foi ˙til e que isso vale de algum dinheiro e est· disposto a doar algo, sinta-se livre para enviar qualquer quantia atravÈs de :
 
 <a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=linux%2erlm%40gmail%2ecom&lc=BR&item_name=NFePHP%20OpenSource%20API&item_number=nfephp&currency_code=BRL&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest">
 <img alt="Doar com Paypal" src="https://www.paypalobjects.com/pt_BR/BR/i/btn/btn_donateCC_LG.gif"/></a>
@@ -80,73 +80,73 @@ Mas tamb√©m, caso voc√™ ache que qualquer informa√ß√£o obtida aqui, lhe foi √∫ti
 
 ## IMPORTANTE:
 
-A partir desta vers√£o o numero das vers√µes seguir√° uma sequencia pr√≥pria da API e n√£o mais ir√° se referir as vers√µes de layout da NFe, CTe, etc.
+A partir desta vers„o o numero das versıes seguir· uma sequencia prÛpria da API e n„o mais ir· se referir as versıes de layout da NFe, CTe, etc.
 
-Nesta vers√£o (4.0.x) apenas a NFe √© funcional, para CTe, e MDFe deve ser usado a TAG 3.10-Obsoleta, pelo menos at√© que outros colaboradores se disponham a auxiliar na refatora√ß√£o  
+Nesta vers„o (4.0.x) apenas a NFe È funcional, para CTe, e MDFe deve ser usado a TAG 3.10-Obsoleta, pelo menos atÈ que outros colaboradores se disponham a auxiliar na refatoraÁ„o  
 
-## Vers√£o de Desenvolvimento
+## Vers„o de Desenvolvimento
 
-Vers√£o 4.0.x-dev (observa a vers√£o de layout 3.10 da SEFAZ)
+Vers„o 4.0.x-dev (observa a vers„o de layout 3.10 da SEFAZ)
 
-## Vers√£o Est√°vel
+## Vers„o Est·vel
 
-Devido as constantes altera√ß√µes, dos schemas, webservices e legisla√ß√µes, promovidas pelo Congresso Nacional, pelas SEFAZ estaduais e pelos provedores dos webservices, a vers√£o em MASTER e a √∫ltima TAG s√£o as mais est√°veis e funcionais.
+Devido as constantes alteraÁıes, dos schemas, webservices e legislaÁıes, promovidas pelo Congresso Nacional, pelas SEFAZ estaduais e pelos provedores dos webservices, a vers„o em MASTER e a ˙ltima TAG s„o as mais est·veis e funcionais.
 
-## Instala√ß√£o com Composer
+## InstalaÁ„o com Composer
 
-Pelo terminal v√° at√© a raiz de seu projeto e l√° execute :
+Pelo terminal v· atÈ a raiz de seu projeto e l· execute :
 
 ```
 composer require nfephp-org/nfephp
 ``` 
-Isso far√° com que o SEU arquivo composer.json seja acrescido da depend√™ncia da API.
-A API ser√° baixada e colocada na pasta "vendor" e o arquivo autoload.php sej√° atualizado.
+Isso far· com que o SEU arquivo composer.json seja acrescido da dependÍncia da API.
+A API ser· baixada e colocada na pasta "vendor" e o arquivo autoload.php sej· atualizado.
 
 
 ## Condicionantes
 
-Para usar essa API √© necess√°rio conhecimento em programa√ß√£o PHP, bem como conhecer os padr√µes atuais da linguagem e ter bases de legisla√ß√£o fiscal. √â extremanente recomend√°vel que seja estudado o conte√∫do dos seguintes sites.
-* Documenta√ß√£o do Funcionamento do sistema de NFe [SEFAZ NFe](http://www.nfe.fazenda.gov.br/portal/principal.aspx)
-* Documenta√ß√£o do Funcionamento do sistema de CTe [SEFAZ CTe](http://www.cte.fazenda.gov.br/listaSubMenu.aspx?Id=tW+YMyk/50s=)
-* Documenta√ß√£o do Funcionamento do sistema de MDFe [SEFAZ MDfe](https://mdfe-portal.sefaz.rs.gov.br/)
-* Composer [Documenta√ß√£o](https://getcomposer.org/doc/)  Constru√ß√£o do [composer.json](http://composer.json.jolicode.com/)
+Para usar essa API È necess·rio conhecimento em programaÁ„o PHP, bem como conhecer os padrıes atuais da linguagem e ter bases de legislaÁ„o fiscal. … extremanente recomend·vel que seja estudado o conte˙do dos seguintes sites.
+* DocumentaÁ„o do Funcionamento do sistema de NFe [SEFAZ NFe](http://www.nfe.fazenda.gov.br/portal/principal.aspx)
+* DocumentaÁ„o do Funcionamento do sistema de CTe [SEFAZ CTe](http://www.cte.fazenda.gov.br/listaSubMenu.aspx?Id=tW+YMyk/50s=)
+* DocumentaÁ„o do Funcionamento do sistema de MDFe [SEFAZ MDfe](https://mdfe-portal.sefaz.rs.gov.br/)
+* Composer [DocumentaÁ„o](https://getcomposer.org/doc/)  ConstruÁ„o do [composer.json](http://composer.json.jolicode.com/)
 * IMPORTANTE [PHP do Jeito Certo](http://br.phptherightway.com/)
 * Coding Style Guide [PSR-2](http://www.php-fig.org/psr/psr-2/)
 * Autoload [PSR-4](http://www.php-fig.org/psr/psr-4/)
 
->NOTA: A NFSe Nota Fiscal de Servi√ßos Eletr√¥nica, n√£o tem padr√£o √∫nico, e a API tem somente alguns exemplos de montagem de um sistema para esse fim, mas nenhuma API realmente funcional para esse tipo de documentos fiscais.
+>NOTA: A NFSe Nota Fiscal de ServiÁos EletrÙnica, n„o tem padr„o ˙nico, e a API tem somente alguns exemplos de montagem de um sistema para esse fim, mas nenhuma API realmente funcional para esse tipo de documentos fiscais.
 
 ## Objetivo
 
-A API permite que um programa emissor de NFe se comunique com a SEFAZ. A API n√£o foi criada para ela pr√≥pria emitir a NFe tendo em vista a enorme quantidade de informa√ß√µes necess√°rias e as caracter√≠sticas e especificidades de cada emitente.
+A API permite que um programa emissor de NFe se comunique com a SEFAZ. A API n„o foi criada para ela prÛpria emitir a NFe tendo em vista a enorme quantidade de informaÁıes necess·rias e as caracterÌsticas e especificidades de cada emitente.
 
-## Depend√™ncias
+## DependÍncias
 
 * composer <https://getcomposer.org/>
 * Apache: <http://httpd.apache.org/>
 * PHP 5.4+: <http://php.net>
 * Bibliotecas de terceiros
- * FPDF: Provis√≥riamente usada para gerar os documentos em PDF. Veja <http://www.fpdf.org/>.Dever√° ser substituida pela classe ZendPdf (devido ao tendimento dos padr√µes PSR e ser mais ativamente mantida e distribuida via composer.
- * zendframework/zend-mail (v.2.x) Usada para envio dos emails aos destin√°tarios dos docuemntos fiscais eletr√¥nicos.
+ * FPDF: ProvisÛriamente usada para gerar os documentos em PDF. Veja <http://www.fpdf.org/>.Dever· ser substituida pela classe ZendPdf (devido ao tendimento dos padrıes PSR e ser mais ativamente mantida e distribuida via composer.
+ * zendframework/zend-mail (v.2.x) Usada para envio dos emails aos destin·tarios dos docuemntos fiscais eletrÙnicos.
  * zendframework/zend-barcode (v.2.x) Usada para gerar os codigos de barras 128 presente nos documentos fiscais em PDF.
  * soundasleep/html2text (v.0.2) Usada para converter as mensagens Htlm dos emails em seu equivalente em texto puro. Usada na classe de envio dos emails.
  * endroid/qrcode (v.1.x) Usada para gerar o QRCode impresso nas NFCe
-* Extens√µes PHP
- * cURL: Normalmente j√° vem habilitado com o PHP 5.3+. Veja <http://br2.php.net/manual/book.curl.php> e <http://curl.haxx.se/>.
- * OpenSSL: Normalmente j√° vem habilitado com o PHP 5.3+. Veja <http://br2.php.net/manual/book.openssl.php> e <http://www.openssl.org/>.
- * mcrypt: Normalmente j√° vem habilitado com o PHP 5.3+. Veja <http://www.php.net/manual/book.mcrypt.php>.
- * imap: Normalmente j√° vem habilitado com o PHP 5.3+. Veja <http://www.php.net/manual/book.imap.php>
- * GD: Normalmente j√° vem habilitado com o PHP 5.3+. Veja <http://www.php.net/manual/book.image.php>
- * ZIP: Necess√°rio para o download de NFe da SEFAZ. Veja <http://www.php.net/manual/en/book.zip.php>
- * Zlib: Necess√°ria para descompactar NFe ap√≥s download. Veja <http://www.php.net/manual/en/book.zlib.php>
+* Extensıes PHP
+ * cURL: Normalmente j· vem habilitado com o PHP 5.3+. Veja <http://br2.php.net/manual/book.curl.php> e <http://curl.haxx.se/>.
+ * OpenSSL: Normalmente j· vem habilitado com o PHP 5.3+. Veja <http://br2.php.net/manual/book.openssl.php> e <http://www.openssl.org/>.
+ * mcrypt: Normalmente j· vem habilitado com o PHP 5.3+. Veja <http://www.php.net/manual/book.mcrypt.php>.
+ * imap: Normalmente j· vem habilitado com o PHP 5.3+. Veja <http://www.php.net/manual/book.imap.php>
+ * GD: Normalmente j· vem habilitado com o PHP 5.3+. Veja <http://www.php.net/manual/book.image.php>
+ * ZIP: Necess·rio para o download de NFe da SEFAZ. Veja <http://www.php.net/manual/en/book.zip.php>
+ * Zlib: Necess·ria para descompactar NFe apÛs download. Veja <http://www.php.net/manual/en/book.zlib.php>
 
-## Instala√ß√£o
+## InstalaÁ„o
 
-Para mais detalhes sobre a instala√ß√£o, veja <https://github.com/nfephp-org/nfephp/wiki/Instala√ß√£o>.
+Para mais detalhes sobre a instalaÁ„o, veja <https://github.com/nfephp-org/nfephp/wiki/InstalaÁ„o>.
 
 ## Quick start
 
-Clone o reposit√≥rio com `git clone --branch=develop https://github.com/nfephp-org/nfephp.git` ou [baixe a √∫ltima vers√£o est√°vel](https://github.com/nfephp-org/nfephp/downloads).
+Clone o repositÛrio com `git clone --branch=develop https://github.com/nfephp-org/nfephp.git` ou [baixe a ˙ltima vers„o est·vel](https://github.com/nfephp-org/nfephp/downloads).
 
 ```sh
 $ composer install
@@ -155,26 +155,26 @@ $ ./vendor/bin/phpunit
 
 ## Versionamento
 
-Para fins de transpar√™ncia e discernimento sobre nosso ciclo de lan√ßamento, e procurando manter compatibilidade com vers√µes anteriores, o n√∫mero de vers√£o da NFePHP 
-ser√° mantida, tanto quanto poss√≠vel, respeitando o padr√£o abaixo.
+Para fins de transparÍncia e discernimento sobre nosso ciclo de lanÁamento, e procurando manter compatibilidade com versıes anteriores, o n˙mero de vers„o da NFePHP 
+ser· mantida, tanto quanto possÌvel, respeitando o padr„o abaixo.
 
-As libera√ß√µes ser√£o numeradas com o seguinte formato:
+As liberaÁıes ser„o numeradas com o seguinte formato:
 
 `<major>.<minor>.<patch>`
 
-E ser√£o constru√≠das com as seguintes orienta√ß√µes:
+E ser„o construÌdas com as seguintes orientaÁıes:
 
-* Quebra de compatibilidade com vers√µes anteriores, avan√ßa o `<major>`.
-* Adi√ß√£o de novas funcionalidades sem quebrar compatibilidade com vers√µes anteriores, avan√ßa o `<minor>`.
-* Corre√ß√£o de bugs e outras altera√ß√µes, avan√ßa `<patch>`.
+* Quebra de compatibilidade com versıes anteriores, avanÁa o `<major>`.
+* AdiÁ„o de novas funcionalidades sem quebrar compatibilidade com versıes anteriores, avanÁa o `<minor>`.
+* CorreÁ„o de bugs e outras alteraÁıes, avanÁa `<patch>`.
 
-Para mais informa√ß√µes, por favor visite <http://semver.org/>.
+Para mais informaÁıes, por favor visite <http://semver.org/>.
 
 ## Desenvolvimento
 
-Para todo o desenvolvimento, corre√ß√µes de bugs, inclus√µes e testes dever√° ser usada branch `develop`. 
-Na branch `master`estar√£o os c√≥digos considerados como est√°veis.
-Novas branches poder√£o surgir em fun√ß√£o das necessidades que se apresentarem, seja para manter versionamentos anteriores seja para estabelecer corre√ß√µes de bugs. Mas apenas essas duas branches estabelecidas √© que ser√£o permanentente mantidas. 
+Para todo o desenvolvimento, correÁıes de bugs, inclusıes e testes dever· ser usada branch `develop`. 
+Na branch `master`estar„o os cÛdigos considerados como est·veis.
+Novas branches poder„o surgir em funÁ„o das necessidades que se apresentarem, seja para manter versionamentos anteriores seja para estabelecer correÁıes de bugs. Mas apenas essas duas branches estabelecidas È que ser„o permanentente mantidas. 
 
 ## Bug tracker
 
@@ -182,15 +182,15 @@ Encontrou um bug? Informe-nos aqui no GitHub!
 
 <https://github.com/nfephp-org/nfephp/issues>
 
-## Mantenedores (em revis√£o)
+## Mantenedores (em revis„o)
 
 * NFe  - `Roberto L. Machado`
 * NFCe - `Roberto L. Machado`
-* NFSe - `n√£o definido`
-* CTe  - `n√£o definido`
-* MDFe - `n√£o definido`
-* CLe  - `n√£o definido`
+* NFSe - `n„o definido`
+* CTe  - `n„o definido`
+* MDFe - `n„o definido`
+* CLe  - `n„o definido`
 
 ## Pull Request
 
-Para que seu Pull Request seja aceito ele deve estar seguindo os padr√µes descritos neste documento <http://www.walkeralencar.com/PHPCodeStandards.pdf>
+Para que seu Pull Request seja aceito ele deve estar seguindo os padrıes descritos neste documento <http://www.walkeralencar.com/PHPCodeStandards.pdf>

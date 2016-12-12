@@ -7,13 +7,13 @@
 * Auteur :  Roland Gautier
 *
 * C128($x,$y,$code,$w,$h)
-*     $x,$y :     angle sup�rieur gauche du code � barre
-*     $code :     le code � cr�er
-*     $w :        largeur hors tout du code dans l'unit� courante
-*                 (pr�voir 5 � 15 mm de blanc � droite et � gauche)
-*     $h :        hauteur hors tout du code dans l'unit� courante
+*     $x,$y :     angle sup?rieur gauche du code ? barre
+*     $code :     le code ? cr?er
+*     $w :        largeur hors tout du code dans l'unit? courante
+*                 (pr?voir 5 ? 15 mm de blanc ? droite et ? gauche)
+*     $h :        hauteur hors tout du code dans l'unit? courante
 *
-* Commutation des jeux ABC automatique et optimis�e.
+* Commutation des jeux ABC automatique et optimis?e.
 *******************************************************************************/
 require_once 'fpdf.php';
 
@@ -21,14 +21,14 @@ class PDF_Code128 extends FPDF
 {
 
     var $T128;                                             // tableau des codes 128
-    var $ABCset="";                                        // jeu des caract�res �ligibles au C128
-    var $Aset="";                                          // Set A du jeu des caract�res �ligibles
-    var $Bset="";                                          // Set B du jeu des caract�res �ligibles
-    var $Cset="";                                          // Set C du jeu des caract�res �ligibles
+    var $ABCset="";                                        // jeu des caract?res ?ligibles au C128
+    var $Aset="";                                          // Set A du jeu des caract?res ?ligibles
+    var $Bset="";                                          // Set B du jeu des caract?res ?ligibles
+    var $Cset="";                                          // Set C du jeu des caract?res ?ligibles
     var $SetFrom;                                          // Convertisseur source des jeux vers le tableau
     var $SetTo;                                            // Convertisseur destination des jeux vers le tableau
-    var $JStart = array("A"=>103, "B"=>104, "C"=>105);     // Caract�res de s�lection de jeu au d�but du C128
-    var $JSwap = array("A"=>101, "B"=>100, "C"=>99);       // Caract�res de changement de jeu
+    var $JStart = array("A"=>103, "B"=>104, "C"=>105);     // Caract?res de s?lection de jeu au d?but du C128
+    var $JSwap = array("A"=>101, "B"=>100, "C"=>99);       // Caract?res de changement de jeu
 
     //____________________________ Extension du constructeur _______________________
     function PDF_Code128($orientation = 'P', $unit = 'mm', $format = 'A4')
@@ -36,7 +36,7 @@ class PDF_Code128 extends FPDF
 
         parent::FPDF($orientation, $unit, $format);
 
-        $this->T128[] = array(2, 1, 2, 2, 2, 2);           //0 : [ ]               // composition des caract�res
+        $this->T128[] = array(2, 1, 2, 2, 2, 2);           //0 : [ ]               // composition des caract?res
         $this->T128[] = array(2, 2, 2, 1, 2, 2);           //1 : [!]
         $this->T128[] = array(2, 2, 2, 2, 2, 1);           //2 : ["]
         $this->T128[] = array(1, 2, 1, 2, 2, 3);           //3 : [#]
@@ -145,7 +145,7 @@ class PDF_Code128 extends FPDF
         $this->T128[] = array(2, 3, 3, 1, 1, 1);           //106 : [STOP]
         $this->T128[] = array(2, 1);                       //107 : [END BAR]
 
-        for ($i = 32; $i <= 95; $i++) {                                            // jeux de caract�res
+        for ($i = 32; $i <= 95; $i++) {                                            // jeux de caract?res
             $this->ABCset .= chr($i);
         }
         $this->Aset = $this->ABCset;
@@ -171,7 +171,7 @@ class PDF_Code128 extends FPDF
     //________________ Fonction encodage et dessin du code 128 _____________________
     function Code128($x, $y, $code, $w, $h)
     {
-        $Aguid="";                                                                      // Cr�ation des guides de choix ABC
+        $Aguid="";                                                                      // Cr?ation des guides de choix ABC
         $Bguid="";
         $Cguid="";
         for ($i=0; $i < strlen($code); $i++) {
@@ -187,15 +187,15 @@ class PDF_Code128 extends FPDF
         $crypt = "";
         while ($code > "") {
                                                                                     // BOUCLE PRINCIPALE DE CODAGE
-            $i = strpos($Cguid, $SminiC);                                                // for�age du jeu C, si possible
+            $i = strpos($Cguid, $SminiC);                                                // for?age du jeu C, si possible
             if ($i!==false) {
                 $Aguid [$i] = "N";
                 $Bguid [$i] = "N";
             }
 
             if (substr($Cguid, 0, $IminiC) == $SminiC) {                                  // jeu C
-                $crypt .= chr(($crypt > "") ? $this->JSwap["C"] : $this->JStart["C"]);  // d�but Cstart, sinon Cswap
-                $made = strpos($Cguid, "N");                                             // �tendu du set C
+                $crypt .= chr(($crypt > "") ? $this->JSwap["C"] : $this->JStart["C"]);  // d?but Cstart, sinon Cswap
+                $made = strpos($Cguid, "N");                                             // ?tendu du set C
                 if ($made === false) {
                     $made = strlen($Cguid);
                 }
@@ -205,35 +205,35 @@ class PDF_Code128 extends FPDF
                     $crypt .= chr(strval(substr($code, $i, 2))); // conversion 2 par 2
                 }                $jeu = "C";
             } else {
-                $madeA = strpos($Aguid, "N");                                            // �tendu du set A
+                $madeA = strpos($Aguid, "N");                                            // ?tendu du set A
                 if ($madeA === false) {
                     $madeA = strlen($Aguid);
                 }
-                $madeB = strpos($Bguid, "N");                                            // �tendu du set B
+                $madeB = strpos($Bguid, "N");                                            // ?tendu du set B
                 if ($madeB === false) {
                     $madeB = strlen($Bguid);
                 }
-                $made = (($madeA < $madeB) ? $madeB : $madeA );                         // �tendu trait�e
+                $made = (($madeA < $madeB) ? $madeB : $madeA );                         // ?tendu trait?e
                 $jeu = (($madeA < $madeB) ? "B" : "A" );                                // Jeu en cours
                 $jeuguid = $jeu . "guid";
 
-                $crypt .= chr(($crypt > "") ? $this->JSwap["$jeu"] : $this->JStart["$jeu"]); // d�but start, sinon swap
+                $crypt .= chr(($crypt > "") ? $this->JSwap["$jeu"] : $this->JStart["$jeu"]); // d?but start, sinon swap
 
                 $crypt .= strtr(substr($code, 0, $made), $this->SetFrom[$jeu], $this->SetTo[$jeu]); // conversion selon jeu
             }
-            $code = substr($code, $made);                                           // raccourcir l�gende et guides de la zone trait�e
+            $code = substr($code, $made);                                           // raccourcir l?gende et guides de la zone trait?e
             $Aguid = substr($Aguid, $made);
             $Bguid = substr($Bguid, $made);
             $Cguid = substr($Cguid, $made);
         }                                                                          // FIN BOUCLE PRINCIPALE
 
-        $check=ord($crypt[0]);                                                     // calcul de la somme de contr�le
+        $check=ord($crypt[0]);                                                     // calcul de la somme de contr?le
         for ($i=0; $i<strlen($crypt); $i++) {
             $check += (ord($crypt[$i]) * $i);
         }
         $check %= 103;
 
-        $crypt .= chr($check) . chr(106) . chr(107);                               // Chaine Crypt�e compl�te
+        $crypt .= chr($check) . chr(106) . chr(107);                               // Chaine Crypt?e compl?te
 
         $i = (strlen($crypt) * 11) - 8;                                            // calcul de la largeur du module
         $modul = $w/$i;

@@ -6,25 +6,25 @@
 	<xs:include schemaLocation="tiposBasico_v3.10.xsd"/>
 	<xs:complexType name="TInutNFe">
 		<xs:annotation>
-			<xs:documentation>Tipo Pedido de InutilizaÃ§Ã£o de NumeraÃ§Ã£o da Nota Fiscal EletrÃ´nica</xs:documentation>
+			<xs:documentation>Tipo Pedido de Inutilização de Numeração da Nota Fiscal Eletrônica</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="infInut">
 				<xs:annotation>
-					<xs:documentation>Dados do Pedido de InutilizaÃ§Ã£o de NumeraÃ§Ã£o da Nota Fiscal EletrÃ´nica</xs:documentation>
+					<xs:documentation>Dados do Pedido de Inutilização de Numeração da Nota Fiscal Eletrônica</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
 						<xs:element name="tpAmb" type="TAmb">
 							<xs:annotation>
-								<xs:documentation>IdentificaÃ§Ã£o do Ambiente:
-1 - ProduÃ§Ã£o
-2 - HomologaÃ§Ã£o</xs:documentation>
+								<xs:documentation>Identificação do Ambiente:
+1 - Produção
+2 - Homologação</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 						<xs:element name="xServ">
 							<xs:annotation>
-								<xs:documentation>ServiÃ§o Solicitado</xs:documentation>
+								<xs:documentation>Serviço Solicitado</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="TServ">
@@ -34,12 +34,12 @@
 						</xs:element>
 						<xs:element name="cUF" type="TCodUfIBGE">
 							<xs:annotation>
-								<xs:documentation>CÃ³digo da UF do emitente</xs:documentation>
+								<xs:documentation>Código da UF do emitente</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 						<xs:element name="ano" type="Tano">
 							<xs:annotation>
-								<xs:documentation>Ano de inutilizaÃ§Ã£o da numeraÃ§Ã£o</xs:documentation>
+								<xs:documentation>Ano de inutilização da numeração</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 						<xs:element name="CNPJ" type="TCnpj">
@@ -54,22 +54,22 @@
 						</xs:element>
 						<xs:element name="serie" type="TSerie">
 							<xs:annotation>
-								<xs:documentation>SÃ©rie da NF-e</xs:documentation>
+								<xs:documentation>Série da NF-e</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 						<xs:element name="nNFIni" type="TNF">
 							<xs:annotation>
-								<xs:documentation>NÃºmero da NF-e inicial</xs:documentation>
+								<xs:documentation>Número da NF-e inicial</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 						<xs:element name="nNFFin" type="TNF">
 							<xs:annotation>
-								<xs:documentation>NÃºmero da NF-e final</xs:documentation>
+								<xs:documentation>Número da NF-e final</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 						<xs:element name="xJust" type="TJust">
 							<xs:annotation>
-								<xs:documentation>Justificativa do pedido de inutilizaÃ§Ã£o</xs:documentation>
+								<xs:documentation>Justificativa do pedido de inutilização</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 					</xs:sequence>
@@ -88,45 +88,45 @@
 	</xs:complexType>
 	<xs:complexType name="TRetInutNFe">
 		<xs:annotation>
-			<xs:documentation>Tipo retorno do Pedido de InutilizaÃ§Ã£o de NumeraÃ§Ã£o da Nota Fiscal EletrÃ´nica</xs:documentation>
+			<xs:documentation>Tipo retorno do Pedido de Inutilização de Numeração da Nota Fiscal Eletrônica</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="infInut">
 				<xs:annotation>
-					<xs:documentation>Dados do Retorno do Pedido de InutilizaÃ§Ã£o de NumeraÃ§Ã£o da Nota Fiscal EletrÃ´nica</xs:documentation>
+					<xs:documentation>Dados do Retorno do Pedido de Inutilização de Numeração da Nota Fiscal Eletrônica</xs:documentation>
 				</xs:annotation>
 				<xs:complexType>
 					<xs:sequence>
 						<xs:element name="tpAmb" type="TAmb">
 							<xs:annotation>
-								<xs:documentation>IdentificaÃ§Ã£o do Ambiente:
-1 - ProduÃ§Ã£o
-2 - HomologaÃ§Ã£o</xs:documentation>
+								<xs:documentation>Identificação do Ambiente:
+1 - Produção
+2 - Homologação</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 						<xs:element name="verAplic" type="TVerAplic">
 							<xs:annotation>
-								<xs:documentation>VersÃ£o do Aplicativo que processou a NF-e</xs:documentation>
+								<xs:documentation>Versão do Aplicativo que processou a NF-e</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 						<xs:element name="cStat" type="TStat">
 							<xs:annotation>
-								<xs:documentation>CÃ³digo do status da mensagem enviada.</xs:documentation>
+								<xs:documentation>Código do status da mensagem enviada.</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 						<xs:element name="xMotivo" type="TMotivo">
 							<xs:annotation>
-								<xs:documentation>DescriÃ§Ã£o literal do status do serviÃ§o solicitado.</xs:documentation>
+								<xs:documentation>Descrição literal do status do serviço solicitado.</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 						<xs:element name="cUF" type="TCodUfIBGE">
 							<xs:annotation>
-								<xs:documentation>CÃ³digo da UF que atendeu a solicitaÃ§Ã£o</xs:documentation>
+								<xs:documentation>Código da UF que atendeu a solicitação</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 						<xs:element name="ano" type="Tano" minOccurs="0">
 							<xs:annotation>
-								<xs:documentation>Ano de inutilizaÃ§Ã£o da numeraÃ§Ã£o</xs:documentation>
+								<xs:documentation>Ano de inutilização da numeração</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 						<xs:element name="CNPJ" type="TCnpj" minOccurs="0">
@@ -141,27 +141,27 @@
 						</xs:element>
 						<xs:element name="serie" type="TSerie" minOccurs="0">
 							<xs:annotation>
-								<xs:documentation>SÃ©rie da NF-e</xs:documentation>
+								<xs:documentation>Série da NF-e</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 						<xs:element name="nNFIni" type="TNF" minOccurs="0">
 							<xs:annotation>
-								<xs:documentation>NÃºmero da NF-e inicial</xs:documentation>
+								<xs:documentation>Número da NF-e inicial</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 						<xs:element name="nNFFin" type="TNF" minOccurs="0">
 							<xs:annotation>
-								<xs:documentation>NÃºmero da NF-e final</xs:documentation>
+								<xs:documentation>Número da NF-e final</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 						<xs:element name="dhRecbto" type="TDateTimeUTC">
 							<xs:annotation>
-								<xs:documentation>Data e hora de recebimento, no formato AAAA-MM-DDTHH:MM:SS. Deve ser preenchida com data e hora da gravaÃ§Ã£o no Banco em caso de ConfirmaÃ§Ã£o. Em caso de RejeiÃ§Ã£o, com data e hora do recebimento do Pedido de InutilizaÃ§Ã£o.</xs:documentation>
+								<xs:documentation>Data e hora de recebimento, no formato AAAA-MM-DDTHH:MM:SS. Deve ser preenchida com data e hora da gravação no Banco em caso de Confirmação. Em caso de Rejeição, com data e hora do recebimento do Pedido de Inutilização.</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 						<xs:element name="nProt" type="TProt" minOccurs="0">
 							<xs:annotation>
-								<xs:documentation>NÃºmero do Protocolo de Status da NF-e. 1 posiÃ§Ã£o (1 â€“ Secretaria de Fazenda Estadual 2 â€“ Receita Federal); 2 - cÃ³digo da UF - 2 posiÃ§Ãµes ano; 10 seqÃ¼encial no ano.</xs:documentation>
+								<xs:documentation>Número do Protocolo de Status da NF-e. 1 posição (1 - Secretaria de Fazenda Estadual 2 - Receita Federal); 2 - código da UF - 2 posições ano; 10 seqüencial no ano.</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 					</xs:sequence>
@@ -174,7 +174,7 @@
 	</xs:complexType>
 	<xs:complexType name="TProcInutNFe">
 		<xs:annotation>
-			<xs:documentation>Tipo Pedido de inutilzaÃ§Ã£o de nÃºmeraÃ§Ã£o de  NF-e processado</xs:documentation>
+			<xs:documentation>Tipo Pedido de inutilzação de númeração de  NF-e processado</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="inutNFe" type="TInutNFe"/>
@@ -184,7 +184,7 @@
 	</xs:complexType>
 	<xs:simpleType name="TVerInutNFe">
 		<xs:annotation>
-			<xs:documentation>Tipo VersÃ£o do leiaute de InutilizaÃ§Ã£o 3.10</xs:documentation>
+			<xs:documentation>Tipo Versão do leiaute de Inutilização 3.10</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:token">
 			<xs:pattern value="3\.10"/>

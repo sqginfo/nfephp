@@ -3,7 +3,7 @@
 namespace NFePHP\Common\Files;
 
 /**
- * Classe auxiliar para criar, listar e testar os diret√≥rios utilizados pela API
+ * Classe auxiliar para criar, listar e testar os diretÛrios utilizados pela API
  *
  * @category  NFePHP
  * @package   NFePHP\Common\Files
@@ -72,7 +72,7 @@ class FilesFolders
         if (!is_dir($path)) {
             if (!mkdir($path, 0777, true)) {
                 throw new Exception\RuntimeException(
-                    "N√£o foi possivel criar o diretorio $folder. Verifique as permiss√µes"
+                    "N„o foi possivel criar o diretorio $folder. Verifique as permissıes"
                 );
             }
         }    
@@ -89,7 +89,7 @@ class FilesFolders
      */
     public static function createFolders($dirPath)
     {
-        //monta a arvore de diret√≥rios necess√°ria e estabelece permiss√µes de acesso
+        //monta a arvore de diretÛrios necess·ria e estabelece permissıes de acesso
         self::createFolder($dirPath);
         foreach (self::$ambientes as $ambiente) {
             $folder = $dirPath.DIRECTORY_SEPARATOR.$ambiente;
@@ -112,7 +112,7 @@ class FilesFolders
         if (! is_dir($folder)) {
             if (! mkdir($folder, 0777)) {
                 throw new Exception\RuntimeException(
-                    "N√£o foi possivel criar o diretorio $folder. Verifique as permiss√µes"
+                    "N„o foi possivel criar o diretorio $folder. Verifique as permissıes"
                 );
             }
         }
@@ -140,23 +140,23 @@ class FilesFolders
     
     /**
      * listDir
-     * Obtem todo o conte√∫do de um diretorio, e que atendam ao crit√©rio indicado.
+     * Obtem todo o conte˙do de um diretorio, e que atendam ao critÈrio indicado.
      * @param  string  $dir       Diretorio a ser pesquisado
-     * @param  string  $fileMatch Crit√©rio de sele√ß√£o pode ser usados coringas como *-nfe.xml
+     * @param  string  $fileMatch CritÈrio de seleÁ„o pode ser usados coringas como *-nfe.xml
      * @param  boolean $retpath   se true retorna o path completo dos arquivos se false so retorna o nome dos arquivos
-     * @return array com os nome dos arquivos que atendem ao crit√©rio estabelecido ou false
+     * @return array com os nome dos arquivos que atendem ao critÈrio estabelecido ou false
      * @throws Exception\InvalidArgumentException
      */
     public static function listDir($folder, $fileMatch = '*-nfe.xml', $retpath = false)
     {
         if ($folder == '' || $fileMatch == '') {
             throw new Exception\InvalidArgumentException(
-                "√â necess√°rio passar os parametros diret√≥rio e filtro!!!"
+                "… necess·rio passar os parametros diretÛrio e filtro!!!"
             );
         }
         if (! is_dir($folder)) {
             throw new Exception\InvalidArgumentException(
-                "O diret√≥rio n√£o existe $folder !!!"
+                "O diretÛrio n„o existe $folder !!!"
             );
         }
         $aList = array();
@@ -178,11 +178,11 @@ class FilesFolders
     
     /**
      * Rotina para teste de escrita no path especificado
-     * Usada na rotina de configura√ß√£o (install.php)
+     * Usada na rotina de configuraÁ„o (install.php)
      *
      * @param  string $path
      * @param  string $message
-     * @param  string $respHtml passado por referencia ir√° conter a resposta em html
+     * @param  string $respHtml passado por referencia ir· conter a resposta em html
      * @return boolean
      */
     public static function writeTest($path = '', $message = '', &$respHtml = '')
@@ -211,7 +211,7 @@ class FilesFolders
     }
     
     /**
-     * Apaga um diretorio e todo o seu conte√∫do
+     * Apaga um diretorio e todo o seu conte˙do
      *
      * @param  string $dirPath
      * @return boolean
@@ -226,13 +226,13 @@ class FilesFolders
             } else {
                 if (! unlink("$dirPath/$file")) {
                     throw new Exception\RuntimeException(
-                        "Falha! sem permiss√£o de exclus√£o do arquivo $dirPath/$file"
+                        "Falha! sem permiss„o de exclus„o do arquivo $dirPath/$file"
                     );
                 }
             }
         }
         if (! rmdir($dirPath)) {
-            $msg = "Falha! sem permiss√£o de exclus√£o do diret√≥rio $dirPath";
+            $msg = "Falha! sem permiss„o de exclus„o do diretÛrio $dirPath";
             throw new Exception\RuntimeException($msg);
         }
         return true;
@@ -253,11 +253,11 @@ class FilesFolders
             throw new Exception\InvalidArgumentException($msg);
         }
         if (! is_file($pathFile)) {
-            $msg = "O arquivo indicado n√£o foi localizado!! $pathFile";
+            $msg = "O arquivo indicado n„o foi localizado!! $pathFile";
             throw new Exception\InvalidArgumentException($msg);
         }
         if (! is_readable($pathFile)) {
-            $msg = "O arquivo indicado n√£o pode ser lido. Permiss√µes!! $pathFile";
+            $msg = "O arquivo indicado n„o pode ser lido. Permissıes!! $pathFile";
             throw new Exception\RuntimeException($msg);
         }
         return file_get_contents($pathFile);

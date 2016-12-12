@@ -23,7 +23,7 @@
 		</xs:sequence>
 		<xs:attribute name="versao">
 			<xs:annotation>
-			  <xs:documentation>VersÃ£o do leiaute</xs:documentation>
+			  <xs:documentation>Versão do leiaute</xs:documentation>
 			</xs:annotation>
 			<xs:simpleType>
 				<xs:restriction base="xs:string">

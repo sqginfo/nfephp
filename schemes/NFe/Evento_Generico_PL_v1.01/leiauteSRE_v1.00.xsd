@@ -10,7 +10,7 @@
     <meta http-equiv="Content-Language" content="en">
     
     
-    <title>ACBr/leiauteSRE_v1.00.xsd at master ¬∑ cesarjr/ACBr</title>
+    <title>ACBr/leiauteSRE_v1.00.xsd at master ∑ cesarjr/ACBr</title>
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
     <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png">
@@ -19,8 +19,8 @@
     <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png">
     <meta property="fb:app_id" content="1401488693436528">
 
-      <meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="cesarjr/ACBr" name="twitter:title" /><meta content="Mirror do projeto ACBr. S√£o componentes escritos para Delphi que facilitam a vida de quem trabalha com automa√ß√£o comercial. Este reposit√≥rio √© apenas um espelho do reposit√≥rio original, no qual " name="twitter:description" /><meta content="https://avatars2.githubusercontent.com/u/824198?v=2&amp;s=400" name="twitter:image:src" />
-<meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="https://avatars2.githubusercontent.com/u/824198?v=2&amp;s=400" property="og:image" /><meta content="cesarjr/ACBr" property="og:title" /><meta content="https://github.com/cesarjr/ACBr" property="og:url" /><meta content="Mirror do projeto ACBr. S√£o componentes escritos para Delphi que facilitam a vida de quem trabalha com automa√ß√£o comercial. Este reposit√≥rio √© apenas um espelho do reposit√≥rio original, no qual est√° hospedado em SVN. Mais sobre o projeto pode ser lido em http://acbr.sourceforge.net/drupal/" property="og:description" />
+      <meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="cesarjr/ACBr" name="twitter:title" /><meta content="Mirror do projeto ACBr. S„o componentes escritos para Delphi que facilitam a vida de quem trabalha com automaÁ„o comercial. Este repositÛrio È apenas um espelho do repositÛrio original, no qual " name="twitter:description" /><meta content="https://avatars2.githubusercontent.com/u/824198?v=2&amp;s=400" name="twitter:image:src" />
+<meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="https://avatars2.githubusercontent.com/u/824198?v=2&amp;s=400" property="og:image" /><meta content="cesarjr/ACBr" property="og:title" /><meta content="https://github.com/cesarjr/ACBr" property="og:url" /><meta content="Mirror do projeto ACBr. S„o componentes escritos para Delphi que facilitam a vida de quem trabalha com automaÁ„o comercial. Este repositÛrio È apenas um espelho do repositÛrio original, no qual est· hospedado em SVN. Mais sobre o projeto pode ser lido em http://acbr.sourceforge.net/drupal/" property="og:description" />
 
       <meta name="browser-stats-url" content="/_stats">
     <link rel="assets" href="https://assets-cdn.github.com/">
@@ -54,7 +54,7 @@
     <meta http-equiv="x-pjax-version" content="f33e34fc7e40286ba76217947ed67f44">
 
       
-  <meta name="description" content="Mirror do projeto ACBr. S√£o componentes escritos para Delphi que facilitam a vida de quem trabalha com automa√ß√£o comercial. Este reposit√≥rio √© apenas um espelho do reposit√≥rio original, no qual est√° hospedado em SVN. Mais sobre o projeto pode ser lido em http://acbr.sourceforge.net/drupal/">
+  <meta name="description" content="Mirror do projeto ACBr. S„o componentes escritos para Delphi que facilitam a vida de quem trabalha com automaÁ„o comercial. Este repositÛrio È apenas um espelho do repositÛrio original, no qual est· hospedado em SVN. Mais sobre o projeto pode ser lido em http://acbr.sourceforge.net/drupal/">
   <meta name="go-import" content="github.com/cesarjr/ACBr git https://github.com/cesarjr/ACBr.git">
 
   <meta content="824198" name="octolytics-dimension-user_id" /><meta content="cesarjr" name="octolytics-dimension-user_login" /><meta content="7109398" name="octolytics-dimension-repository_id" /><meta content="cesarjr/ACBr" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="7109398" name="octolytics-dimension-repository_network_root_id" /><meta content="cesarjr/ACBr" name="octolytics-dimension-repository_network_root_nwo" />
@@ -654,7 +654,7 @@ git-svn-id: https://acbr.svn.sourceforge.net/svnroot/acbr/trunk@3728 6e92efe7-b9
       </tr>
       <tr>
         <td id="L15" class="blob-num js-line-number" data-line-number="15"></td>
-        <td id="LC15" class="blob-code js-file-line">								<span class="nt">&lt;xs:documentation&gt;</span>C√≥digo do √≥rg√£o de recep√ß√£o do Evento. Utilizar a Tabela do IBGE extendida, utilizar 90 para identificar o Ambiente Nacional<span class="nt">&lt;/xs:documentation&gt;</span></td>
+        <td id="LC15" class="blob-code js-file-line">								<span class="nt">&lt;xs:documentation&gt;</span>CÛdigo do Ûrg„o de recepÁ„o do Evento. Utilizar a Tabela do IBGE extendida, utilizar 90 para identificar o Ambiente Nacional<span class="nt">&lt;/xs:documentation&gt;</span></td>
       </tr>
       <tr>
         <td id="L16" class="blob-num js-line-number" data-line-number="16"></td>
@@ -674,15 +674,15 @@ git-svn-id: https://acbr.svn.sourceforge.net/svnroot/acbr/trunk@3728 6e92efe7-b9
       </tr>
       <tr>
         <td id="L20" class="blob-num js-line-number" data-line-number="20"></td>
-        <td id="LC20" class="blob-code js-file-line">								<span class="nt">&lt;xs:documentation&gt;</span>Identifica√ß√£o do Ambiente:</td>
+        <td id="LC20" class="blob-code js-file-line">								<span class="nt">&lt;xs:documentation&gt;</span>IdentificaÁ„o do Ambiente:</td>
       </tr>
       <tr>
         <td id="L21" class="blob-num js-line-number" data-line-number="21"></td>
-        <td id="LC21" class="blob-code js-file-line">1 - Produ√ß√£o</td>
+        <td id="LC21" class="blob-code js-file-line">1 - ProduÁ„o</td>
       </tr>
       <tr>
         <td id="L22" class="blob-num js-line-number" data-line-number="22"></td>
-        <td id="LC22" class="blob-code js-file-line">2 - Homologa√ß√£o<span class="nt">&lt;/xs:documentation&gt;</span></td>
+        <td id="LC22" class="blob-code js-file-line">2 - HomologaÁ„o<span class="nt">&lt;/xs:documentation&gt;</span></td>
       </tr>
       <tr>
         <td id="L23" class="blob-num js-line-number" data-line-number="23"></td>
@@ -702,7 +702,7 @@ git-svn-id: https://acbr.svn.sourceforge.net/svnroot/acbr/trunk@3728 6e92efe7-b9
       </tr>
       <tr>
         <td id="L27" class="blob-num js-line-number" data-line-number="27"></td>
-        <td id="LC27" class="blob-code js-file-line">								<span class="nt">&lt;xs:documentation&gt;</span>Identifica√ß√£o do  autor do evento<span class="nt">&lt;/xs:documentation&gt;</span></td>
+        <td id="LC27" class="blob-code js-file-line">								<span class="nt">&lt;xs:documentation&gt;</span>IdentificaÁ„o do  autor do evento<span class="nt">&lt;/xs:documentation&gt;</span></td>
       </tr>
       <tr>
         <td id="L28" class="blob-num js-line-number" data-line-number="28"></td>
@@ -870,7 +870,7 @@ git-svn-id: https://acbr.svn.sourceforge.net/svnroot/acbr/trunk@3728 6e92efe7-b9
       </tr>
       <tr>
         <td id="L69" class="blob-num js-line-number" data-line-number="69"></td>
-        <td id="LC69" class="blob-code js-file-line">								<span class="nt">&lt;xs:documentation&gt;</span>Seq√ºencial do evento para o mesmo tipo de evento.  Para maioria dos eventos ser√° 1, nos casos em que possa existir mais de um evento, como √© o caso da carta de corre√ß√£o, o autor do evento deve numerar de forma seq√ºencial.<span class="nt">&lt;/xs:documentation&gt;</span></td>
+        <td id="LC69" class="blob-code js-file-line">								<span class="nt">&lt;xs:documentation&gt;</span>Seq¸encial do evento para o mesmo tipo de evento.  Para maioria dos eventos ser· 1, nos casos em que possa existir mais de um evento, como È o caso da carta de correÁ„o, o autor do evento deve numerar de forma seq¸encial.<span class="nt">&lt;/xs:documentation&gt;</span></td>
       </tr>
       <tr>
         <td id="L70" class="blob-num js-line-number" data-line-number="70"></td>
@@ -914,7 +914,7 @@ git-svn-id: https://acbr.svn.sourceforge.net/svnroot/acbr/trunk@3728 6e92efe7-b9
       </tr>
       <tr>
         <td id="L80" class="blob-num js-line-number" data-line-number="80"></td>
-        <td id="LC80" class="blob-code js-file-line">								<span class="nt">&lt;xs:documentation&gt;</span>Vers√£o do Tipo do Evento<span class="nt">&lt;/xs:documentation&gt;</span></td>
+        <td id="LC80" class="blob-code js-file-line">								<span class="nt">&lt;xs:documentation&gt;</span>Vers„o do Tipo do Evento<span class="nt">&lt;/xs:documentation&gt;</span></td>
       </tr>
       <tr>
         <td id="L81" class="blob-num js-line-number" data-line-number="81"></td>
@@ -966,7 +966,7 @@ git-svn-id: https://acbr.svn.sourceforge.net/svnroot/acbr/trunk@3728 6e92efe7-b9
       </tr>
       <tr>
         <td id="L93" class="blob-num js-line-number" data-line-number="93"></td>
-        <td id="LC93" class="blob-code js-file-line">											<span class="nt">&lt;xs:documentation&gt;</span>informa√ß√µes espec√≠ficas do evento<span class="nt">&lt;/xs:documentation&gt;</span></td>
+        <td id="LC93" class="blob-code js-file-line">											<span class="nt">&lt;xs:documentation&gt;</span>informaÁıes especÌficas do evento<span class="nt">&lt;/xs:documentation&gt;</span></td>
       </tr>
       <tr>
         <td id="L94" class="blob-num js-line-number" data-line-number="94"></td>
@@ -1006,11 +1006,11 @@ git-svn-id: https://acbr.svn.sourceforge.net/svnroot/acbr/trunk@3728 6e92efe7-b9
       </tr>
       <tr>
         <td id="L103" class="blob-num js-line-number" data-line-number="103"></td>
-        <td id="LC103" class="blob-code js-file-line">							<span class="nt">&lt;xs:documentation&gt;</span>Identificador da TAG a ser assinada, a regra de forma√ß√£o do Id √©:</td>
+        <td id="LC103" class="blob-code js-file-line">							<span class="nt">&lt;xs:documentation&gt;</span>Identificador da TAG a ser assinada, a regra de formaÁ„o do Id È:</td>
       </tr>
       <tr>
         <td id="L104" class="blob-num js-line-number" data-line-number="104"></td>
-        <td id="LC104" class="blob-code js-file-line">‚ÄúID‚Äù + tpEvento +  chave da NF-e + nSeqEvento<span class="nt">&lt;/xs:documentation&gt;</span></td>
+        <td id="LC104" class="blob-code js-file-line">"ID" + tpEvento +  chave da NF-e + nSeqEvento<span class="nt">&lt;/xs:documentation&gt;</span></td>
       </tr>
       <tr>
         <td id="L105" class="blob-num js-line-number" data-line-number="105"></td>
@@ -1106,15 +1106,15 @@ git-svn-id: https://acbr.svn.sourceforge.net/svnroot/acbr/trunk@3728 6e92efe7-b9
       </tr>
       <tr>
         <td id="L128" class="blob-num js-line-number" data-line-number="128"></td>
-        <td id="LC128" class="blob-code js-file-line">								<span class="nt">&lt;xs:documentation&gt;</span>Identifica√ß√£o do Ambiente:</td>
+        <td id="LC128" class="blob-code js-file-line">								<span class="nt">&lt;xs:documentation&gt;</span>IdentificaÁ„o do Ambiente:</td>
       </tr>
       <tr>
         <td id="L129" class="blob-num js-line-number" data-line-number="129"></td>
-        <td id="LC129" class="blob-code js-file-line">1 - Produ√ß√£o</td>
+        <td id="LC129" class="blob-code js-file-line">1 - ProduÁ„o</td>
       </tr>
       <tr>
         <td id="L130" class="blob-num js-line-number" data-line-number="130"></td>
-        <td id="LC130" class="blob-code js-file-line">2 - Homologa√ß√£o<span class="nt">&lt;/xs:documentation&gt;</span></td>
+        <td id="LC130" class="blob-code js-file-line">2 - HomologaÁ„o<span class="nt">&lt;/xs:documentation&gt;</span></td>
       </tr>
       <tr>
         <td id="L131" class="blob-num js-line-number" data-line-number="131"></td>
@@ -1134,7 +1134,7 @@ git-svn-id: https://acbr.svn.sourceforge.net/svnroot/acbr/trunk@3728 6e92efe7-b9
       </tr>
       <tr>
         <td id="L135" class="blob-num js-line-number" data-line-number="135"></td>
-        <td id="LC135" class="blob-code js-file-line">								<span class="nt">&lt;xs:documentation&gt;</span>Vers√£o do Aplicativo que recebeu o Evento<span class="nt">&lt;/xs:documentation&gt;</span></td>
+        <td id="LC135" class="blob-code js-file-line">								<span class="nt">&lt;xs:documentation&gt;</span>Vers„o do Aplicativo que recebeu o Evento<span class="nt">&lt;/xs:documentation&gt;</span></td>
       </tr>
       <tr>
         <td id="L136" class="blob-num js-line-number" data-line-number="136"></td>
@@ -1154,7 +1154,7 @@ git-svn-id: https://acbr.svn.sourceforge.net/svnroot/acbr/trunk@3728 6e92efe7-b9
       </tr>
       <tr>
         <td id="L140" class="blob-num js-line-number" data-line-number="140"></td>
-        <td id="LC140" class="blob-code js-file-line">								<span class="nt">&lt;xs:documentation&gt;</span>C√≥digo do √≥rg√£o de recep√ß√£o do Evento. Utilizar a Tabela do IBGE extendida, utilizar 90 para identificar o Ambiente Nacional<span class="nt">&lt;/xs:documentation&gt;</span></td>
+        <td id="LC140" class="blob-code js-file-line">								<span class="nt">&lt;xs:documentation&gt;</span>CÛdigo do Ûrg„o de recepÁ„o do Evento. Utilizar a Tabela do IBGE extendida, utilizar 90 para identificar o Ambiente Nacional<span class="nt">&lt;/xs:documentation&gt;</span></td>
       </tr>
       <tr>
         <td id="L141" class="blob-num js-line-number" data-line-number="141"></td>
@@ -1174,7 +1174,7 @@ git-svn-id: https://acbr.svn.sourceforge.net/svnroot/acbr/trunk@3728 6e92efe7-b9
       </tr>
       <tr>
         <td id="L145" class="blob-num js-line-number" data-line-number="145"></td>
-        <td id="LC145" class="blob-code js-file-line">								<span class="nt">&lt;xs:documentation&gt;</span>C√≥digo do status da registro do Evento<span class="nt">&lt;/xs:documentation&gt;</span></td>
+        <td id="LC145" class="blob-code js-file-line">								<span class="nt">&lt;xs:documentation&gt;</span>CÛdigo do status da registro do Evento<span class="nt">&lt;/xs:documentation&gt;</span></td>
       </tr>
       <tr>
         <td id="L146" class="blob-num js-line-number" data-line-number="146"></td>
@@ -1194,7 +1194,7 @@ git-svn-id: https://acbr.svn.sourceforge.net/svnroot/acbr/trunk@3728 6e92efe7-b9
       </tr>
       <tr>
         <td id="L150" class="blob-num js-line-number" data-line-number="150"></td>
-        <td id="LC150" class="blob-code js-file-line">								<span class="nt">&lt;xs:documentation&gt;</span>Descri√ß√£o literal do status do registro do Evento<span class="nt">&lt;/xs:documentation&gt;</span></td>
+        <td id="LC150" class="blob-code js-file-line">								<span class="nt">&lt;xs:documentation&gt;</span>DescriÁ„o literal do status do registro do Evento<span class="nt">&lt;/xs:documentation&gt;</span></td>
       </tr>
       <tr>
         <td id="L151" class="blob-num js-line-number" data-line-number="151"></td>
@@ -1278,7 +1278,7 @@ git-svn-id: https://acbr.svn.sourceforge.net/svnroot/acbr/trunk@3728 6e92efe7-b9
       </tr>
       <tr>
         <td id="L171" class="blob-num js-line-number" data-line-number="171"></td>
-        <td id="LC171" class="blob-code js-file-line">								<span class="nt">&lt;xs:documentation&gt;</span>Descri√ß√£o do Evento<span class="nt">&lt;/xs:documentation&gt;</span></td>
+        <td id="LC171" class="blob-code js-file-line">								<span class="nt">&lt;xs:documentation&gt;</span>DescriÁ„o do Evento<span class="nt">&lt;/xs:documentation&gt;</span></td>
       </tr>
       <tr>
         <td id="L172" class="blob-num js-line-number" data-line-number="172"></td>
@@ -1322,7 +1322,7 @@ git-svn-id: https://acbr.svn.sourceforge.net/svnroot/acbr/trunk@3728 6e92efe7-b9
       </tr>
       <tr>
         <td id="L182" class="blob-num js-line-number" data-line-number="182"></td>
-        <td id="LC182" class="blob-code js-file-line">								<span class="nt">&lt;xs:documentation&gt;</span>Seq√ºencial do evento<span class="nt">&lt;/xs:documentation&gt;</span></td>
+        <td id="LC182" class="blob-code js-file-line">								<span class="nt">&lt;xs:documentation&gt;</span>Seq¸encial do evento<span class="nt">&lt;/xs:documentation&gt;</span></td>
       </tr>
       <tr>
         <td id="L183" class="blob-num js-line-number" data-line-number="183"></td>
@@ -1366,7 +1366,7 @@ git-svn-id: https://acbr.svn.sourceforge.net/svnroot/acbr/trunk@3728 6e92efe7-b9
       </tr>
       <tr>
         <td id="L193" class="blob-num js-line-number" data-line-number="193"></td>
-        <td id="LC193" class="blob-code js-file-line">								<span class="nt">&lt;xs:documentation&gt;</span>Identifica√ß√£o do  destinatpario da NF-e<span class="nt">&lt;/xs:documentation&gt;</span></td>
+        <td id="LC193" class="blob-code js-file-line">								<span class="nt">&lt;xs:documentation&gt;</span>IdentificaÁ„o do  destinatpario da NF-e<span class="nt">&lt;/xs:documentation&gt;</span></td>
       </tr>
       <tr>
         <td id="L194" class="blob-num js-line-number" data-line-number="194"></td>
@@ -1382,7 +1382,7 @@ git-svn-id: https://acbr.svn.sourceforge.net/svnroot/acbr/trunk@3728 6e92efe7-b9
       </tr>
       <tr>
         <td id="L197" class="blob-num js-line-number" data-line-number="197"></td>
-        <td id="LC197" class="blob-code js-file-line">									<span class="nt">&lt;xs:documentation&gt;</span>CNPJ Destinat√°rio<span class="nt">&lt;/xs:documentation&gt;</span></td>
+        <td id="LC197" class="blob-code js-file-line">									<span class="nt">&lt;xs:documentation&gt;</span>CNPJ Destinat·rio<span class="nt">&lt;/xs:documentation&gt;</span></td>
       </tr>
       <tr>
         <td id="L198" class="blob-num js-line-number" data-line-number="198"></td>
@@ -1402,7 +1402,7 @@ git-svn-id: https://acbr.svn.sourceforge.net/svnroot/acbr/trunk@3728 6e92efe7-b9
       </tr>
       <tr>
         <td id="L202" class="blob-num js-line-number" data-line-number="202"></td>
-        <td id="LC202" class="blob-code js-file-line">									<span class="nt">&lt;xs:documentation&gt;</span>CPF Destiant√°rio<span class="nt">&lt;/xs:documentation&gt;</span></td>
+        <td id="LC202" class="blob-code js-file-line">									<span class="nt">&lt;xs:documentation&gt;</span>CPF Destiant·rio<span class="nt">&lt;/xs:documentation&gt;</span></td>
       </tr>
       <tr>
         <td id="L203" class="blob-num js-line-number" data-line-number="203"></td>
@@ -1426,7 +1426,7 @@ git-svn-id: https://acbr.svn.sourceforge.net/svnroot/acbr/trunk@3728 6e92efe7-b9
       </tr>
       <tr>
         <td id="L208" class="blob-num js-line-number" data-line-number="208"></td>
-        <td id="LC208" class="blob-code js-file-line">								<span class="nt">&lt;xs:documentation&gt;</span>email do destinat√°rio<span class="nt">&lt;/xs:documentation&gt;</span></td>
+        <td id="LC208" class="blob-code js-file-line">								<span class="nt">&lt;xs:documentation&gt;</span>email do destinat·rio<span class="nt">&lt;/xs:documentation&gt;</span></td>
       </tr>
       <tr>
         <td id="L209" class="blob-num js-line-number" data-line-number="209"></td>
@@ -1514,7 +1514,7 @@ git-svn-id: https://acbr.svn.sourceforge.net/svnroot/acbr/trunk@3728 6e92efe7-b9
       </tr>
       <tr>
         <td id="L230" class="blob-num js-line-number" data-line-number="230"></td>
-        <td id="LC230" class="blob-code js-file-line">								<span class="nt">&lt;xs:documentation&gt;</span>N√∫mero do protocolo de registro do evento<span class="nt">&lt;/xs:documentation&gt;</span></td>
+        <td id="LC230" class="blob-code js-file-line">								<span class="nt">&lt;xs:documentation&gt;</span>N˙mero do protocolo de registro do evento<span class="nt">&lt;/xs:documentation&gt;</span></td>
       </tr>
       <tr>
         <td id="L231" class="blob-num js-line-number" data-line-number="231"></td>
@@ -1710,15 +1710,15 @@ git-svn-id: https://acbr.svn.sourceforge.net/svnroot/acbr/trunk@3728 6e92efe7-b9
       </tr>
       <tr>
         <td id="L279" class="blob-num js-line-number" data-line-number="279"></td>
-        <td id="LC279" class="blob-code js-file-line">					<span class="nt">&lt;xs:documentation&gt;</span>Identifica√ß√£o do Ambiente:</td>
+        <td id="LC279" class="blob-code js-file-line">					<span class="nt">&lt;xs:documentation&gt;</span>IdentificaÁ„o do Ambiente:</td>
       </tr>
       <tr>
         <td id="L280" class="blob-num js-line-number" data-line-number="280"></td>
-        <td id="LC280" class="blob-code js-file-line">1 - Produ√ß√£o</td>
+        <td id="LC280" class="blob-code js-file-line">1 - ProduÁ„o</td>
       </tr>
       <tr>
         <td id="L281" class="blob-num js-line-number" data-line-number="281"></td>
-        <td id="LC281" class="blob-code js-file-line">2 - Homologa√ß√£o<span class="nt">&lt;/xs:documentation&gt;</span></td>
+        <td id="LC281" class="blob-code js-file-line">2 - HomologaÁ„o<span class="nt">&lt;/xs:documentation&gt;</span></td>
       </tr>
       <tr>
         <td id="L282" class="blob-num js-line-number" data-line-number="282"></td>
@@ -1738,7 +1738,7 @@ git-svn-id: https://acbr.svn.sourceforge.net/svnroot/acbr/trunk@3728 6e92efe7-b9
       </tr>
       <tr>
         <td id="L286" class="blob-num js-line-number" data-line-number="286"></td>
-        <td id="LC286" class="blob-code js-file-line">					<span class="nt">&lt;xs:documentation&gt;</span>Vers√£o do Aplicativo que recebeu o Evento<span class="nt">&lt;/xs:documentation&gt;</span></td>
+        <td id="LC286" class="blob-code js-file-line">					<span class="nt">&lt;xs:documentation&gt;</span>Vers„o do Aplicativo que recebeu o Evento<span class="nt">&lt;/xs:documentation&gt;</span></td>
       </tr>
       <tr>
         <td id="L287" class="blob-num js-line-number" data-line-number="287"></td>
@@ -1758,7 +1758,7 @@ git-svn-id: https://acbr.svn.sourceforge.net/svnroot/acbr/trunk@3728 6e92efe7-b9
       </tr>
       <tr>
         <td id="L291" class="blob-num js-line-number" data-line-number="291"></td>
-        <td id="LC291" class="blob-code js-file-line">					<span class="nt">&lt;xs:documentation&gt;</span>C√≥digo do √≤rgao que registrou o Evento<span class="nt">&lt;/xs:documentation&gt;</span></td>
+        <td id="LC291" class="blob-code js-file-line">					<span class="nt">&lt;xs:documentation&gt;</span>CÛdigo do Úrgao que registrou o Evento<span class="nt">&lt;/xs:documentation&gt;</span></td>
       </tr>
       <tr>
         <td id="L292" class="blob-num js-line-number" data-line-number="292"></td>
@@ -1778,7 +1778,7 @@ git-svn-id: https://acbr.svn.sourceforge.net/svnroot/acbr/trunk@3728 6e92efe7-b9
       </tr>
       <tr>
         <td id="L296" class="blob-num js-line-number" data-line-number="296"></td>
-        <td id="LC296" class="blob-code js-file-line">					<span class="nt">&lt;xs:documentation&gt;</span>C√≥digo do status da registro do Evento<span class="nt">&lt;/xs:documentation&gt;</span></td>
+        <td id="LC296" class="blob-code js-file-line">					<span class="nt">&lt;xs:documentation&gt;</span>CÛdigo do status da registro do Evento<span class="nt">&lt;/xs:documentation&gt;</span></td>
       </tr>
       <tr>
         <td id="L297" class="blob-num js-line-number" data-line-number="297"></td>
@@ -1798,7 +1798,7 @@ git-svn-id: https://acbr.svn.sourceforge.net/svnroot/acbr/trunk@3728 6e92efe7-b9
       </tr>
       <tr>
         <td id="L301" class="blob-num js-line-number" data-line-number="301"></td>
-        <td id="LC301" class="blob-code js-file-line">					<span class="nt">&lt;xs:documentation&gt;</span>Descri√ß√£o literal do status do registro do Evento<span class="nt">&lt;/xs:documentation&gt;</span></td>
+        <td id="LC301" class="blob-code js-file-line">					<span class="nt">&lt;xs:documentation&gt;</span>DescriÁ„o literal do status do registro do Evento<span class="nt">&lt;/xs:documentation&gt;</span></td>
       </tr>
       <tr>
         <td id="L302" class="blob-num js-line-number" data-line-number="302"></td>
@@ -1874,7 +1874,7 @@ git-svn-id: https://acbr.svn.sourceforge.net/svnroot/acbr/trunk@3728 6e92efe7-b9
       </tr>
       <tr>
         <td id="L320" class="blob-num js-line-number" data-line-number="320"></td>
-        <td id="LC320" class="blob-code js-file-line">			<span class="nt">&lt;xs:documentation&gt;</span>Tipo Vers√£o do EnvEvento<span class="nt">&lt;/xs:documentation&gt;</span></td>
+        <td id="LC320" class="blob-code js-file-line">			<span class="nt">&lt;xs:documentation&gt;</span>Tipo Vers„o do EnvEvento<span class="nt">&lt;/xs:documentation&gt;</span></td>
       </tr>
       <tr>
         <td id="L321" class="blob-num js-line-number" data-line-number="321"></td>
@@ -1910,7 +1910,7 @@ git-svn-id: https://acbr.svn.sourceforge.net/svnroot/acbr/trunk@3728 6e92efe7-b9
       </tr>
       <tr>
         <td id="L329" class="blob-num js-line-number" data-line-number="329"></td>
-        <td id="LC329" class="blob-code js-file-line">			<span class="nt">&lt;xs:documentation&gt;</span>Tipo Vers√£o do Evento<span class="nt">&lt;/xs:documentation&gt;</span></td>
+        <td id="LC329" class="blob-code js-file-line">			<span class="nt">&lt;xs:documentation&gt;</span>Tipo Vers„o do Evento<span class="nt">&lt;/xs:documentation&gt;</span></td>
       </tr>
       <tr>
         <td id="L330" class="blob-num js-line-number" data-line-number="330"></td>
@@ -1946,7 +1946,7 @@ git-svn-id: https://acbr.svn.sourceforge.net/svnroot/acbr/trunk@3728 6e92efe7-b9
       </tr>
       <tr>
         <td id="L338" class="blob-num js-line-number" data-line-number="338"></td>
-        <td id="LC338" class="blob-code js-file-line">			<span class="nt">&lt;xs:documentation&gt;</span>Tipo C√≥digo de org√£o (UF da tabela do IBGE + 90 RFB)<span class="nt">&lt;/xs:documentation&gt;</span></td>
+        <td id="LC338" class="blob-code js-file-line">			<span class="nt">&lt;xs:documentation&gt;</span>Tipo CÛdigo de org„o (UF da tabela do IBGE + 90 RFB)<span class="nt">&lt;/xs:documentation&gt;</span></td>
       </tr>
       <tr>
         <td id="L339" class="blob-num js-line-number" data-line-number="339"></td>

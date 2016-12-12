@@ -4,7 +4,7 @@ namespace NFePHP\Extras;
 
 /**
  * Classe complementar
- * necess√°ria para extender a classe base Exception
+ * necess·ria para extender a classe base Exception
  * Usada no tratamento de erros da API
  *
  * @version 1.0.0

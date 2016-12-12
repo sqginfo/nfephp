@@ -25,8 +25,8 @@ class Strings
     public static function cleanString($texto = '')
     {
         $texto = trim($texto);
-        $aFind = array('&','ГЎ','Г ','ГЈ','Гў','Г©','ГЄ','Г­','Гі','Гґ','Гµ','Гє','Гј',
-            'Г§','ГЃ','ГЂ','Гѓ','Г‚','Г‰','ГЉ','ГЌ','Г“','Г”','Г•','Гљ','Гњ','Г‡');
+        $aFind = array('&','б','а','г','в','й','к','н','у','ф','х','ъ','ь',
+            'з','Б','А','Г','В','Й','К','Н','У','Ф','Х','Ъ','Ь','З');
         $aSubs = array('e','a','a','a','a','e','e','i','o','o','o','u','u',
             'c','A','A','A','A','E','E','I','O','O','O','U','U','C');
         $novoTexto = str_replace($aFind, $aSubs, $texto);
@@ -67,7 +67,7 @@ class Strings
     
     /**
      * clearProt
-     * Limpa o xml apГіs adiГ§ГЈo do protocolo
+     * Limpa o xml apуs adiзгo do protocolo
      *
      * @param  string $procXML
      * @return string

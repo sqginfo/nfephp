@@ -3,7 +3,7 @@
 	<xs:include schemaLocation="leiauteConsStatServ_v2.00.xsd"/>
 	<xs:element name="retConsStatServ" type="TRetConsStatServ">
 		<xs:annotation>
-			<xs:documentation>Schema XML de validaÃ§Ã£o do Resultado da Consulta do Status do ServiÃ§o</xs:documentation>
+			<xs:documentation>Schema XML de validação do Resultado da Consulta do Status do Serviço</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 </xs:schema>

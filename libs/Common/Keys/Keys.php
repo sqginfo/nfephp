@@ -3,7 +3,7 @@
 namespace NFePHP\Common\Keys;
 
 /**
- * Classe auxiliar para criar, listar e testar os diretÃ³rios utilizados pela API
+ * Classe auxiliar para criar, listar e testar os diretórios utilizados pela API
  *
  * @category  NFePHP
  * @package   NFePHP\Common\Keys
@@ -74,7 +74,7 @@ class Keys
     
     /**
      * calculaDV
-     * FunÃ§Ã£o para o calculo o digito verificador da chave da NFe
+     * Função para o calculo o digito verificador da chave da NFe
      *
      * @param  string $chave43
      * @return string
