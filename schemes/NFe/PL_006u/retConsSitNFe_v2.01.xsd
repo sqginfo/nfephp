@@ -4,7 +4,7 @@
 	<xs:include schemaLocation="leiauteConsSitNFe_v2.01.xsd"/>
 	<xs:element name="retConsSitNFe" type="TRetConsSitNFe">
 		<xs:annotation>
-			<xs:documentation>Schema XML de validaÃ§Ã£o do retorno da consulta da situaÃ§Ã£o atual da NF-e</xs:documentation>
+			<xs:documentation>Schema XML de validação do retorno da consulta da situação atual da NF-e</xs:documentation>
 		</xs:annotation>
 	</xs:element>
 </xs:schema>

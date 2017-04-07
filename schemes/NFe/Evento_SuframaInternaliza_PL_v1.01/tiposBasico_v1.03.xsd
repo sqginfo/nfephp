@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- PL_006u - 21/07/14 - InclusÃ£o do tipo BÃ¡sico TPlaca // v2.0-->
-<!-- PL_006u - 06/05/14 - AlteraÃ§Ãµes Fuso-Horario // v2.0-->
-<!-- PL_006h - 13/05/11 - correÃ§Ãµes da NT 2011/004  // v2.0-->
+<!-- PL_006u - 21/07/14 - Inclusão do tipo Básico TPlaca // v2.0-->
+<!-- PL_006u - 06/05/14 - Alterações Fuso-Horario // v2.0-->
+<!-- PL_006h - 13/05/11 - correções da NT 2011/004  // v2.0-->
 <!-- PL_006f - 29/05/10 - correcao do tipo TDec_1504 para limitar a quantidade de decimais para 4  // v2.0-->
-<!-- PL_006f - 09/05/10 - eliminaÃ§Ã£o da possibilidade informar a InscriÃ§Ã£o produtor rural na IEDest  // v2.0-->
+<!-- PL_006f - 09/05/10 - eliminação da possibilidade informar a Inscrição produtor rural na IEDest  // v2.0-->
 <!-- PL_006d - 04/10/09 - alterada a ordem do pattern do TIE - adequacao libxml  // v2.0-->
-<!-- PL_006d - 20/08/09 - acrescentado o tipo nÃºmerico com 10 casas decimais,15 casas inteiras e hora  // v2.0-->
-<!-- PL_005d - 11/08/09 - alteraÃ§Ã£o no enumeration do tpais para nova tabela de paises do BACEN-->
-<!-- PL_005b - 24/10/08 - acrescentado a tabela do tpais   e outras alteraÃ§Ãµes para eliminar os brancos no inÃ­cio e fim do campo   -->
+<!-- PL_006d - 20/08/09 - acrescentado o tipo númerico com 10 casas decimais,15 casas inteiras e hora  // v2.0-->
+<!-- PL_005d - 11/08/09 - alteração no enumeration do tpais para nova tabela de paises do BACEN-->
+<!-- PL_005b - 24/10/08 - acrescentado a tabela do tpais   e outras alterações para eliminar os brancos no início e fim do campo   -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:nfe="http://www.portalfiscal.inf.br/nfe" targetNamespace="http://www.portalfiscal.inf.br/nfe" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:simpleType name="TCodUfIBGE">
 		<xs:annotation>
-			<xs:documentation>Tipo CÃ³digo da UF da tabela do IBGE</xs:documentation>
+			<xs:documentation>Tipo Código da UF da tabela do IBGE</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:whiteSpace value="preserve"/>
@@ -46,7 +46,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="TCodMunIBGE">
 		<xs:annotation>
-			<xs:documentation>Tipo CÃ³digo do MunicÃ­pio da tabela do IBGE</xs:documentation>
+			<xs:documentation>Tipo Código do Município da tabela do IBGE</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:whiteSpace value="preserve"/>
@@ -55,7 +55,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="TChNFe">
 		<xs:annotation>
-			<xs:documentation>Tipo Chave da Nota Fiscal EletrÃ´nica</xs:documentation>
+			<xs:documentation>Tipo Chave da Nota Fiscal Eletrônica</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:whiteSpace value="preserve"/>
@@ -64,7 +64,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="TProt">
 		<xs:annotation>
-			<xs:documentation>Tipo NÃºmero do Protocolo de Status</xs:documentation>
+			<xs:documentation>Tipo Número do Protocolo de Status</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:whiteSpace value="preserve"/>
@@ -73,7 +73,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="TRec">
 		<xs:annotation>
-			<xs:documentation>Tipo NÃºmero do Recibo do envio de lote de NF-e</xs:documentation>
+			<xs:documentation>Tipo Número do Recibo do envio de lote de NF-e</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:whiteSpace value="preserve"/>
@@ -82,7 +82,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="TStat">
 		<xs:annotation>
-			<xs:documentation>Tipo CÃ³digo da Mensagem enviada</xs:documentation>
+			<xs:documentation>Tipo Código da Mensagem enviada</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:whiteSpace value="preserve"/>
@@ -91,7 +91,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="TCnpj">
 		<xs:annotation>
-			<xs:documentation>Tipo NÃºmero do CNPJ</xs:documentation>
+			<xs:documentation>Tipo Número do CNPJ</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:whiteSpace value="preserve"/>
@@ -100,7 +100,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="TCnpjVar">
 		<xs:annotation>
-			<xs:documentation>Tipo NÃºmero do CNPJ tmanho varÃ­avel (3-14)</xs:documentation>
+			<xs:documentation>Tipo Número do CNPJ tmanho varíavel (3-14)</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:whiteSpace value="preserve"/>
@@ -109,7 +109,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="TCnpjOpc">
 		<xs:annotation>
-			<xs:documentation>Tipo NÃºmero do CNPJ Opcional</xs:documentation>
+			<xs:documentation>Tipo Número do CNPJ Opcional</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:whiteSpace value="preserve"/>
@@ -119,7 +119,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="TCpf">
 		<xs:annotation>
-			<xs:documentation>Tipo NÃºmero do CPF</xs:documentation>
+			<xs:documentation>Tipo Número do CPF</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:whiteSpace value="preserve"/>
@@ -128,7 +128,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="TCpfVar">
 		<xs:annotation>
-			<xs:documentation>Tipo NÃºmero do CPF de tamanho variÃ¡vel (3-11)</xs:documentation>
+			<xs:documentation>Tipo Número do CPF de tamanho variável (3-11)</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:whiteSpace value="preserve"/>
@@ -137,7 +137,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="TDec_0302">
 		<xs:annotation>
-			<xs:documentation>Tipo Decimal com 5 dÃ­gitos, sendo 3 de corpo e 2 decimais</xs:documentation>
+			<xs:documentation>Tipo Decimal com 5 dígitos, sendo 3 de corpo e 2 decimais</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:whiteSpace value="preserve"/>
@@ -146,7 +146,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="TDec_0302Opc">
 		<xs:annotation>
-			<xs:documentation>Tipo Decimal com 5 dÃ­gitos, sendo 3 de corpo e 2 decimais, utilizado em tags opcionais</xs:documentation>
+			<xs:documentation>Tipo Decimal com 5 dígitos, sendo 3 de corpo e 2 decimais, utilizado em tags opcionais</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:whiteSpace value="preserve"/>
@@ -155,7 +155,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="TDec_0803">
 		<xs:annotation>
-			<xs:documentation>Tipo Decimal com 11 dÃ­gitos, sendo 8 de corpo e 3 decimais</xs:documentation>
+			<xs:documentation>Tipo Decimal com 11 dígitos, sendo 8 de corpo e 3 decimais</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:whiteSpace value="preserve"/>
@@ -164,7 +164,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="TDec_0803Opc">
 		<xs:annotation>
-			<xs:documentation>Tipo Decimal com 11 dÃ­gitos, sendo 8 de corpo e 3 decimais utilizado em tags opcionais</xs:documentation>
+			<xs:documentation>Tipo Decimal com 11 dígitos, sendo 8 de corpo e 3 decimais utilizado em tags opcionais</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:whiteSpace value="preserve"/>
@@ -173,7 +173,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="TDec_0804">
 		<xs:annotation>
-			<xs:documentation>Tipo Decimal com 12 dÃ­gitos, sendo 8 de corpo e 4decimais</xs:documentation>
+			<xs:documentation>Tipo Decimal com 12 dígitos, sendo 8 de corpo e 4decimais</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:whiteSpace value="preserve"/>
@@ -182,7 +182,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="TDec_0804Opc">
 		<xs:annotation>
-			<xs:documentation>Tipo Decimal com 12 dÃ­gitos, sendo 8 de corpo e 4 decimais, utilizado em tags opcionais</xs:documentation>
+			<xs:documentation>Tipo Decimal com 12 dígitos, sendo 8 de corpo e 4 decimais, utilizado em tags opcionais</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:whiteSpace value="preserve"/>
@@ -191,7 +191,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="TDec_1104">
 		<xs:annotation>
-			<xs:documentation>Tipo Decimal com 15 dÃ­gitos, sendo 11 de corpo e 4 decimais</xs:documentation>
+			<xs:documentation>Tipo Decimal com 15 dígitos, sendo 11 de corpo e 4 decimais</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:whiteSpace value="preserve"/>
@@ -200,7 +200,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="TDec_1104Opc">
 		<xs:annotation>
-			<xs:documentation>Tipo Decimal com 15 dÃ­gitos, sendo 11 de corpo e 4 decimais, utilizado em tags opcionais</xs:documentation>
+			<xs:documentation>Tipo Decimal com 15 dígitos, sendo 11 de corpo e 4 decimais, utilizado em tags opcionais</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:whiteSpace value="preserve"/>
@@ -209,7 +209,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="TDec_1203">
 		<xs:annotation>
-			<xs:documentation>Tipo Decimal com 15 dÃ­gitos, sendo 12 de corpo e 3 decimais</xs:documentation>
+			<xs:documentation>Tipo Decimal com 15 dígitos, sendo 12 de corpo e 3 decimais</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:whiteSpace value="preserve"/>
@@ -218,7 +218,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="TDec_1203Opc">
 		<xs:annotation>
-			<xs:documentation>Tipo Decimal com 15 dÃ­gitos, sendo 12 de corpo e 3 decimais, utilizado em tags opcionais</xs:documentation>
+			<xs:documentation>Tipo Decimal com 15 dígitos, sendo 12 de corpo e 3 decimais, utilizado em tags opcionais</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:whiteSpace value="preserve"/>
@@ -227,7 +227,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="TDec_1204">
 		<xs:annotation>
-			<xs:documentation>Tipo Decimal com 16 dÃ­gitos, sendo 12 de corpo e 4 decimais</xs:documentation>
+			<xs:documentation>Tipo Decimal com 16 dígitos, sendo 12 de corpo e 4 decimais</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:whiteSpace value="preserve"/>
@@ -236,7 +236,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="TDec_1204Opc">
 		<xs:annotation>
-			<xs:documentation>Tipo Decimal com 16 dÃ­gitos, sendo 12 de corpo e 4 decimais, utilizado em tags opcionais</xs:documentation>
+			<xs:documentation>Tipo Decimal com 16 dígitos, sendo 12 de corpo e 4 decimais, utilizado em tags opcionais</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:whiteSpace value="preserve"/>
@@ -245,7 +245,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="TDec_1302">
 		<xs:annotation>
-			<xs:documentation>Tipo Decimal com 15 dÃ­gitos, sendo 13 de corpo e 2 decimais</xs:documentation>
+			<xs:documentation>Tipo Decimal com 15 dígitos, sendo 13 de corpo e 2 decimais</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:whiteSpace value="preserve"/>
@@ -254,7 +254,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="TDec_1302Opc">
 		<xs:annotation>
-			<xs:documentation>Tipo Decimal com 15 dÃ­gitos, sendo 13 de corpo e 2 decimais, utilizado em tags opcionais</xs:documentation>
+			<xs:documentation>Tipo Decimal com 15 dígitos, sendo 13 de corpo e 2 decimais, utilizado em tags opcionais</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:whiteSpace value="preserve"/>
@@ -263,7 +263,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="TDec_1110">
 		<xs:annotation>
-			<xs:documentation>Tipo Decimal com atÃ©  21 dÃ­gitos, sendo 11 de corpo e atÃ© 10 decimais // aperfeiÃ§oamento v2.0</xs:documentation>
+			<xs:documentation>Tipo Decimal com até  21 dígitos, sendo 11 de corpo e até 10 decimais // aperfeiçoamento v2.0</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:whiteSpace value="preserve"/>
@@ -272,7 +272,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="TDec_1104v">
 		<xs:annotation>
-			<xs:documentation>Tipo Decimal com atÃ© 15 dÃ­gitos, sendo 11 de corpo e atÃ© 4 decimais  // aperfeiÃ§oamento v2.0</xs:documentation>
+			<xs:documentation>Tipo Decimal com até 15 dígitos, sendo 11 de corpo e até 4 decimais  // aperfeiçoamento v2.0</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:whiteSpace value="preserve"/>
@@ -281,7 +281,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="TIeDest">
 		<xs:annotation>
-			<xs:documentation>Tipo InscriÃ§Ã£o Estadual do DestinatÃ¡rio // alterado para aceitar vazio ou ISENTO - maio/2010 v2.0</xs:documentation>
+			<xs:documentation>Tipo Inscrição Estadual do Destinatário // alterado para aceitar vazio ou ISENTO - maio/2010 v2.0</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:whiteSpace value="preserve"/>
@@ -290,7 +290,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="TIeST">
 		<xs:annotation>
-			<xs:documentation>Tipo InscriÃ§Ã£o Estadual do ST // acrescentado EM 24/10/08</xs:documentation>
+			<xs:documentation>Tipo Inscrição Estadual do ST // acrescentado EM 24/10/08</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:whiteSpace value="preserve"/>
@@ -299,7 +299,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="TIe">
 		<xs:annotation>
-			<xs:documentation>Tipo InscriÃ§Ã£o Estadual do Emitente // alterado EM 24/10/08 para aceitar ISENTO</xs:documentation>
+			<xs:documentation>Tipo Inscrição Estadual do Emitente // alterado EM 24/10/08 para aceitar ISENTO</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:whiteSpace value="preserve"/>
@@ -317,7 +317,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="TNF">
 		<xs:annotation>
-			<xs:documentation>Tipo NÃºmero do Documento Fiscal</xs:documentation>
+			<xs:documentation>Tipo Número do Documento Fiscal</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:whiteSpace value="preserve"/>
@@ -326,7 +326,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="TSerie">
 		<xs:annotation>
-			<xs:documentation>Tipo SÃ©rie do Documento Fiscal </xs:documentation>
+			<xs:documentation>Tipo Série do Documento Fiscal </xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:whiteSpace value="preserve"/>
@@ -335,7 +335,7 @@
 	</xs:simpleType>
 	<xs:simpleType name="Tpais">
 		<xs:annotation>
-			<xs:documentation>Tipo CÃ³digo do Pais 
+			<xs:documentation>Tipo Código do Pais 
 // PL_005d - 11/08/09
 eliminado:
  4235-LEBUAN, ILHAS - 
@@ -355,7 +355,7 @@ acrescentado:
 //PL_006t - 21/03/2014
 acrescentado:
 5780 - Palestina
-7600 - SudÃ£o do Sul 
+7600 - Sudão do Sul 
  </xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
@@ -722,7 +722,7 @@ acrescentado:
 	</xs:simpleType>
 	<xs:simpleType name="TVerAplic">
 		<xs:annotation>
-			<xs:documentation>Tipo VersÃ£o do Aplicativo</xs:documentation>
+			<xs:documentation>Tipo Versão do Aplicativo</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="nfe:TString">
 			<xs:minLength value="1"/>
@@ -749,7 +749,7 @@ acrescentado:
 	</xs:simpleType>
 	<xs:simpleType name="TServ">
 		<xs:annotation>
-			<xs:documentation>Tipo ServiÃ§o solicitado</xs:documentation>
+			<xs:documentation>Tipo Serviço solicitado</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="nfe:TString"/>
 	</xs:simpleType>
@@ -764,7 +764,7 @@ acrescentado:
 	</xs:simpleType>
 	<xs:simpleType name="TMed">
 		<xs:annotation>
-			<xs:documentation> Tipo temp mÃ©dio em segundos</xs:documentation>
+			<xs:documentation> Tipo temp médio em segundos</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:whiteSpace value="preserve"/>
@@ -773,11 +773,11 @@ acrescentado:
 	</xs:simpleType>
 	<xs:simpleType name="TString">
 		<xs:annotation>
-			<xs:documentation> Tipo string genÃ©rico</xs:documentation>
+			<xs:documentation> Tipo string genérico</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:whiteSpace value="preserve"/>
-			<xs:pattern value="[!-Ã¿]{1}[ -Ã¿]*[!-Ã¿]{1}|[!-Ã¿]{1}"/>
+			<xs:pattern value="[!-ÿ]{1}[ -ÿ]*[!-ÿ]{1}|[!-ÿ]{1}"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="TData">

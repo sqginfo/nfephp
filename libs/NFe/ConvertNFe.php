@@ -3,7 +3,7 @@
 namespace NFePHP\NFe;
 
 /**
- * Classe para a conversÃ£o de notas fiscais do formato TXT conforme padrÃ£o
+ * Classe para a conversão de notas fiscais do formato TXT conforme padrão
  * SEFAZ SP Manual_de_layout_TXT-NF-e_v3.1.0.pdf para o formato XML.
  *
  * @category  NFePHP
@@ -23,7 +23,7 @@ class ConvertNFe
     //parametros protegidos da classe
     /**
      * $limparString
-     * ForÃ§a a substituiÃ§Ã£o dos caracteres especiais e acentuados
+     * Força a substituição dos caracteres especiais e acentuados
      * pelos seus substitutos normais
      *
      * @var bool
@@ -31,7 +31,7 @@ class ConvertNFe
     protected $limparString = true;
     /**
      * $version
-     * versÃ£o do layout do xml da NFe
+     * versão do layout do xml da NFe
      * que esta classe cria
      *
      * @var string
@@ -95,7 +95,7 @@ class ConvertNFe
     protected $nDI = '0';
     /**
      * $linhaI50
-     * dados de exportaÃ§Ã£o
+     * dados de exportação
      *
      * @var array
      */
@@ -174,7 +174,7 @@ class ConvertNFe
 
     /**
      * contruct
-     * MÃ©todo contrutor da classe
+     * Método contrutor da classe
      *
      * @param  boolean $limparString Ativa flag para limpar os caracteres especiais
      *                e acentos
@@ -248,7 +248,7 @@ class ConvertNFe
     {
         //A|versao|Id|pk_nItem|
         if ($aCampos[1] != $this->version) {
-            $msg = "A conversÃ£o somente para a versÃ£o $this->version !";
+            $msg = "A conversão somente para a versão $this->version !";
             throw new Exception\RuntimeException($msg);
         }
         $chave = preg_replace('/[^0-9]/', '', $aCampos[2]);
@@ -302,7 +302,7 @@ class ConvertNFe
     protected function baEntity($aCampos)
     {
         //BA|
-        //fake nÃ£o faz nada
+        //fake não faz nada
         $aCampos = array();
     }
 
@@ -764,7 +764,7 @@ class ConvertNFe
     protected function gaEntity($aCampos)
     {
         //GA02
-        //fake nÃ£o faz nada
+        //fake não faz nada
         $aCampos = array();
     }
 
@@ -1125,7 +1125,7 @@ class ConvertNFe
     protected function nEntity($aCampos)
     {
         //N|
-        //fake nÃ£o faz nada
+        //fake não faz nada
         $aCampos = array();
     }
     
@@ -2109,7 +2109,7 @@ class ConvertNFe
     protected function sEntity($aCampos)
     {
         //S|
-        //fake nÃ£o faz nada
+        //fake não faz nada
         $aCampos = array();
         $this->linhaS[0] = '';
         $this->linhaS[1] = '';
@@ -2340,7 +2340,7 @@ class ConvertNFe
     protected function wEntity($aCampos)
     {
         //W|
-        //fake nÃ£o faz nada
+        //fake não faz nada
         $aCampos = array();
     }
     
@@ -2607,7 +2607,7 @@ class ConvertNFe
     protected function yEntity($aCampos)
     {
         //Y|
-        //fake nÃ£o faz nada
+        //fake não faz nada
         $aCampos = array();
     }
     
@@ -2818,7 +2818,7 @@ class ConvertNFe
     
     /**
      * zx01Entity
-     * Cria a tag infNFeSupl com o qrCode para impressÃ£o da DANFCE
+     * Cria a tag infNFeSupl com o qrCode para impressão da DANFCE
      *
      * @param array $aCampos
      */
@@ -2830,7 +2830,7 @@ class ConvertNFe
     
     /**
      * zClearParam
-     * Limpar os parametros da classe para a conversÃ£o de nova NFe
+     * Limpar os parametros da classe para a conversão de nova NFe
      */
     protected function zClearParam()
     {
@@ -2842,7 +2842,7 @@ class ConvertNFe
         $this->linhaG = array();
         $this->nItem = 0; //numero do item da NFe
         $this->nDI = '0'; //numero da DI
-        $this->linhaI50 = array(); //dados de exportaÃ§Ã£o
+        $this->linhaI50 = array(); //dados de exportação
         $this->linhaLA = array();
         $this->linhaO = array();
         $this->linhaQ = array();
@@ -2900,7 +2900,7 @@ class ConvertNFe
             $aCampos = $this->zClean(explode("|", $dado));
             $metodo = strtolower(str_replace(' ', '', $aCampos[0])).'Entity';
             if (! method_exists($this, $metodo)) {
-                $msg = "O txt tem um metodo nÃ£o definido!! $dado";
+                $msg = "O txt tem um metodo não definido!! $dado";
                 throw new Exception\RuntimeException($msg);
             }
             $this->$metodo($aCampos);

@@ -180,7 +180,7 @@ $aConfig = array(
 
 $content = json_encode($aConfig);
 
-$msg = 'SUCESSO !! arquivo de configuraÃ§Ã£o confg.json SALVO.';
+$msg = 'SUCESSO !! arquivo de configuração confg.json SALVO.';
 if (! $resdefault = FilesFolders::saveFile($defaultconfigfolder, 'config.json', $content)) {
     $msg = "Falha ao salvar o config.json na pasta $defaultconfigfolder \n";
     

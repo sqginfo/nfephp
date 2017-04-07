@@ -3,7 +3,7 @@
 namespace NFePHP\Common\Identify;
 
 /**
- * Classe auxiliar para a identificaÃ§Ã£o dos documentos eletrÃ´nicos
+ * Classe auxiliar para a identificação dos documentos eletrônicos
  *
  * @category  NFePHP
  * @package   NFePHP\Common\Identify
@@ -19,7 +19,7 @@ use NFePHP\Common\Files\FilesFolders;
 class Identify
 {
     /**
-     * Lista com a identificaÃ§Ã£o das TAGs principais que identificam o documento
+     * Lista com a identificação das TAGs principais que identificam o documento
      * e o respectivo arquivo xsd
      *
      * @var array

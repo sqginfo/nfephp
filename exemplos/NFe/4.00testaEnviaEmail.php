@@ -16,8 +16,8 @@ $chave = '52160500067985000172550010000000101000000100';
 $pathXml = "D:/xampp/htdocs/GIT-nfephp-org/nfephp/xmls/NF-e/homologacao/enviadas/aprovadas/201605/{$chave}-protNFe.xml";
 $pathPdf = "D:/xampp/htdocs/GIT-nfephp-org/nfephp/xmls/NF-e/homologacao/pdf/201605/{$chave}-danfe.pdf";
 
-$aMails = array('nfe@chinnonsantos.com'); //se for um array vazio a classe Mail irÃ¡ pegar os emails do xml
-$templateFile = ''; //se vazio usarÃ¡ o template padrÃ£o da mensagem
+$aMails = array('nfe@chinnonsantos.com'); //se for um array vazio a classe Mail irá pegar os emails do xml
+$templateFile = ''; //se vazio usará o template padrão da mensagem
 $comPdf = true; //se true, anexa a DANFE no e-mail
 try {
     $nfe->enviaMail($pathXml, $aMails, $templateFile, $comPdf, $pathPdf);

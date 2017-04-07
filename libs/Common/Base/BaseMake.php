@@ -3,7 +3,7 @@
 namespace NFePHP\Common\Base;
 
 /**
- * Classe base para a cria√ß√£o das classes construtoras dos XML
+ * Classe base para a criaÁ„o das classes construtoras dos XML
  * tanto para NFe, NFCe, CTe e MDFe
  *
  * @category  NFePHP
@@ -23,15 +23,15 @@ class BaseMake
 {
     /**
      * erros
-     * Matriz contendo os erros reportados pelas tags obrigat√≥rias
-     * e sem conte√∫do
+     * Matriz contendo os erros reportados pelas tags obrigatÛrias
+     * e sem conte˙do
      *
      * @var array
      */
     public $erros = array();
     /**
      * versao
-     * numero da vers√£o do xml do documento fiscal
+     * numero da vers„o do xml do documento fiscal
      *
      * @var string
      */
@@ -52,7 +52,7 @@ class BaseMake
     public $xml = '';
     /**
      * dom
-     * Vari√°vel onde ser√° montado o xml do documento fiscal
+     * Vari·vel onde ser· montado o xml do documento fiscal
      *
      * @var \NFePHP\Common\Dom\Dom
      */
@@ -67,8 +67,8 @@ class BaseMake
     
     /**
      * __construct
-     * Fun√ß√£o construtora cria um objeto DOMDocument
-     * que ser√° carregado com o documento fiscal
+     * FunÁ„o construtora cria um objeto DOMDocument
+     * que ser· carregado com o documento fiscal
      */
     public function __construct()
     {
@@ -91,7 +91,7 @@ class BaseMake
      * grava o xml do documento fiscal na estrutura de pastas
      * em path indicar por exemplo /var/www/nfe ou /dados/cte ou /arquivo/mdfe
      * ou seja as pastas principais onde guardar os arquivos
-     * Esse m√©todo it√° colocar na subpastas [producao] ou [homologacao]
+     * Esse mÈtodo it· colocar na subpastas [producao] ou [homologacao]
      * na subpasta [entradas] e na subpasta [ANOMES]
      *
      * @param  string $path
@@ -99,8 +99,8 @@ class BaseMake
      */
     public function gravaXML($path = '')
     {
-        //pode ser NFe, CTe, MDFe e pode ser homologa√ß√£o ou produ√ß√£o
-        //essas informa√ß√µes est√£o dentro do xml
+        //pode ser NFe, CTe, MDFe e pode ser homologaÁ„o ou produÁ„o
+        //essas informaÁıes est„o dentro do xml
         if ($path == '') {
             return false;
         }

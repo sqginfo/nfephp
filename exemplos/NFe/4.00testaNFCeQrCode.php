@@ -19,14 +19,14 @@ $indPag = '0';
 $mod  = '65';
 $serie = '1';
 $nNF = '200';
-$dhEmi = date("Y-m-d\TH:i:sP");//Formato: â€œAAAA-MM-DDThh:mm:ssTZDâ€ (UTC - Universal Coordinated Time).
-$dhSaiEnt = '';//NÃ£o informar este campo para a NFC-e.
+$dhEmi = date("Y-m-d\TH:i:sP");//Formato: "AAAA-MM-DDThh:mm:ssTZD" (UTC - Universal Coordinated Time).
+$dhSaiEnt = '';//Não informar este campo para a NFC-e.
 $tpNF = '1';
 $idDest = '1';
 $cMunFG = '5208707';
 $tpImp = '4';
 $tpEmis = '1'; //normal
-$tpAmb = '2'; //homolocaÃ§Ã£o
+$tpAmb = '2'; //homolocação
 $finNFe = '1';
 $indFinal = '1';
 $indPres = '1';
@@ -78,19 +78,19 @@ $CPF = ''; // Utilizado para CPF na nota
 $xNome = $nfeTools->aConfig['razaosocial'];
 $xFant = $nfeTools->aConfig['nomefantasia'];
 $IE = $nfeTools->aConfig['ie'];
-$IEST = ''; //NFC-e nÃ£o deve informar IE de Substituto TributÃ¡rio
+$IEST = ''; //NFC-e não deve informar IE de Substituto Tributário
 $IM = $nfeTools->aConfig['im'];
 $CNAE = $nfeTools->aConfig['cnae'];
 $CRT = $nfeTools->aConfig['regime'];
 $resp = $nfe->tagemit($CNPJ, $CPF, $xNome, $xFant, $IE, $IEST, $IM, $CNAE, $CRT);
 
-//endereÃ§o do emitente
+//endereço do emitente
 $xLgr = 'Rua 144';
 $nro = '636';
-$xCpl = 'Qd. 50 Lt. 23/24, Sala 6 Res. MendonÃ§a';
+$xCpl = 'Qd. 50 Lt. 23/24, Sala 6 Res. Mendonça';
 $xBairro = 'Setor Marista';
 $cMun = '5208707';
-$xMun = 'GoiÃ¢nia';
+$xMun = 'Goiânia';
 $UF = 'GO';
 $CEP = '74170030';
 $cPais = '1058';
@@ -98,7 +98,7 @@ $xPais = 'Brasil';
 $fone = '6241010313';
 $resp = $nfe->tagenderEmit($xLgr, $nro, $xCpl, $xBairro, $cMun, $xMun, $UF, $CEP, $cPais, $xPais, $fone);
 
-//destinatÃ¡rio
+//destinatário
 /*$CNPJ = '';
 $CPF = '';
 $idEstrangeiro = '';
@@ -110,7 +110,7 @@ $IM = '';
 $email = '';
 $resp = $nfe->tagdest($CNPJ, $CPF, $idEstrangeiro, $xNome, $indIEDest, $IE, $ISUF, $IM, $email);*/
 
-//EndereÃ§o do destinatÃ¡rio
+//Endereço do destinatário
 /*$xLgr = '';
 $nro = '';
 $xCpl = '';
@@ -130,7 +130,7 @@ $cEAN = '97899072659522';
 $xProd = 'Chopp Originale 330ml';
 $NCM = '22030000';
 $NVE = '';
-$CEST = '0302300'; // ConvÃªnio ICMS 92/15
+$CEST = '0302300'; // Convênio ICMS 92/15
 $EXTIPI = '';
 $CFOP = '5405'; //CSOSN 500 = 5.405, 5.656 ou 5.667
 $uCom = 'Un';
@@ -163,7 +163,7 @@ $cst = '60';//Simples nacional
 $modBC = '3';
 $pRedBC = '';
 $vBC = '12.00'; // = $qTrib * $vUnTrib 
-$pICMS = '19.00'; //17% AlÃ­quota Interna + 2% FECP
+$pICMS = '19.00'; //17% Alíquota Interna + 2% FECP
 $vICMS = '2.28'; // = $vBC * ( $pICMS / 100 )
 $vICMSDeson = '';
 $motDesICMS = '';
@@ -180,14 +180,14 @@ $vBCSTRet = '';
 $vICMSSTRet = '';
 $resp = $nfe->tagICMS($nItem, $orig, $cst, $modBC, $pRedBC, $vBC, $pICMS, $vICMS, $vICMSDeson, $motDesICMS, $modBCST, $pMVAST, $pRedBCST, $vBCST, $pICMSST, $vICMSST, $pDif, $vICMSDif, $vICMSOp, $vBCSTRet, $vICMSSTRet);*/
 
-//ICMSSN - TributaÃ§Ã£o ICMS pelo Simples Nacional - CSOSN 500
+//ICMSSN - Tributação ICMS pelo Simples Nacional - CSOSN 500
 $nItem = 1;
 $orig = '0';
-$csosn = '500'; //ICMS cobrado anteriormente por substituiÃ§Ã£o tributÃ¡ria (substituÃ­do) ou por antecipaÃ§Ã£o
+$csosn = '500'; //ICMS cobrado anteriormente por substituição tributária (substituído) ou por antecipação
 $modBC = '1';
 $pRedBC = '';
 $vBC = ''; //12.00 = $qTrib * $vUnTrib 
-$pICMS = ''; //19.00 = 17% AlÃ­quota Interna + 2% FECP
+$pICMS = ''; //19.00 = 17% Alíquota Interna + 2% FECP
 $vICMS = ''; //2.28 = $vBC * ( $pICMS / 100 )
 $pCredSN = '';
 $vCredICMSSN = '';
@@ -198,12 +198,12 @@ $vBCST = '';
 $pICMSST = ''; //27.00 = GO para GO
 $vICMSST = '';
 $vBCSTRet = '12.00'; // Pauta do Chope Claro 1000ml em GO R$ 8,59 x 0.660 Litros
-$vICMSSTRet = '0.96'; // = (Valor da Pauta * AlÃ­quota ICMS ST) - Valor ICMS PrÃ³prio
+$vICMSSTRet = '0.96'; // = (Valor da Pauta * Alíquota ICMS ST) - Valor ICMS Próprio
 $resp = $nfe->tagICMSSN($nItem, $orig, $csosn, $modBC, $vBC, $pRedBC, $pICMS, $vICMS, $pCredSN, $vCredICMSSN, $modBCST, $pMVAST, $pRedBCST, $vBCST, $pICMSST, $vICMSST, $vBCSTRet, $vICMSSTRet);
 
 //PIS
 $nItem = 1;
-$cst = '01'; //OperaÃ§Ã£o TributÃ¡vel (base de cÃ¡lculo = (valor da operaÃ§Ã£o * alÃ­quota normal) / 100
+$cst = '01'; //Operação Tributável (base de cálculo = (valor da operação * alíquota normal) / 100
 $vBC = '4.62';
 $pPIS = '0.65';
 $vPIS = '0.03';
@@ -213,7 +213,7 @@ $resp = $nfe->tagPIS($nItem, $cst, $vBC, $pPIS, $vPIS, $qBCProd, $vAliqProd);
 
 //COFINS
 $nItem = 1;
-$cst = '01'; //OperaÃ§Ã£o TributÃ¡vel (base de cÃ¡lculo = (valor da operaÃ§Ã£o * alÃ­quota normal) / 100
+$cst = '01'; //Operação Tributável (base de cálculo = (valor da operação * alíquota normal) / 100
 $vBC = '4.62';
 $pCOFINS = '3.00';
 $vCOFINS = '0.13';
@@ -221,7 +221,7 @@ $qBCProd = '';
 $vAliqProd = '';
 $resp = $nfe->tagCOFINS($nItem, $cst, $vBC, $pCOFINS, $vCOFINS, $qBCProd, $vAliqProd);
 
-//InicializaÃ§Ã£o de vÃ¡riaveis nÃ£o declaradas...
+//Inicialização de váriaveis não declaradas...
 $vII = isset($vII) ? $vII : 0;
 $vIPI = isset($vIPI) ? $vIPI : 0;
 $vIOF = isset($vIOF) ? $vIOF : 0;
@@ -263,16 +263,16 @@ $tPag = '02'; //Cheque
 $vPag = '10.00';
 $rest = $nfe->tagpag($tPag, $vPag);
 
-// Calculo de carga tributÃ¡ria similar ao IBPT - Lei 12.741/12
+// Calculo de carga tributária similar ao IBPT - Lei 12.741/12
 $federal = number_format($vII+$vIPI+$vIOF+$vPIS+$vCOFINS, 2, ',', '.');
 $estadual = number_format($vICMS+$vST, 2, ',', '.');
 $municipal = number_format($vISS, 2, ',', '.');
 $totalT = number_format($federal+$estadual+$municipal, 2, ',', '.');
 $textoIBPT = "Valor Aprox. Tributos R$ {$totalT} - {$federal} Federal, {$estadual} Estadual e {$municipal} Municipal.";
 
-//informaÃ§Ãµes Adicionais
+//informações Adicionais
 $infAdFisco = "";
-$infCpl = "Pedido NÂº506 - {$textoIBPT}";
+$infCpl = "Pedido Nº506 - {$textoIBPT}";
 $resp = $nfe->taginfAdic($infAdFisco, $infCpl);
 
 //Monta a NFCe e retorna na tela

@@ -16,7 +16,7 @@ $docxml = FilesFolders::readFile($xmlProt);
 $pathLogo = '../../images/logo.jpg';
 $danfce = new Danfce($docxml, $pathLogo, 2);
 
-$ecoNFCe = false; //false = NÃ£o (NFC-e Completa); true = Sim (NFC-e Simplificada)
+$ecoNFCe = false; //false = Não (NFC-e Completa); true = Sim (NFC-e Simplificada)
 $id = $danfce->montaDANFCE($ecoNFCe);
 
 $pdfDanfe = "$id-danfce.pdf";

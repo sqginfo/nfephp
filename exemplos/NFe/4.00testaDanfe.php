@@ -1,7 +1,7 @@
 <?php
 /**
- * ATENÃ‡ÃƒO : Esse exemplo usa classe PROVISÃ“RIA que serÃ¡ removida assim que 
- * a nova classe DANFE estiver refatorada e a pasta EXTRAS serÃ¡ removida.
+ * ATENÇÃO : Esse exemplo usa classe PROVISÓRIA que será removida assim que 
+ * a nova classe DANFE estiver refatorada e a pasta EXTRAS será removida.
  */
 
 error_reporting(E_ALL);
@@ -16,7 +16,7 @@ $nfe = new ToolsNFe('../../config/config.json');
 
 $chave = '52160500067985000172550010000000101000000100';
 $xmlProt = "D:/xampp/htdocs/GIT-nfephp-org/nfephp/xmls/NF-e/homologacao/enviadas/aprovadas/201605/{$chave}-protNFe.xml";
-// Uso da nomeclatura '-danfe.pdf' para facilitar a diferenciaÃ§Ã£o entre PDFs DANFE e DANFCE salvos na mesma pasta...
+// Uso da nomeclatura '-danfe.pdf' para facilitar a diferenciação entre PDFs DANFE e DANFCE salvos na mesma pasta...
 $pdfDanfe = "D:/xampp/htdocs/GIT-nfephp-org/nfephp/xmls/NF-e/homologacao/pdf/201605/{$chave}-danfe.pdf";
 
 $docxml = FilesFolders::readFile($xmlProt);

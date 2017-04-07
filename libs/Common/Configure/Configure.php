@@ -30,10 +30,10 @@ class Configure
      * @var array
      */
     public static $aRequirements = array(
-        'PHP' => array('php','','','5.4.0','VersÃ£o do PHP'),
-        'cURL'=> array('curl','cURL Information','','7.22.2','mÃ­nimo cURL 7.22.2'),
-        'OpenSSL' => array('openssl','OpenSSL Library Version','','','mÃ­nimo OpenSSL 1.0'),
-        'DOM' => array('dom','libxml Version','','2.0.6','mÃ­nimo DOM 2.0.6'),
+        'PHP' => array('php','','','5.4.0','Versão do PHP'),
+        'cURL'=> array('curl','cURL Information','','7.22.2','mínimo cURL 7.22.2'),
+        'OpenSSL' => array('openssl','OpenSSL Library Version','','','mínimo OpenSSL 1.0'),
+        'DOM' => array('dom','libxml Version','','2.0.6','mínimo DOM 2.0.6'),
         'GD' => array('gd','GD Support','','','-----'),
         'SOAP' => array('soap','Soap Client','','','-----'),
         'ZIP' => array('zip','Zip version', '', '', '-----')
@@ -48,7 +48,7 @@ class Configure
     {
         //instanciar a classe de modulos
         $modules = new Modules();
-        //versÃ£o do php
+        //versão do php
         $phpversion = str_replace('-', '', substr(PHP_VERSION, 0, 6));
         $phpver = $modules->convVer($phpversion);
         $phpvermin = $modules->convVer(self::$aRequirements['PHP'][3]);
@@ -56,12 +56,12 @@ class Configure
         $bcor = "bgcolor=\"".self::$cRed."\"";
         $comment = "v. $phpversion Inadequada !!!";
         if ($phpver >= $phpvermin) {
-            $comment = "mÃ­nimo PHP ". self::$aRequirements['PHP'][3];
+            $comment = "mínimo PHP ". self::$aRequirements['PHP'][3];
             $status = 'OK';
             $bcor = "bgcolor=\"".self::$cGreen."\"";
         }
         $htmmod = "<table><tr bgcolor=\"#FFFF99\">"
-            . "<td>VersÃ£o do PHP $phpversion</td>"
+            . "<td>Versão do PHP $phpversion</td>"
             . "<td $bcor><div align=\"center\">$status</div></td>"
             . "<td>$comment</td></tr>";
         
@@ -99,7 +99,7 @@ class Configure
         }
         if (! is_dir($pathCertsFiles)) {
             $flag = $flag && false;
-            $msg .= "DiretÃ³rio nÃ£o localizado! $pathCertsFiles \n";
+            $msg .= "Diretório não localizado! $pathCertsFiles \n";
         }
         if (substr($pathCertsFiles, -1) !== DIRECTORY_SEPARATOR) {
             $pathCertsFiles .= DIRECTORY_SEPARATOR;
@@ -160,7 +160,7 @@ class Configure
         //testa diretorio certs
         if ($pathcerts != '') {
             if (! is_writable($pathcerts)) {
-                $aResp['Certs'] = array('status'=>false, 'msg'=>'DiretÃ³rio sem permissÃµes de escrita');
+                $aResp['Certs'] = array('status'=>false, 'msg'=>'Diretório sem permissões de escrita');
             }
         }
         return $aResp;

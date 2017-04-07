@@ -9,7 +9,7 @@ class StringsTest extends PHPUnit_Framework_TestCase
 {
     public function testCleanString()
     {
-        $txtSujo = "Esse Ã© um cÃ³digo cheio de @$#$! , - . ; : / COISAS e 12093876486";
+        $txtSujo = "Esse é um código cheio de @$#$! , - . ; : / COISAS e 12093876486";
         $txtLimpo = "Esse e um codigo cheio de @ , - . ; : / COISAS e 12093876486";
         $resp = NFePHP\Common\Strings\Strings::cleanString($txtSujo);
         $this->assertEquals($txtLimpo, $resp);

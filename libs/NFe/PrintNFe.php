@@ -3,7 +3,7 @@
 namespace NFePHP\NFe;
 
 /**
- * Classe para impress√£o dos documentos fiscais
+ * Classe para impress„o dos documentos fiscais
  *
  * @category  NFePHP
  * @package   NFePHP\NFe\PrintNFe

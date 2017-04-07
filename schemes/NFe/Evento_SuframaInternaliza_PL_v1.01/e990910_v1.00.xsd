@@ -3,13 +3,13 @@
 	<xs:include schemaLocation="tiposBasico_v1.03.xsd"/>
 	<xs:element name="detEvento">
 		<xs:annotation>
-			<xs:documentation>Schema XML de valida√ß√£o do evento do Confirma√ß√£o de Internaliza√ß√£o da Mercadoria na SUFRAMA 990910</xs:documentation>
+			<xs:documentation>Schema XML de validaÁ„o do evento do ConfirmaÁ„o de InternalizaÁ„o da Mercadoria na SUFRAMA 990910</xs:documentation>
 		</xs:annotation>
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="descEvento">
 					<xs:annotation>
-						<xs:documentation>Descri√ß√£o do Evento - ‚ÄúConfirma√ß√£o de Internaliza√ß√£o da Mercadoria na SUFRAMA‚Äù</xs:documentation>
+						<xs:documentation>DescriÁ„o do Evento - "ConfirmaÁ„o de InternalizaÁ„o da Mercadoria na SUFRAMA"</xs:documentation>
 					</xs:annotation>
 					<xs:simpleType>
 						<xs:restriction base="xs:string">
@@ -20,7 +20,7 @@
 				</xs:element>
 				<xs:element name="PINe">
 					<xs:annotation>
-						<xs:documentation>N√∫mero do PIN-e -  Protocolo de Internaliza√ß√£o de Mercadoria Nacional eletronico</xs:documentation>
+						<xs:documentation>N˙mero do PIN-e -  Protocolo de InternalizaÁ„o de Mercadoria Nacional eletronico</xs:documentation>
 					</xs:annotation>
 					<xs:simpleType>
 						<xs:restriction base="xs:string">
@@ -31,7 +31,7 @@
 				</xs:element>
 				<xs:element name="dVistoria" type="TDateTimeUTC">
 					<xs:annotation>
-						<xs:documentation>Data de ocorr√™ncia da vistoria, formato UTC (AAAA-MM-DDThh:mm:ssTZD, onde TZD = +hh:mm ou -hh:mm)</xs:documentation>
+						<xs:documentation>Data de ocorrÍncia da vistoria, formato UTC (AAAA-MM-DDThh:mm:ssTZD, onde TZD = +hh:mm ou -hh:mm)</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 				<xs:element name="locVistoria">
@@ -58,7 +58,7 @@
 				</xs:element>
 				<xs:element name="xHistorico">
 					<xs:annotation>
-						<xs:documentation>Hist√≥rico da ocorr√™ncia, se existir.</xs:documentation>
+						<xs:documentation>HistÛrico da ocorrÍncia, se existir.</xs:documentation>
 					</xs:annotation>
 					<xs:simpleType>
 						<xs:restriction base="TString">

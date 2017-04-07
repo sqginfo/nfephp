@@ -8,11 +8,11 @@ use NFePHP\NFe\ToolsNFe;
 $nfe = new ToolsNFe('../../config/config.json');
 $nfe->setModelo('65');
 
-/* OperaÃ§Ãµes de administraÃ§Ã£o CSC (indOp):
+/* Operações de administração CSC (indOp):
 
-01 â€“ Consulta
-02 â€“ SolicitaÃ§Ã£o
-03 â€“ RevogaÃ§Ã£o
+01 - Consulta
+02 - Solicitação
+03 - Revogação
 
 */
 

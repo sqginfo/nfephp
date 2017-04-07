@@ -10,7 +10,7 @@
 		<xs:sequence>
 		  <xs:element name="idLote">
 			<xs:annotation>
-			  <xs:documentation>Identificador de controle do Lote de envio do Evento. NÃºmero sequencial autoincremental Ãºnico para identificaÃ§Ã£o do Lote.</xs:documentation>
+			  <xs:documentation>Identificador de controle do Lote de envio do Evento. Número sequencial autoincremental único para identificação do Lote.</xs:documentation>
 			</xs:annotation>
 			<xs:simpleType>
 				<xs:restriction base="xs:string">
@@ -21,27 +21,27 @@
 		  </xs:element>
 		  <xs:element name="tpAmb" type="TAmb">
 			<xs:annotation>
-			  <xs:documentation>IdentificaÃ§Ã£o do Ambiente: 1 - ProduÃ§Ã£o, 2 Â– HomologaÃ§Ã£o</xs:documentation>
+			  <xs:documentation>Identificação do Ambiente: 1 - Produção, 2 – Homologação</xs:documentation>
 			</xs:annotation>
 		  </xs:element>
 		  <xs:element name="verAplic" type="TVerAplic">
 			<xs:annotation>
-			  <xs:documentation>VersÃ£o da aplicaÃ§Ã£o que processou o evento.</xs:documentation>
+			  <xs:documentation>Versão da aplicação que processou o evento.</xs:documentation>
 			</xs:annotation>
 		  </xs:element>
 		  <xs:element name="cOrgao" type="TCOrgaoIBGE">
 			<xs:annotation>
-			  <xs:documentation>CÃ³digo da UF que registrou o Evento. Utilizar 90 para o Ambiente Nacional.</xs:documentation>
+			  <xs:documentation>Código da UF que registrou o Evento. Utilizar 90 para o Ambiente Nacional.</xs:documentation>
 			</xs:annotation>
 		  </xs:element>
 		  <xs:element name="cStat" type="TStat">
 			<xs:annotation>
-			  <xs:documentation>CÃ³digo do status da resposta</xs:documentation>
+			  <xs:documentation>Código do status da resposta</xs:documentation>
 			</xs:annotation>
 		  </xs:element>
 		  <xs:element name="xMotivo" type="TMotivo">
 			<xs:annotation>
-			  <xs:documentation>DescriÃ§Ã£o do status da resposta</xs:documentation>
+			  <xs:documentation>Descrição do status da resposta</xs:documentation>
 			</xs:annotation>
 		  </xs:element>
 		  <xs:element maxOccurs="20" minOccurs="0" name="retEvento">
@@ -52,34 +52,34 @@
 			  <xs:sequence>
 				<xs:element name="infEvento">
 				  <xs:annotation>
-					<xs:documentation>Grupo de informaÃ§Ãµes do registro do Evento</xs:documentation>
+					<xs:documentation>Grupo de informações do registro do Evento</xs:documentation>
 				  </xs:annotation>
 				  <xs:complexType>
 					<xs:sequence>
 					  <xs:element name="tpAmb" type="TAmb"> 
 						<xs:annotation>
-						  <xs:documentation>IdentificaÃ§Ã£o do Ambiente: 1 Â– ProduÃ§Ã£o / 2 Â– HomologaÃ§Ã£o</xs:documentation>
+						  <xs:documentation>Identificação do Ambiente: 1 – Produção / 2 – Homologação</xs:documentation>
 						</xs:annotation>
 					  </xs:element>
 					  <xs:element name="verAplic" type="TVerAplic">
 						<xs:annotation>
-						  <xs:documentation>VersÃ£o da aplicaÃ§Ã£o que registrou o Evento, utilizar literal que permita a identificaÃ§Ã£o do Ã³rgÃ£o, como a sigla da UF ou
-	do Ã³rgÃ£o.</xs:documentation>
+						  <xs:documentation>Versão da aplicação que registrou o Evento, utilizar literal que permita a identificação do órgão, como a sigla da UF ou
+	do órgão.</xs:documentation>
 						</xs:annotation>
 					  </xs:element>
 					  <xs:element name="cOrgao" type="TCOrgaoIBGE">
 						<xs:annotation>
-						  <xs:documentation>CÃ³digo da UF que registrou o Evento. Utilizar 90 para o Ambiente Nacional.</xs:documentation>
+						  <xs:documentation>Código da UF que registrou o Evento. Utilizar 90 para o Ambiente Nacional.</xs:documentation>
 						</xs:annotation>
 					  </xs:element>
 					  <xs:element name="cStat" type="TStat">
 						<xs:annotation>
-						  <xs:documentation>CÃ³digo do status da resposta.</xs:documentation>
+						  <xs:documentation>Código do status da resposta.</xs:documentation>
 						</xs:annotation>
 					  </xs:element>
 					  <xs:element name="xMotivo" type="TMotivo">
 						<xs:annotation>
-						  <xs:documentation>DescriÃ§Ã£o do status da resposta.</xs:documentation>
+						  <xs:documentation>Descrição do status da resposta.</xs:documentation>
 						</xs:annotation>
 					  </xs:element>
 					  <xs:element name="chNFe" maxOccurs="1" minOccurs="0" type="TChNFe">
@@ -89,7 +89,7 @@
 					  </xs:element>
 					  <xs:element name="tpEvento" maxOccurs="1" minOccurs="0">
 						<xs:annotation>
-						  <xs:documentation>CÃ³digo do Tipo do Evento.</xs:documentation>
+						  <xs:documentation>Código do Tipo do Evento.</xs:documentation>
 						</xs:annotation>
 						<xs:simpleType>
 							  <xs:restriction base="xs:string">
@@ -102,11 +102,11 @@
 					  </xs:element>
 					  <xs:element maxOccurs="1" minOccurs="0" name="xEvento">
 						<xs:annotation>
-						  <xs:documentation>DescriÃ§Ã£o do Evento Â– Â“Cancelamento de Pedido de ProrrogaÃ§Ã£o registradoÂ”</xs:documentation>
+						  <xs:documentation>Descrição do Evento – “Cancelamento de Pedido de Prorrogação registrado”</xs:documentation>
 						</xs:annotation>
 						<xs:simpleType>
 							<xs:restriction base="xs:string">
-								<xs:enumeration value="Cancelamento de Pedido de ProrrogaÃ§Ã£o registrado" />									
+								<xs:enumeration value="Cancelamento de Pedido de Prorrogação registrado" />									
 							</xs:restriction>
 						</xs:simpleType>
 					  </xs:element>
@@ -123,12 +123,12 @@
 					  </xs:element>
 					  <xs:element name="CNPJDest" maxOccurs="1" minOccurs="0" type="TCnpjOpc">
 						<xs:annotation>
-						  <xs:documentation>Informar o CNPJ do destinatÃ¡rio da NF-e.</xs:documentation>
+						  <xs:documentation>Informar o CNPJ do destinatário da NF-e.</xs:documentation>
 						</xs:annotation>
 					  </xs:element>
 					  <xs:element name="emailDest" maxOccurs="1" minOccurs="0">
 						<xs:annotation>
-						  <xs:documentation>email do destinatÃ¡rio informado na NF-e.</xs:documentation>
+						  <xs:documentation>email do destinatário informado na NF-e.</xs:documentation>
 						</xs:annotation>
 						<xs:simpleType>
 							<xs:restriction base="TString">
@@ -139,21 +139,21 @@
 					  </xs:element>
 					  <xs:element name="dhRegEvento" type="TDateTimeUTC">
 						<xs:annotation>
-						  <xs:documentation>Data e hora de registro do evento no formato AAAA-MMDDTHH:MM:SSTZD (formato UTC, onde TZD Ã© +HH:MM ou
-	Â–HH:MM), se o evento for rejeitado informar a data e hora de recebimento do evento.</xs:documentation>
+						  <xs:documentation>Data e hora de registro do evento no formato AAAA-MMDDTHH:MM:SSTZD (formato UTC, onde TZD é +HH:MM ou
+	–HH:MM), se o evento for rejeitado informar a data e hora de recebimento do evento.</xs:documentation>
 						</xs:annotation>
 					  </xs:element>
 					  <xs:element name="nProt" maxOccurs="1" minOccurs="0" type="TProt">
 						<xs:annotation>
-						  <xs:documentation>NÃºmero do Protocolo do Evento 1 posiÃ§Ã£o (1-Secretaria da Fazenda Estadual, 2-RFB), 2 posiÃ§Ãµes para o cÃ³digo da UF, 2 posiÃ§Ãµes para o ano e 10 posiÃ§Ãµes para o sequencial no ano.</xs:documentation>
+						  <xs:documentation>Número do Protocolo do Evento 1 posição (1-Secretaria da Fazenda Estadual, 2-RFB), 2 posições para o código da UF, 2 posições para o ano e 10 posições para o sequencial no ano.</xs:documentation>
 						</xs:annotation>
 					  </xs:element>
 					</xs:sequence>
 					<xs:attribute name="Id" >
 						<xs:annotation>
-						  <xs:documentation>Identificador da TAG a ser assinada, somente deve ser informado se o Ã³rgÃ£o de registro assinar a resposta.
-								Em caso de assinatura da resposta pelo Ã³rgÃ£o de registro, preencher com o nÃºmero do protocolo, precedido pela literal Â“ID
-						  Â”</xs:documentation>
+						  <xs:documentation>Identificador da TAG a ser assinada, somente deve ser informado se o órgão de registro assinar a resposta.
+								Em caso de assinatura da resposta pelo órgão de registro, preencher com o número do protocolo, precedido pela literal “ID
+						  ”</xs:documentation>
 						</xs:annotation>
 						<xs:simpleType>
 							<xs:restriction base="xs:ID">
@@ -167,7 +167,7 @@
 			  </xs:sequence>
 			  <xs:attribute name="versao">
 				  <xs:annotation>
-					<xs:documentation>VersÃ£o do leiaute</xs:documentation>
+					<xs:documentation>Versão do leiaute</xs:documentation>
 				  </xs:annotation>
 				  <xs:simpleType>
 					<xs:restriction base="xs:string">
@@ -181,7 +181,7 @@
 		</xs:sequence>
 		<xs:attribute name="versao">
 			<xs:annotation>
-			  <xs:documentation>VersÃ£o do leiaute</xs:documentation>
+			  <xs:documentation>Versão do leiaute</xs:documentation>
 			</xs:annotation>
 			<xs:simpleType>
 				<xs:restriction base="xs:string">
@@ -194,7 +194,7 @@
 	</xs:element>
 	<xs:simpleType name="TCOrgaoIBGE">
 		<xs:annotation>
-			<xs:documentation>Tipo CÃ³digo de orgÃ£o (UF da tabela do IBGE + 91 RFB)</xs:documentation> 
+			<xs:documentation>Tipo Código de orgão (UF da tabela do IBGE + 91 RFB)</xs:documentation> 
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:whiteSpace value="preserve" /> 

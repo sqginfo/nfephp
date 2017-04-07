@@ -3,7 +3,7 @@
 namespace NFePHP\NFe;
 
 /**
- * Classe principal para a comunica√ß√£o com a SEFAZ
+ * Classe principal para a comunicaÁ„o com a SEFAZ
  *
  * @category  NFePHP
  * @package   NFePHP\NFe\ToolsNFe
@@ -46,7 +46,7 @@ class ToolsNFe extends BaseTools
     public $soapDebug = '';
     /**
      * urlPortal
-     * Inst√¢ncia do WebService
+     * Inst‚ncia do WebService
      *
      * @var string
      */
@@ -73,7 +73,7 @@ class ToolsNFe extends BaseTools
      */
     public function setModelo($modelo = '55')
     {
-        //for√ßa pelo menos um modelo correto
+        //forÁa pelo menos um modelo correto
         if ($modelo != '55' && $modelo != '65') {
             $modelo = '55';
         }
@@ -175,7 +175,7 @@ class ToolsNFe extends BaseTools
 
     /**
      * desativaContingencia
-     * Desliga op√ß√£o de conting√™ncia
+     * Desliga opÁ„o de contingÍncia
      *
      * @return boolean
      */
@@ -197,7 +197,7 @@ class ToolsNFe extends BaseTools
 
     /**
      * imprime
-     * Imprime o documento eletr√¥nico (NFe, CCe, Inut.)
+     * Imprime o documento eletrÙnico (NFe, CCe, Inut.)
      *
      * @param  string $pathXml
      * @param  string $pathDestino
@@ -206,21 +206,21 @@ class ToolsNFe extends BaseTools
      */
     public function imprime($pathXml = '', $pathDestino = '', $printer = '')
     {
-        //TODO : falta implementar esse m√©todo para isso √© necess√°ria a classe
+        //TODO : falta implementar esse mÈtodo para isso È necess·ria a classe
         //PrintNFe
         return "$pathXml $pathDestino $printer";
     }
 
     /**
      * enviaMail
-     * Envia a NFe por email aos destinat√°rios
-     * Caso $aMails esteja vazio ser√£o obtidos os email do destinat√°rio  e
+     * Envia a NFe por email aos destinat·rios
+     * Caso $aMails esteja vazio ser„o obtidos os email do destinat·rio  e
      * os emails que estiverem registrados nos campos obsCont do xml
      *
      * @param  string  $pathXml
      * @param  array   $aMails
      * @param  string  $templateFile path completo ao arquivo template html do corpo do email
-     * @param  boolean $comPdf       se true o sistema ir√° renderizar o DANFE e anexa-lo a mensagem
+     * @param  boolean $comPdf       se true o sistema ir· renderizar o DANFE e anexa-lo a mensagem
      * @param  string  $pathPdf
      * @return boolean
      * @throws Exception\RuntimeException
@@ -228,9 +228,9 @@ class ToolsNFe extends BaseTools
     public function enviaMail($pathXml = '', $aMails = array(), $templateFile = '', $comPdf = false, $pathPdf = '')
     {
         $mail = new MailNFe($this->aMailConf);
-        // Se n√£o for informado o caminho do PDF, monta um atrav√©s do XML
+        // Se n„o for informado o caminho do PDF, monta um atravÈs do XML
         if ($comPdf && $this->modelo == '55' && $pathPdf == '') {
-            $docxml = Files\FilesFolders::readFile($pathXml);
+                $docxml = Files\FilesFolders::readFile($pathXml);
             $danfe = new Extras\Danfe($docxml, 'P', 'A4', $this->aDocFormat['pathLogoFile'], 'I', '');
             $id = $danfe->montaDANFE();
             $pathPdf = $this->aConfig['pathNFeFiles']
@@ -246,14 +246,14 @@ class ToolsNFe extends BaseTools
             $mail->setTemplate($templateFile);
         }
         if ($mail->envia($pathXml, $aMails, $comPdf, $pathPdf) === false) {
-            throw new Exception\RuntimeException('Email n√£o enviado. '.$mail->error);
+            throw new Exception\RuntimeException('Email n„o enviado. '.$mail->error);
         }
         return true;
     }
 
     /**
      * addB2B
-     * Adiciona tags de comunica√ß√£o B2B, especialmente ANFAVEA
+     * Adiciona tags de comunicaÁ„o B2B, especialmente ANFAVEA
      *
      * @param  string $pathNFefile
      * @param  string $pathB2Bfile
@@ -265,18 +265,18 @@ class ToolsNFe extends BaseTools
     public function addB2B($pathNFefile = '', $pathB2Bfile = '', $tagB2B = '')
     {
         if (! is_file($pathNFefile) || ! is_file($pathB2Bfile)) {
-            $msg = "Algum dos arquivos n√£o foi localizado no caminho indicado ! $pathNFefile ou $pathB2Bfile";
+            $msg = "Algum dos arquivos n„o foi localizado no caminho indicado ! $pathNFefile ou $pathB2Bfile";
             throw new Exception\InvalidArgumentException($msg);
         }
         if ($tagB2B == '') {
-            //padr√£o anfavea
+            //padr„o anfavea
             $tagB2B = 'NFeB2BFin';
         }
         $docnfe = new Dom();
         $docnfe->loadXMLFile($pathNFefile);
         $nodenfe = $docnfe->getNode('nfeProc', 0);
         if ($nodenfe == '') {
-            $msg = "O arquivo indicado como NFe n√£o est√° protocolado ou n√£o √© uma NFe!!";
+            $msg = "O arquivo indicado como NFe n„o est· protocolado ou n„o È uma NFe!!";
             throw new Exception\RuntimeException($msg);
         }
         //carrega o arquivo B2B
@@ -284,7 +284,7 @@ class ToolsNFe extends BaseTools
         $docb2b->loadXMLFile($pathNFefile);
         $nodeb2b = $docnfe->getNode($tagB2B, 0);
         if ($nodeb2b == '') {
-            $msg = "O arquivo indicado como B2B n√£o cont√™n a tag requerida!!";
+            $msg = "O arquivo indicado como B2B n„o contÍn a tag requerida!!";
             throw new Exception\RuntimeException($msg);
         }
         //cria a NFe processada com a tag do protocolo
@@ -298,17 +298,17 @@ class ToolsNFe extends BaseTools
         //inclui a tag NFeB2BFin
         $node2 = $procb2b->importNode($nodeb2b, true);
         $nfeProcB2B->appendChild($node2);
-        //salva o xml como string em uma vari√°vel
+        //salva o xml como string em uma vari·vel
         $nfeb2bXML = $procb2b->saveXML();
-        //remove as informa√ß√µes indesejadas
+        //remove as informaÁıes indesejadas
         $nfeb2bXMLString = str_replace(array("\n","\r","\s"), '', $nfeb2bXML);
         return (string) $nfeb2bXMLString;
     }
 
     /**
      * addProtocolo
-     * Adiciona o protocolo de autoriza√ß√£o de uso da NFe
-     * NOTA: exig√™ncia da SEFAZ, a nota somente √© v√°lida com o seu respectivo protocolo
+     * Adiciona o protocolo de autorizaÁ„o de uso da NFe
+     * NOTA: exigÍncia da SEFAZ, a nota somente È v·lida com o seu respectivo protocolo
      *
      * @param  string  $pathNFefile
      * @param  string  $pathProtfile
@@ -325,17 +325,17 @@ class ToolsNFe extends BaseTools
             //carrega o XML pelo caminho do arquivo informado
             $docnfe->loadXMLFile($pathNFefile);
         } else {
-            //carrega o XML pelo conte√∫do
+            //carrega o XML pelo conte˙do
             $docnfe->loadXMLString($pathNFefile);
         }
 
         $nodenfe = $docnfe->getNode('NFe', 0);
         if ($nodenfe == '') {
-            $msg = "O arquivo indicado como NFe n√£o √© um xml de NFe!";
+            $msg = "O arquivo indicado como NFe n„o È um xml de NFe!";
             throw new Exception\RuntimeException($msg);
         }
         if ($docnfe->getNode('Signature') == '') {
-            $msg = "A NFe n√£o est√° assinada!";
+            $msg = "A NFe n„o est· assinada!";
             throw new Exception\RuntimeException($msg);
         }
         //carrega o protocolo
@@ -345,13 +345,13 @@ class ToolsNFe extends BaseTools
             //carrega o XML pelo caminho do arquivo informado
             $docprot->loadXMLFile($pathProtfile);
         } else {
-            //carrega o XML pelo conte√∫do
+            //carrega o XML pelo conte˙do
             $docprot->loadXMLString($pathProtfile);
         }
 
         $nodeprots = $docprot->getElementsByTagName('protNFe');
         if ($nodeprots->length == 0) {
-            $msg = "O arquivo indicado n√£o contem um protocolo de autoriza√ß√£o!";
+            $msg = "O arquivo indicado n„o contem um protocolo de autorizaÁ„o!";
             throw new Exception\RuntimeException($msg);
         }
         //carrega dados da NFe
@@ -379,11 +379,11 @@ class ToolsNFe extends BaseTools
             }
         }
         if ($digValueNFe != $digValueProt) {
-            $msg = "Inconsist√™ncia! O DigestValue da NFe n√£o combina com o do digVal do protocolo indicado!";
+            $msg = "InconsistÍncia! O DigestValue da NFe n„o combina com o do digVal do protocolo indicado!";
             throw new Exception\RuntimeException($msg);
         }
         if ($chaveNFe != $chaveProt) {
-            $msg = "O protocolo indicado pertence a outra NFe. Os n√∫meros das chaves n√£o combinam !";
+            $msg = "O protocolo indicado pertence a outra NFe. Os n˙meros das chaves n„o combinam !";
             throw new Exception\RuntimeException($msg);
         }
         //cria a NFe processada com a tag do protocolo
@@ -393,7 +393,7 @@ class ToolsNFe extends BaseTools
         //cria a tag nfeProc
         $nfeProc = $procnfe->createElement('nfeProc');
         $procnfe->appendChild($nfeProc);
-        //estabele o atributo de vers√£o
+        //estabele o atributo de vers„o
         $nfeProcAtt1 = $nfeProc->appendChild($procnfe->createAttribute('versao'));
         $nfeProcAtt1->appendChild($procnfe->createTextNode($protver));
         //estabelece o atributo xmlns
@@ -405,15 +405,15 @@ class ToolsNFe extends BaseTools
         //cria tag protNFe
         $protNFe = $procnfe->createElement('protNFe');
         $nfeProc->appendChild($protNFe);
-        //estabele o atributo de vers√£o
+        //estabele o atributo de vers„o
         $protNFeAtt1 = $protNFe->appendChild($procnfe->createAttribute('versao'));
         $protNFeAtt1->appendChild($procnfe->createTextNode($versao));
         //cria tag infProt
         $nodep = $procnfe->importNode($infProt, true);
         $protNFe->appendChild($nodep);
-        //salva o xml como string em uma vari√°vel
+        //salva o xml como string em uma vari·vel
         $procXML = $procnfe->saveXML();
-        //remove as informa√ß√µes indesejadas
+        //remove as informaÁıes indesejadas
         $procXML = Strings::clearProt($procXML);
         if ($saveFile) {
             $filename = "{$chaveNFe}-protNFe.xml";
@@ -431,8 +431,8 @@ class ToolsNFe extends BaseTools
 
     /**
      * addCancelamento
-     * Adiciona a tga de cancelamento a uma NFe j√° autorizada
-     * NOTA: n√£o √© requisito da SEFAZ, mas auxilia na identifica√ß√£o das NFe que foram canceladas
+     * Adiciona a tga de cancelamento a uma NFe j· autorizada
+     * NOTA: n„o È requisito da SEFAZ, mas auxilia na identificaÁ„o das NFe que foram canceladas
      *
      * @param  string $pathNFefile
      * @param  string $pathCancfile
@@ -448,12 +448,12 @@ class ToolsNFe extends BaseTools
         $docnfe->loadXMLFile($pathNFefile);
         $nodenfe = $docnfe->getNode('NFe', 0);
         if ($nodenfe == '') {
-            $msg = "O arquivo indicado como NFe n√£o √© um xml de NFe!";
+            $msg = "O arquivo indicado como NFe n„o È um xml de NFe!";
             throw new Exception\RuntimeException($msg);
         }
         $proNFe = $docnfe->getNode('protNFe');
         if ($proNFe == '') {
-            $msg = "A NFe n√£o est√° protocolada ainda!!";
+            $msg = "A NFe n„o est· protocolada ainda!!";
             throw new Exception\RuntimeException($msg);
         }
         $chaveNFe = $proNFe->getElementsByTagName('chNFe')->item(0)->nodeValue;
@@ -466,7 +466,13 @@ class ToolsNFe extends BaseTools
         //carrega o cancelamento
         //pode ser um evento ou resultado de uma consulta com multiplos eventos
         $doccanc = new Dom();
-        $doccanc->loadXMLFile($pathCancfile);
+        if (file_exists($pathCancfile)) {
+            //carrega o XML pelo caminho do arquivo informado
+            $doccanc->loadXMLFile($pathCancfile);
+        } else {
+            //carrega o XML pelo conte˙do
+            $doccanc->loadXMLString($pathCancfile);
+        }
         $retEvento = $doccanc->getElementsByTagName('retEvento')->item(0);
         $eventos = $retEvento->getElementsByTagName('infEvento');
         foreach ($eventos as $evento) {
@@ -478,7 +484,7 @@ class ToolsNFe extends BaseTools
             //$nProtEvento = $evento->getElementsByTagName('nProt')->item(0)->nodeValue;
             //verifica se conferem os dados
             //cStat = 135 ==> evento homologado
-            //cStat = 136 ==> vincula√ß√£o do evento √† respectiva NF-e prejudicada
+            //cStat = 136 ==> vinculaÁ„o do evento ‡ respectiva NF-e prejudicada
             //cStat = 155 ==> Cancelamento homologado fora de prazo
             //tpEvento = 110111 ==> Cancelamento
             //chave do evento == chave da NFe
@@ -490,7 +496,7 @@ class ToolsNFe extends BaseTools
                 $proNFe->getElementsByTagName('cStat')->item(0)->nodeValue = '101';
                 $proNFe->getElementsByTagName('xMotivo')->item(0)->nodeValue = 'Cancelamento de NF-e homologado';
                 $procXML = $docnfe->saveXML();
-                //remove as informa√ß√µes indesejadas
+                //remove as informaÁıes indesejadas
                 $procXML = Strings::clearProt($procXML);
                 if ($saveFile) {
                     $filename = "$chaveNFe-protNFe.xml";
@@ -522,7 +528,7 @@ class ToolsNFe extends BaseTools
     {
         $aRetorno = array();
         if (!file_exists($pathXmlFile)) {
-            $msg = "Arquivo n√£o localizado!!";
+            $msg = "Arquivo n„o localizado!!";
             throw new Exception\InvalidArgumentException($msg);
         }
         //carrega a NFe
@@ -558,7 +564,7 @@ class ToolsNFe extends BaseTools
         $oldmod = $this->modelo;
         $this->modelo = $modelo;
         if ($this->modelo == 65) {
-            //descomentar essa linha ap√≥s 03/11/2015 conforme NT 2015.002
+            //descomentar essa linha apÛs 03/11/2015 conforme NT 2015.002
             //ou quando for habilitada essa TAG no XML da NFCe
             //para incluir o QRCode no corpo da NFCe
             $xmlSigned = $this->zPutQRTag($dom, $saveFile);
@@ -570,17 +576,17 @@ class ToolsNFe extends BaseTools
     /**
      * zPutQRTag
      * Monta a URI para o QRCode e coloca a tag
-     * no xml j√° assinado
+     * no xml j· assinado
      *
      * @param  Dom $dom
      * @return string
-     * NOTA: O Campo QRCode est√° habilitado para uso a partir de
-     *       01/10/2015 homologa√ß√£o
-     *       03/11/2015 Produ√ß√£o
+     * NOTA: O Campo QRCode est· habilitado para uso a partir de
+     *       01/10/2015 homologaÁ„o
+     *       03/11/2015 ProduÁ„o
      */
     protected function zPutQRTag(Dom $dom, $saveFile)
     {
-        //pega os dados necess√°rios para a montagem da URI a partir do xml
+        //pega os dados necess·rios para a montagem da URI a partir do xml
         $nfe = $dom->getNode('NFe');
         $ide = $dom->getNode('ide');
         $dest = $dom->getNode('dest');
@@ -609,15 +615,15 @@ class ToolsNFe extends BaseTools
         $versao = '100';
         /*
          *Pega a URL para consulta do QRCode do estado emissor,
-         *essa url est√° em nfe_ws3_mode65.xml, em tese essa url
-         *N√ÉO √â uma WebService, √© simplismente uma p√°gina para
+         *essa url est· em nfe_ws3_mode65.xml, em tese essa url
+         *N√O … uma WebService, È simplismente uma p·gina para
          *consulta do QRCode via parametros GET, percebe-se que
-         *em todas as SEFAZ o endere√ßo de consulta do QRCode se
-         *difere do padr√£o de endere√ßo das WS.
-         *Esse √© um servi√ßo para ser utilizado pelo consumidor...
-         *NOTA: Sem o endere√ßo de consulta n√£o √© poss√≠vel gerar o QR-Code!!!
+         *em todas as SEFAZ o endereÁo de consulta do QRCode se
+         *difere do padr„o de endereÁo das WS.
+         *Esse È um serviÁo para ser utilizado pelo consumidor...
+         *NOTA: Sem o endereÁo de consulta n„o È possÌvel gerar o QR-Code!!!
         */
-        //carrega servi√ßo
+        //carrega serviÁo
         $servico = 'NfeConsultaQR';
         $siglaUF = $this->zGetSigla($cUF);
         $this->zLoadServico(
@@ -627,11 +633,11 @@ class ToolsNFe extends BaseTools
             $tpAmb
         );
         if ($this->urlService == '') {
-            $this->errors[] = "A consulta por QRCode n√£o est√° dispon√≠vel na SEFAZ $siglaUF!!!";
+            $this->errors[] = "A consulta por QRCode n„o est· disponÌvel na SEFAZ $siglaUF!!!";
             return $dom->saveXML();
         }
         $url = $this->urlService;
-        //usa a fun√ß√£o zMakeQRCode para gerar a string da URI
+        //usa a funÁ„o zMakeQRCode para gerar a string da URI
         $qrcode = $this->zMakeQRCode(
             $chNFe,
             $url,
@@ -671,7 +677,7 @@ class ToolsNFe extends BaseTools
 
     /**
      * sefazEnviaLote
-     * Solicita a autoriza√ß√£o de uso de Lote de NFe
+     * Solicita a autorizaÁ„o de uso de Lote de NFe
      *
      * @param    array   $aXml
      * @param    string  $tpAmb
@@ -700,7 +706,7 @@ class ToolsNFe extends BaseTools
         }
         if (is_array($aXml)) {
             if (count($aXml) > 1) {
-                //multiplas nfes, n√£o pode ser sincrono
+                //multiplas nfes, n„o pode ser sincrono
                 $indSinc = 0;
             }
             $sxml = implode("", $sxml);
@@ -713,7 +719,7 @@ class ToolsNFe extends BaseTools
         if ($idLote == '') {
             $idLote = LotNumber::geraNumLote(15);
         }
-        //carrega servi√ßo
+        //carrega serviÁo
         $servico = 'NfeAutorizacao';
         $this->zLoadServico(
             'nfe',
@@ -722,7 +728,7 @@ class ToolsNFe extends BaseTools
             $tpAmb
         );
         if ($this->urlService == '') {
-            $msg = "O envio de lote n√£o est√° dispon√≠vel na SEFAZ $siglaUF!!!";
+            $msg = "O envio de lote n„o est· disponÌvel na SEFAZ $siglaUF!!!";
             throw new Exception\RuntimeException($msg);
         }
         //montagem dos dados da mensagem SOAP
@@ -734,7 +740,7 @@ class ToolsNFe extends BaseTools
         //valida a mensagem com o xsd
         //validar mensagem com xsd
         //if (! $this->validarXml($cons)) {
-        //    $msg = 'Falha na valida√ß√£o. '.$this->error;
+        //    $msg = 'Falha na validaÁ„o. '.$this->error;
         //    throw new Exception\RuntimeException($msg);
         //}
         //montagem dos dados da mensagem SOAP
@@ -745,7 +751,7 @@ class ToolsNFe extends BaseTools
             $body = "<nfeDadosMsgZip xmlns=\"$this->urlNamespace\">$gzdata</nfeDadosMsgZip>";
             $method = $this->urlMethod."Zip";
         }
-        //envia a solicita√ß√£o via SOAP
+        //envia a solicitaÁ„o via SOAP
         $retorno = $this->oSoap->send($this->urlService, $this->urlNamespace, $this->urlHeader, $body, $method);
         $this->soapDebug = $this->oSoap->soapDebug;
         //salva mensagens
@@ -766,7 +772,7 @@ class ToolsNFe extends BaseTools
 
     /**
      * sefazConsultaRecibo
-     * Consulta a situa√ß√£o de um Lote de NFe enviadas pelo recibo desse envio
+     * Consulta a situaÁ„o de um Lote de NFe enviadas pelo recibo desse envio
      *
      * @param    string $recibo
      * @param    string $tpAmb
@@ -786,7 +792,7 @@ class ToolsNFe extends BaseTools
             $tpAmb = $this->aConfig['tpAmb'];
         }
         $siglaUF = $this->aConfig['siglaUF'];
-        //carrega servi√ßo
+        //carrega serviÁo
         $servico = 'NfeRetAutorizacao';
         $this->zLoadServico(
             'nfe',
@@ -795,7 +801,7 @@ class ToolsNFe extends BaseTools
             $tpAmb
         );
         if ($this->urlService == '') {
-            $msg = "A consulta de NFe n√£o est√° dispon√≠vel na SEFAZ $siglaUF!!!";
+            $msg = "A consulta de NFe n„o est· disponÌvel na SEFAZ $siglaUF!!!";
             throw new Exception\RuntimeException($msg);
         }
         $cons = "<consReciNFe xmlns=\"$this->urlPortal\" versao=\"$this->urlVersion\">"
@@ -804,12 +810,12 @@ class ToolsNFe extends BaseTools
             . "</consReciNFe>";
         //validar mensagem com xsd
         //if (! $this->validarXml($cons)) {
-        //    $msg = 'Falha na valida√ß√£o. '.$this->error;
+        //    $msg = 'Falha na validaÁ„o. '.$this->error;
         //    throw new Exception\RuntimeException($msg);
         //}
         //montagem dos dados da mensagem SOAP
         $body = "<nfeDadosMsg xmlns=\"$this->urlNamespace\">$cons</nfeDadosMsg>";
-        //envia a solicita√ß√£o via SOAP
+        //envia a solicitaÁ„o via SOAP
         $retorno = $this->oSoap->send(
             $this->urlService,
             $this->urlNamespace,
@@ -828,7 +834,7 @@ class ToolsNFe extends BaseTools
         }
         //tratar dados de retorno
         $aRetorno = ReturnNFe::readReturnSefaz($servico, $retorno);
-        //podem ser retornados nenhum, um ou v√°rios protocolos
+        //podem ser retornados nenhum, um ou v·rios protocolos
         //caso existam protocolos protocolar as NFe e movelas-las para a
         //pasta enviadas/aprovadas/anomes
         return (string) $retorno;
@@ -850,7 +856,7 @@ class ToolsNFe extends BaseTools
     {
         $chNFe = preg_replace('/[^0-9]/', '', $chave);
         if (strlen($chNFe) != 44) {
-            $msg = "Uma chave de 44 d√≠gitos da NFe deve ser passada.";
+            $msg = "Uma chave de 44 dÌgitos da NFe deve ser passada.";
             throw new Exception\InvalidArgumentException($msg);
         }
         if ($tpAmb == '') {
@@ -858,7 +864,7 @@ class ToolsNFe extends BaseTools
         }
         $cUF = substr($chNFe, 0, 2);
         $siglaUF = $this->zGetSigla($cUF);
-        //carrega servi√ßo
+        //carrega serviÁo
         $servico = 'NfeConsultaProtocolo';
         $this->zLoadServico(
             'nfe',
@@ -867,7 +873,7 @@ class ToolsNFe extends BaseTools
             $tpAmb
         );
         if ($this->urlService == '') {
-            $msg = "A consulta de NFe n√£o est√° dispon√≠vel na SEFAZ $siglaUF!!!";
+            $msg = "A consulta de NFe n„o est· disponÌvel na SEFAZ $siglaUF!!!";
             throw new Exception\RuntimeException($msg);
         }
         $cons = "<consSitNFe xmlns=\"$this->urlPortal\" versao=\"$this->urlVersion\">"
@@ -877,12 +883,12 @@ class ToolsNFe extends BaseTools
                 . "</consSitNFe>";
         //validar mensagem com xsd
         //if (! $this->validarXml($cons)) {
-        //    $msg = 'Falha na valida√ß√£o. '.$this->error;
+        //    $msg = 'Falha na validaÁ„o. '.$this->error;
         //    throw new Exception\RuntimeException($msg);
         //}
         //montagem dos dados da mensagem SOAP
         $body = "<nfeDadosMsg xmlns=\"$this->urlNamespace\">$cons</nfeDadosMsg>";
-        //envia a solicita√ß√£o via SOAP
+        //envia a solicitaÁ„o via SOAP
         $retorno = $this->oSoap->send(
             $this->urlService,
             $this->urlNamespace,
@@ -906,8 +912,8 @@ class ToolsNFe extends BaseTools
 
     /**
      * sefazInutiliza
-     * Solicita a inutiliza√ß√£o de uma ou uma sequencia de NFe
-     * de uma determinada s√©rie
+     * Solicita a inutilizaÁ„o de uma ou uma sequencia de NFe
+     * de uma determinada sÈrie
      *
      * @param    integer $nSerie
      * @param    integer $nIni
@@ -936,9 +942,9 @@ class ToolsNFe extends BaseTools
         if ($tpAmb == '') {
             $tpAmb = $this->aConfig['tpAmb'];
         }
-        //monta servi√ßo
+        //monta serviÁo
         $siglaUF = $this->aConfig['siglaUF'];
-        //carrega servi√ßo
+        //carrega serviÁo
         $servico = 'NfeInutilizacao';
         $this->zLoadServico(
             'nfe',
@@ -947,7 +953,7 @@ class ToolsNFe extends BaseTools
             $tpAmb
         );
         if ($this->urlService == '') {
-            $msg = "A inutiliza√ß√£o n√£o est√° dispon√≠vel na SEFAZ $siglaUF!!!";
+            $msg = "A inutilizaÁ„o n„o est· disponÌvel na SEFAZ $siglaUF!!!";
             throw new Exception\RuntimeException($msg);
         }
         //montagem dos dados da mensagem SOAP
@@ -973,16 +979,16 @@ class ToolsNFe extends BaseTools
                 . "<nNFFin>$nFin</nNFFin>"
                 . "<xJust>$xJust</xJust>"
                 . "</infInut></inutNFe>";
-        //assina a lsolicita√ß√£o de inutiliza√ß√£o
+        //assina a lsolicitaÁ„o de inutilizaÁ„o
         $signedMsg = $this->oCertificate->signXML($cons, 'infInut');
         $signedMsg = Strings::clearXml($signedMsg, true);
         //valida a mensagem com o xsd
         //if (! $this->zValidMessage($cons, 'nfe', 'inutNFe', $version)) {
-        //    $msg = 'Falha na valida√ß√£o. '.$this->error;
+        //    $msg = 'Falha na validaÁ„o. '.$this->error;
         //    throw new Exception\RuntimeException($msg);
         //}
         $body = "<nfeDadosMsg xmlns=\"$this->urlNamespace\">$signedMsg</nfeDadosMsg>";
-        //envia a solicita√ß√£o via SOAP
+        //envia a solicitaÁ„o via SOAP
         $retorno = $this->oSoap->send(
             $this->urlService,
             $this->urlNamespace,
@@ -1040,7 +1046,7 @@ class ToolsNFe extends BaseTools
         //cria a tag nfeProc
         $procNode = $proc->createElement($tagproc);
         $proc->appendChild($procNode);
-        //estabele o atributo de vers√£o
+        //estabele o atributo de vers„o
         $procNodeAtt1 = $procNode->appendChild($proc->createAttribute('versao'));
         $procNodeAtt1->appendChild($proc->createTextNode($procver));
         //estabelece o atributo xmlns
@@ -1052,9 +1058,9 @@ class ToolsNFe extends BaseTools
         //inclui a tag retInutNFe
         $node = $proc->importNode($nodedoc1, true);
         $procNode->appendChild($node);
-        //salva o xml como string em uma vari√°vel
+        //salva o xml como string em uma vari·vel
         $procXML = $proc->saveXML();
-        //remove as informa√ß√µes indesejadas
+        //remove as informaÁıes indesejadas
         $procXML = Strings::clearProt($procXML);
         return $procXML;
     }
@@ -1075,13 +1081,13 @@ class ToolsNFe extends BaseTools
         if (strlen($xJust) < 15 || strlen($xJust) > 255) {
             $msg = "A justificativa deve ter entre 15 e 255 digitos!!";
         } elseif ($nSerie < 0 || $nSerie > 999) {
-            $msg = "O campo serie est√° errado: $nSerie!!";
+            $msg = "O campo serie est· errado: $nSerie!!";
         } elseif ($nIni < 1 || $nIni > 1000000000) {
-            $msg = "O campo numero inicial est√° errado: $nIni!!";
+            $msg = "O campo numero inicial est· errado: $nIni!!";
         } elseif ($nFin < 1 || $nFin > 1000000000) {
-            $msg = "O campo numero final est√° errado: $nFin!!";
+            $msg = "O campo numero final est· errado: $nFin!!";
         } elseif ($this->enableSVCRS || $this->enableSVCAN) {
-            $msg = "A inutiliza√ß√£o n√£o pode ser feita em conting√™ncia!!";
+            $msg = "A inutilizaÁ„o n„o pode ser feita em contingÍncia!!";
         }
         if ($msg != '') {
             throw new Exception\InvalidArgumentException($msg);
@@ -1091,13 +1097,13 @@ class ToolsNFe extends BaseTools
     /**
      * sefazCadastro
      * Busca os dados cadastrais de um emitente de NFe
-     * NOTA: Nem todas as Sefaz disponibilizam esse servi√ßo
+     * NOTA: Nem todas as Sefaz disponibilizam esse serviÁo
      *
      * @param    string $siglaUF  sigla da UF da empresa que queremos consultar
      * @param    string $tpAmb
      * @param    string $cnpj     numero do CNPJ da empresa a ser consultada
      * @param    string $iest     numero da Insc. Est. da empresa a ser consultada
-     * @param    string $cpf      CPF da pessoa f√≠sica a ser consultada
+     * @param    string $cpf      CPF da pessoa fÌsica a ser consultada
      * @param    array  $aRetorno aRetorno retorno da resposta da SEFAZ em array
      * @return   string XML de retorno do SEFAZ
      * @throws   Exception\RuntimeException
@@ -1109,7 +1115,7 @@ class ToolsNFe extends BaseTools
         $cnpj = preg_replace('/[^0-9]/', '', $cnpj);
         $cpf = preg_replace('/[^0-9]/', '', $cpf);
         $iest = trim($iest);
-        //se nenhum crit√©rio √© satisfeito
+        //se nenhum critÈrio È satisfeito
         if ($cnpj == '' && $iest == '' && $cpf == '') {
             //erro nao foi passado parametro de filtragem
             $msg = "Na consulta de cadastro, pelo menos um desses dados deve ser"
@@ -1130,7 +1136,7 @@ class ToolsNFe extends BaseTools
             $filtro = "<CPF>$cpf</CPF>";
             $txtFile = "CPF_$cpf";
         }
-        //carrega servi√ßo
+        //carrega serviÁo
         $servico = 'NfeConsultaCadastro';
         $this->zLoadServico(
             'nfe',
@@ -1139,7 +1145,7 @@ class ToolsNFe extends BaseTools
             $tpAmb
         );
         if ($this->urlService == '') {
-            $msg = "A consulta de Cadastros n√£o est√° dispon√≠vel na SEFAZ $siglaUF!!!";
+            $msg = "A consulta de Cadastros n„o est· disponÌvel na SEFAZ $siglaUF!!!";
             throw new Exception\RuntimeException($msg);
         }
         $cons = "<ConsCad xmlns=\"$this->urlPortal\" versao=\"$this->urlVersion\">"
@@ -1149,12 +1155,12 @@ class ToolsNFe extends BaseTools
             . "$filtro</infCons></ConsCad>";
         //validar mensagem com xsd
         //if (! $this->validarXml($cons)) {
-        //    $msg = 'Falha na valida√ß√£o. '.$this->error;
+        //    $msg = 'Falha na validaÁ„o. '.$this->error;
         //    throw new Exception\RuntimeException($msg);
         //}
         //montagem dos dados da mensagem SOAP
         $body = "<nfeDadosMsg xmlns=\"$this->urlNamespace\">$cons</nfeDadosMsg>";
-        //envia a solicita√ß√£o via SOAP
+        //envia a solicitaÁ„o via SOAP
         $retorno = $this->oSoap->send(
             $this->urlService,
             $this->urlNamespace,
@@ -1176,12 +1182,12 @@ class ToolsNFe extends BaseTools
 
     	/**
      * sefazStatus
-     * Verifica o status do servi√ßo da SEFAZ/SVC
-     * NOTA : Este servi√ßo ser√° removido no futuro, segundo da Receita/SEFAZ devido
+     * Verifica o status do serviÁo da SEFAZ/SVC
+     * NOTA : Este serviÁo ser· removido no futuro, segundo da Receita/SEFAZ devido
      * ao excesso de mau uso !!!
      *
-     * @param    string $siglaUF  sigla da unidade da Federa√ß√£o
-     * @param    string $tpAmb    tipo de ambiente 1-produ√ß√£o e 2-homologa√ß√£o
+     * @param    string $siglaUF  sigla da unidade da FederaÁ„o
+     * @param    string $tpAmb    tipo de ambiente 1-produÁ„o e 2-homologaÁ„o
      * @param    array  $aRetorno parametro passado por referencia contendo a resposta da consulta em um array
      * @return   mixed string XML do retorno do webservice, ou false se ocorreu algum erro
      * @throws   Exception\RuntimeException
@@ -1195,13 +1201,13 @@ class ToolsNFe extends BaseTools
         if ($siglaUF == '') {
             $siglaUF = $this->aConfig['siglaUF'];
         }
-        //carrega servi√ßo
+        //carrega serviÁo
         $servico = 'NfeStatusServico';
         $this->zLoadServico(
                 'nfe', $servico, $siglaUF, $tpAmb
         );
         if ($this->urlService == '') {
-            $msg = "O status n√£o est√° dispon√≠vel na SEFAZ $siglaUF!!!";
+            $msg = "O status n„o est· disponÌvel na SEFAZ $siglaUF!!!";
             throw new Exception\RuntimeException($msg);
         }
         $cons = "<consStatServ xmlns=\"$this->urlPortal\" versao=\"$this->urlVersion\">"
@@ -1210,7 +1216,7 @@ class ToolsNFe extends BaseTools
         //valida mensagem com xsd
         //validar mensagem com xsd
         //if (! $this->validarXml($cons)) {
-        //    $msg = 'Falha na valida√ß√£o. '.$this->error;
+        //    $msg = 'Falha na validaÁ„o. '.$this->error;
         //    throw new Exception\RuntimeException($msg);
         //}
         //montagem dos dados da mensagem SOAP
@@ -1235,8 +1241,8 @@ class ToolsNFe extends BaseTools
 
     /**
      * sefazDistDFe
-     * Servi√ßo destinado √† distribui√ß√£o de informa√ß√µes
-     * resumidas e documentos fiscais eletr√¥nicos de interesse de um ator.
+     * ServiÁo destinado ‡ distribuiÁ„o de informaÁıes
+     * resumidas e documentos fiscais eletrÙnicos de interesse de um ator.
      *
      * @param    string  $fonte        sigla da fonte dos dados 'AN' e para alguns casos pode ser 'RS' e para alguns casos pode ser 'RS'
      *                      e para alguns casos pode ser 'RS'
@@ -1245,8 +1251,8 @@ class ToolsNFe extends BaseTools
      * @param    integer $ultNSU       ultimo numero NSU que foi consultado
      * @param    integer $numNSU       numero de NSU que se quer consultar
      * @param    array   $aRetorno     array com os dados do retorno
-     * @param    boolean $descompactar se true ir√° descompactar os dados retornados,
-     *        se n√£o os dados ser√£o retornados da forma que foram recebidos
+     * @param    boolean $descompactar se true ir· descompactar os dados retornados,
+     *        se n„o os dados ser„o retornados da forma que foram recebidos
      * @return   string contento o xml retornado pela SEFAZ
      * @internal function zLoadServico (Common\Base\BaseTools)
      */
@@ -1265,7 +1271,7 @@ class ToolsNFe extends BaseTools
         if ($cnpj == '') {
             $cnpj = $this->aConfig['cnpj'];
         }
-        //carrega servi√ßo
+        //carrega serviÁo
         $servico = 'NfeDistribuicaoDFe';
         $this->zLoadServico(
             'nfe',
@@ -1274,7 +1280,7 @@ class ToolsNFe extends BaseTools
             $tpAmb
         );
         if ($this->urlService == '') {
-            $msg = "A distribui√ß√£o de documento DFe n√£o est√° dispon√≠vel na SEFAZ $fonte!!!";
+            $msg = "A distribuiÁ„o de documento DFe n„o est· disponÌvel na SEFAZ $fonte!!!";
             throw new Exception\RuntimeException($msg);
         }
         $cUF = self::getcUF($siglaUF);
@@ -1291,14 +1297,14 @@ class ToolsNFe extends BaseTools
             . "<CNPJ>$cnpj</CNPJ>$tagNSU</distDFeInt>";
         //validar mensagem com xsd
         //if (! $this->validarXml($cons)) {
-        //    $msg = 'Falha na valida√ß√£o. '.$this->error;
+        //    $msg = 'Falha na validaÁ„o. '.$this->error;
         //    throw new Exception\RuntimeException($msg);
         //}
         //montagem dos dados da mensagem SOAP
         $body = "<nfeDistDFeInteresse xmlns=\"$this->urlNamespace\">"
             . "<nfeDadosMsg xmlns=\"$this->urlNamespace\">$cons</nfeDadosMsg>"
             . "</nfeDistDFeInteresse>";
-        //envia dados via SOAP e verifica o retorno este webservice n√£o requer cabe√ßalho
+        //envia dados via SOAP e verifica o retorno este webservice n„o requer cabeÁalho
         $this->urlHeader = '';
         $retorno = $this->oSoap->send(
             $this->urlService,
@@ -1323,7 +1329,7 @@ class ToolsNFe extends BaseTools
 
     /**
      * sefazCCe
-     * Solicita a autoriza√ß√£o da Carta de Corre√ß√£o
+     * Solicita a autorizaÁ„o da Carta de CorreÁ„o
      *
      * @param  string $chNFe
      * @param  string $tpAmb
@@ -1340,15 +1346,15 @@ class ToolsNFe extends BaseTools
         $xCorrecao = Strings::cleanString($xCorrecao);
         $nSeqEvento = (integer) $nSeqEvento;
         if (strlen($chNFe) != 44) {
-            $msg = "A chave deve ter 44 d√≠gitos!!";
+            $msg = "A chave deve ter 44 dÌgitos!!";
             throw new Exception\InvalidArgumentException($msg);
         }
         if (strlen($xCorrecao) < 15 || strlen($xCorrecao) > 1000) {
-            $msg = "A corre√ß√£o deve ter entre 15 e 1000 caracteres!!";
+            $msg = "A correÁ„o deve ter entre 15 e 1000 caracteres!!";
             throw new Exception\InvalidArgumentException($msg);
         }
         if ($nSeqEvento < 1 || $nSeqEvento > 20) {
-            $msg = "O n√∫mero sequencial do evento deve ser entre 1 e 20!!";
+            $msg = "O n˙mero sequencial do evento deve ser entre 1 e 20!!";
             throw new Exception\InvalidArgumentException($msg);
         }
         if ($tpAmb == '') {
@@ -1374,9 +1380,9 @@ class ToolsNFe extends BaseTools
 
     /**
      * sefazEPP
-     * Solicita pedido de prorroga√ß√£o do prazo de retorno de produtos de uma
-     * NF-e de remessa para industrializa√ß√£o por encomenda com suspens√£o do ICMS
-     * em opera√ß√µes interestaduais
+     * Solicita pedido de prorrogaÁ„o do prazo de retorno de produtos de uma
+     * NF-e de remessa para industrializaÁ„o por encomenda com suspens„o do ICMS
+     * em operaÁıes interestaduais
      *
      * @param  string  $chNFe
      * @param  string  $tpAmb
@@ -1397,12 +1403,12 @@ class ToolsNFe extends BaseTools
     ) {
         $chNFe = preg_replace('/[^0-9]/', '', $chNFe);
         if (empty($itens)) {
-            $msg = "Devem ser passados os itens e as quantidades da NFe que ser√° prorrogada!!";
+            $msg = "Devem ser passados os itens e as quantidades da NFe que ser· prorrogada!!";
             throw new Exception\InvalidArgumentException($msg);
         }
         if (empty($nProt)) {
-            $msg = "Deve ser passado o numero do protocolo de autoriza√ß√£o da "
-                . "NFe que ter√° o Pedido de prorroga√ß√£o!!";
+            $msg = "Deve ser passado o numero do protocolo de autorizaÁ„o da "
+                . "NFe que ter· o Pedido de prorrogaÁ„o!!";
             throw new Exception\InvalidArgumentException($msg);
         }
         if ($tpAmb == '') {
@@ -1424,9 +1430,9 @@ class ToolsNFe extends BaseTools
 
     /**
      * sefazECPP
-     * Solicita o cancelamento do pedido de prorroga√ß√£o do prazo de retorno
-     * de produtos de uma NF-e de remessa para industrializa√ß√£o por encomenda
-     * com suspens√£o do ICMS em opera√ß√µes interestaduais
+     * Solicita o cancelamento do pedido de prorrogaÁ„o do prazo de retorno
+     * de produtos de uma NF-e de remessa para industrializaÁ„o por encomenda
+     * com suspens„o do ICMS em operaÁıes interestaduais
      *
      * @param  string  $chNFe
      * @param  string  $tpAmb
@@ -1446,12 +1452,12 @@ class ToolsNFe extends BaseTools
         $chNFe = preg_replace('/[^0-9]/', '', $chNFe);
         if (empty($chNFe)) {
             $msg = "Deve ser passada a chave da NFe referente ao Pedido de "
-                . "prorroga√ß√£o que ser√° Cancelado!!";
+                . "prorrogaÁ„o que ser· Cancelado!!";
             throw new Exception\InvalidArgumentException($msg);
         }
         if (empty($nProt)) {
-            $msg = "Deve ser passado o numero do protocolo de autoriza√ß√£o do "
-                . "Pedido de prorroga√ß√£o que ser√° Cancelado!!";
+            $msg = "Deve ser passado o numero do protocolo de autorizaÁ„o do "
+                . "Pedido de prorrogaÁ„o que ser· Cancelado!!";
             throw new Exception\InvalidArgumentException($msg);
         }
         if ($tpAmb == '') {
@@ -1474,8 +1480,8 @@ class ToolsNFe extends BaseTools
 
     /**
      * sefazEPEC
-     * Solicita autoriza√ß√£o em conting√™ncia EPEC
-     * TODO: terminar esse m√©todo
+     * Solicita autorizaÁ„o em contingÍncia EPEC
+     * TODO: terminar esse mÈtodo
      *
      * @param  string|array $aXml
      * @param  string       $tpAmb
@@ -1487,18 +1493,18 @@ class ToolsNFe extends BaseTools
     public function sefazEPEC($aXml, $tpAmb = '2', $siglaUF = 'AN', &$aRetorno = array())
     {
         //na nfe deve estar indicado a entrada em contingencia da data hora e o motivo
-        //caso contrario ignorar a solicita√ß√£o de EPEC
+        //caso contrario ignorar a solicitaÁ„o de EPEC
         if (! is_array($aXml)) {
-            $aXml[] = $aXml; //se n√£o √© um array converte
+            $aXml[] = $aXml; //se n„o È um array converte
         }
         if (count($aXml) > 20) {
-            $msg = "O limite √© de 20 NFe em um lote EPEC, voc√™ est√° passando [".count($aXml)."]";
+            $msg = "O limite È de 20 NFe em um lote EPEC, vocÍ est· passando [".count($aXml)."]";
             throw new Exception\InvalidArgumentException($msg);
         }
         if ($tpAmb == '') {
             $tpAmb = $this->aConfig['tpAmb'];
         }
-        //carrega servi√ßo
+        //carrega serviÁo
         $servico = 'RecepcaoEPEC';
         $this->zLoadServico(
             'nfe',
@@ -1507,7 +1513,7 @@ class ToolsNFe extends BaseTools
             $tpAmb
         );
         if ($this->urlService == '') {
-            $msg = "A recep√ß√£o de EPEC n√£o est√° dispon√≠vel na SEFAZ !!!";
+            $msg = "A recepÁ„o de EPEC n„o est· disponÌvel na SEFAZ !!!";
             throw new Exception\RuntimeException($msg);
         }
         $aRetorno = array();
@@ -1521,8 +1527,8 @@ class ToolsNFe extends BaseTools
         foreach ($aXml as $xml) {
             $dat = $this->zGetInfo($xml);
             if ($dat['dhCont'] == '' || $dat['xJust'] == '') {
-                $msg = "Somente √© possivel enviar para EPEC as notas emitidas "
-                        . "em conting√™ncia com a data/hora e justificativa da conting√™ncia.";
+                $msg = "Somente È possivel enviar para EPEC as notas emitidas "
+                        . "em contingÍncia com a data/hora e justificativa da contingÍncia.";
                 throw new Exception\InvalidArgumentException($msg);
             }
             $sSeqEvento = str_pad('1', 2, "0", STR_PAD_LEFT);
@@ -1577,13 +1583,13 @@ class ToolsNFe extends BaseTools
             . "</envEvento>";
         //valida mensagem com xsd
         //no caso do evento nao tem xsd organizado, esta fragmentado
-        //e por vezes incorreto por isso essa valida√ß√£o est√° desabilitada
+        //e por vezes incorreto por isso essa validaÁ„o est· desabilitada
         //if (! $this->zValidMessage($cons, 'nfe', 'envEvento', $version)) {
-        //    $msg = 'Falha na valida√ß√£o. '.$this->error;
+        //    $msg = 'Falha na validaÁ„o. '.$this->error;
         //    throw new Exception\RuntimeException($msg);
         //}
         $body = "<nfeDadosMsg xmlns=\"$this->urlNamespace\">$cons</nfeDadosMsg>";
-        //envia a solicita√ß√£o via SOAP
+        //envia a solicitaÁ„o via SOAP
         $retorno = $this->oSoap->send(
             $this->urlService,
             $this->urlNamespace,
@@ -1606,7 +1612,7 @@ class ToolsNFe extends BaseTools
 
     /**
      * zGetInfo
-     * Busca informa√ß√µes do XML
+     * Busca informaÁıes do XML
      * para uso no sefazEPEC
      *
      * @param  string $xml
@@ -1659,17 +1665,17 @@ class ToolsNFe extends BaseTools
         $chNFe = preg_replace('/[^0-9]/', '', $chNFe);
         $nProt = preg_replace('/[^0-9]/', '', $nProt);
         $xJust = Strings::cleanString($xJust);
-        //valida√ß√£o dos dados de entrada
+        //validaÁ„o dos dados de entrada
         if (strlen($chNFe) != 44) {
-            $msg = "Uma chave de NFe v√°lida n√£o foi passada como par√¢metro $chNFe.";
+            $msg = "Uma chave de NFe v·lida n„o foi passada como par‚metro $chNFe.";
             throw new Exception\InvalidArgumentException($msg);
         }
         if ($nProt == '') {
-            $msg = "N√£o foi passado o numero do protocolo!!";
+            $msg = "N„o foi passado o numero do protocolo!!";
             throw new Exception\InvalidArgumentException($msg);
         }
         if (strlen($xJust) < 15 || strlen($xJust) > 255) {
-            $msg = "A justificativa deve ter pelo menos 15 digitos e no m√°ximo 255!!";
+            $msg = "A justificativa deve ter pelo menos 15 digitos e no m·ximo 255!!";
             throw new Exception\InvalidArgumentException($msg);
         }
         $siglaUF = $this->zGetSigla(substr($chNFe, 0, 2));
@@ -1685,7 +1691,7 @@ class ToolsNFe extends BaseTools
 
     /**
      * sefazManifesta
-     * Solicita o registro da manifesta√ß√£o de destinat√°rio
+     * Solicita o registro da manifestaÁ„o de destinat·rio
      *
      * @param  string $chNFe
      * @param  string $tpAmb
@@ -1702,25 +1708,25 @@ class ToolsNFe extends BaseTools
         $tagAdic = '';
         switch ($tpEvento) {
             case '210200':
-                //210200 ‚Äì Confirma√ß√£o da Opera√ß√£o
+                //210200 - ConfirmaÁ„o da OperaÁ„o
                 break;
             case '210210':
-                //210210 ‚Äì Ci√™ncia da Opera√ß√£o
+                //210210 - CiÍncia da OperaÁ„o
                 break;
             case '210220':
-                //210220 ‚Äì Desconhecimento da Opera√ß√£o
+                //210220 - Desconhecimento da OperaÁ„o
                 break;
             case '210240':
-                //210240 ‚Äì Opera√ß√£o n√£o Realizada
+                //210240 - OperaÁ„o n„o Realizada
                 if (strlen($xJust) < 15 ||  strlen($xJust) > 255) {
-                    $msg = "√â obrigat√≥ria uma justificativa com 15 at√© 255 caracteres!!";
+                    $msg = "… obrigatÛria uma justificativa com 15 atÈ 255 caracteres!!";
                     throw new Exception\InvalidArgumentException($msg);
                 }
                 $xJust = Strings::cleanString($xJust);
                 $tagAdic = "<xJust>$xJust</xJust>";
                 break;
             default:
-                $msg = "Esse c√≥digo de tipo de evento n√£o consta!! $tpEvento";
+                $msg = "Esse cÛdigo de tipo de evento n„o consta!! $tpEvento";
                 throw new Exception\InvalidArgumentException($msg);
         }
         $siglaUF = 'AN';
@@ -1732,7 +1738,7 @@ class ToolsNFe extends BaseTools
 
     /**
      * sefazDownload
-     * Solicita o download de NFe j√° manifestada
+     * Solicita o download de NFe j· manifestada
      *
      * @param  string $chNFe
      * @param  string $tpAmb
@@ -1749,7 +1755,7 @@ class ToolsNFe extends BaseTools
         if ($cnpj == '') {
             $cnpj = $this->aConfig['cnpj'];
         }
-        //carrega servi√ßo
+        //carrega serviÁo
         $servico = 'NfeDownloadNF';
         $this->zLoadServico(
             'nfe',
@@ -1758,7 +1764,7 @@ class ToolsNFe extends BaseTools
             $tpAmb
         );
         if ($this->urlService == '') {
-            $msg = "O status n√£o est√° dispon√≠vel na SEFAZ !!!";
+            $msg = "O status n„o est· disponÌvel na SEFAZ !!!";
             throw new Exception\RuntimeException($msg);
         }
         $cons = "<downloadNFe xmlns=\"$this->urlPortal\" versao=\"$this->urlVersion\">"
@@ -1769,7 +1775,7 @@ class ToolsNFe extends BaseTools
                 . "</downloadNFe>";
         //validar mensagem com xsd
         //if (! $this->validarXml($cons)) {
-        //    $msg = 'Falha na valida√ß√£o. '.$this->error;
+        //    $msg = 'Falha na validaÁ„o. '.$this->error;
         //    throw new Exception\RuntimeException($msg);
         //}
         //montagem dos dados da mensagem SOAP
@@ -1795,7 +1801,7 @@ class ToolsNFe extends BaseTools
 
     /**
      * sefazManutencaoCsc
-     * Manuten√ß√£o do C√≥digo de Seguran√ßa do Contribuinte (Antigo Token)
+     * ManutenÁ„o do CÛdigo de SeguranÁa do Contribuinte (Antigo Token)
      *
      * @param    int    $indOp
      * @param    string $tpAmb
@@ -1820,11 +1826,11 @@ class ToolsNFe extends BaseTools
             $tpAmb = $this->aConfig['tpAmb'];
         }
         if (!is_numeric($indOp)) {
-            $msg = "A opera√ß√£o deve ser informada.";
+            $msg = "A operaÁ„o deve ser informada.";
             throw new Exception\InvalidArgumentException($msg);
         } else {
             if ($indOp == 3 && ($idCsc == '' || $codigoCsc == '')) {
-                $msg = "Para Revoga√ß√£o de CSC, √© necess√°rio informar o C√≥digo e ID do CSC que deseja revogar.";
+                $msg = "Para RevogaÁ„o de CSC, È necess·rio informar o CÛdigo e ID do CSC que deseja revogar.";
                 throw new Exception\InvalidArgumentException($msg);
             }
         }
@@ -1832,12 +1838,12 @@ class ToolsNFe extends BaseTools
             $raizCNPJ = substr($this->aConfig['cnpj'], 0, -6);
         } else {
             if (strlen($raizCNPJ)!=8) {
-                $msg = "raizCNPJ: Deve ser os 08 primeiros d√≠gitos do CNPJ.";
+                $msg = "raizCNPJ: Deve ser os 08 primeiros dÌgitos do CNPJ.";
                 throw new Exception\InvalidArgumentException($msg);
             }
         }
         $siglaUF = $this->aConfig['siglaUF'];
-        //carrega servi√ßo
+        //carrega serviÁo
         $servico = 'CscNFCe';
         $this->zLoadServico(
             'nfe',
@@ -1846,7 +1852,7 @@ class ToolsNFe extends BaseTools
             $tpAmb
         );
         if ($this->urlService == '') {
-            $msg = "A manuten√ß√£o do c√≥digo de seguran√ßa do contribuinte de NFC-e n√£o est√° dispon√≠vel na SEFAZ $siglaUF!!!";
+            $msg = "A manutenÁ„o do cÛdigo de seguranÁa do contribuinte de NFC-e n„o est· disponÌvel na SEFAZ $siglaUF!!!";
             throw new Exception\RuntimeException($msg);
         }
 
@@ -1871,7 +1877,7 @@ class ToolsNFe extends BaseTools
         //montagem dos dados da mensagem SOAP
         $body = "<nfeDadosMsg xmlns=\"$this->urlNamespace\">$cons</nfeDadosMsg>";
 
-        //envia a solicita√ß√£o via SOAP
+        //envia a solicitaÁ„o via SOAP
         $retorno = $this->oSoap->send(
             $this->urlService,
             $this->urlNamespace,
@@ -1898,7 +1904,7 @@ class ToolsNFe extends BaseTools
     /**
      * validarXml
      * Valida qualquer xml do sistema NFe com seu xsd
-     * NOTA: caso n√£o exista um arquivo xsd apropriado retorna false
+     * NOTA: caso n„o exista um arquivo xsd apropriado retorna false
      *
      * @param  string $xml path ou conteudo do xml
      * @return boolean
@@ -1920,7 +1926,7 @@ class ToolsNFe extends BaseTools
             DIRECTORY_SEPARATOR .
             $xsdFile;
         if (! is_file($xsdPath)) {
-            $this->errors[] = "O arquivo XSD $xsdFile n√£o foi localizado.";
+            $this->errors[] = "O arquivo XSD $xsdFile n„o foi localizado.";
             return false;
         }
         if (! ValidXsd::validar($aResp['xml'], $xsdPath)) {
@@ -1954,7 +1960,7 @@ class ToolsNFe extends BaseTools
         if ($tpAmb == '') {
             $tpAmb = $this->aConfig['tpAmb'];
         }
-        //carrega servi√ßo
+        //carrega serviÁo
         $servico = 'RecepcaoEvento';
         $this->zLoadServico(
             'nfe',
@@ -1963,7 +1969,7 @@ class ToolsNFe extends BaseTools
             $tpAmb
         );
         if ($this->urlService == '') {
-            $msg = "A recep√ß√£o de eventos n√£o est√° dispon√≠vel na SEFAZ $siglaUF!!!";
+            $msg = "A recepÁ„o de eventos n„o est· disponÌvel na SEFAZ $siglaUF!!!";
             throw new Exception\RuntimeException($msg);
         }
         $aRet = $this->zTpEv($tpEvento);
@@ -2003,13 +2009,13 @@ class ToolsNFe extends BaseTools
             . "</envEvento>";
         //valida mensagem com xsd
         //no caso do evento nao tem xsd organizado, esta fragmentado
-        //e por vezes incorreto por isso essa valida√ß√£o est√° desabilitada
+        //e por vezes incorreto por isso essa validaÁ„o est· desabilitada
         //if (! $this->zValidMessage($cons, 'nfe', 'envEvento', $version)) {
-        //    $msg = 'Falha na valida√ß√£o. '.$this->error;
+        //    $msg = 'Falha na validaÁ„o. '.$this->error;
         //    throw new Exception\RuntimeException($msg);
         //}
         $body = "<nfeDadosMsg xmlns=\"$this->urlNamespace\">$cons</nfeDadosMsg>";
-        //envia a solicita√ß√£o via SOAP
+        //envia a solicitaÁ„o via SOAP
         $retorno = $this->oSoap->send(
             $this->urlService,
             $this->urlNamespace,
@@ -2072,21 +2078,21 @@ class ToolsNFe extends BaseTools
                 break;
             case '110140':
                 //EPEC
-                //emiss√£o em conting√™ncia EPEC
+                //emiss„o em contingÍncia EPEC
                 $aliasEvento = 'EPEC';
                 $descEvento = 'EPEC';
                 break;
             case '111500':
             case '111501':
                 //EPP
-                //Pedido de prorroga√ß√£o
+                //Pedido de prorrogaÁ„o
                 $aliasEvento = 'EPP';
                 $descEvento = 'Pedido de Prorrogacao';
                 break;
             case '111502':
             case '111503':
                 //ECPP
-                //Cancelamento do Pedido de prorroga√ß√£o
+                //Cancelamento do Pedido de prorrogaÁ„o
                 $aliasEvento = 'ECPP';
                 $descEvento = 'Cancelamento de Pedido de Prorrogacao';
                 break;
@@ -2106,12 +2112,12 @@ class ToolsNFe extends BaseTools
                 $descEvento = 'Desconhecimento da Operacao';
                 break;
             case '210240':
-                //Operacao n√£o Realizada
+                //Operacao n„o Realizada
                 $aliasEvento = 'EvNaoRealizada';
                 $descEvento = 'Operacao nao Realizada';
                 break;
             default:
-                $msg = "O c√≥digo do tipo de evento informado n√£o corresponde a "
+                $msg = "O cÛdigo do tipo de evento informado n„o corresponde a "
                 . "nenhum evento estabelecido.";
                 throw new Exception\RuntimeException($msg);
         }
@@ -2131,7 +2137,7 @@ class ToolsNFe extends BaseTools
 
     /**
      * getImpostosIBPT
-     * Consulta o servi√ßo do IBPT para obter os impostos ao consumidor
+     * Consulta o serviÁo do IBPT para obter os impostos ao consumidor
      * conforme Lei 12.741/2012
      *
      * @param  string $ncm
@@ -2214,7 +2220,7 @@ class ToolsNFe extends BaseTools
         $seq .= '&vICMS=' . $vICMS;
         $seq .= '&digVal=' . strtolower($digHex);
         $seq .= '&cIdToken=' . $idToken;
-        //o hash code √© calculado com o Token incluso
+        //o hash code È calculado com o Token incluso
         $hash = sha1($seq.$token);
         $seq .= '&cHashQRCode='. strtoupper($hash);
         if (strpos($url, '?') === false) {
@@ -2251,7 +2257,7 @@ class ToolsNFe extends BaseTools
     }
 
     /**
-     * Se verdade gera os arquivos de logs do envio e resposta da requisi√ß√£o
+     * Se verdade gera os arquivos de logs do envio e resposta da requisiÁ„o
      *
      * @param bool $salvarMensagensEvento
      */

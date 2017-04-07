@@ -3,7 +3,7 @@
 namespace NFePHP\Common\Certificate;
 
 /**
- * Classe auxiliar para obter informaÃ§Ãµes dos certificados digitais A1 (PKCS12)
+ * Classe auxiliar para obter informações dos certificados digitais A1 (PKCS12)
  * Base para a classe ASN
  *
  * @category  NFePHP
@@ -27,20 +27,20 @@ class Base
     {
         $begin = "CERTIFICATE-----";
         $end = "-----END";
-        //extrai o conteÃºdo do certificado entre as marcas BEGIN e END
+        //extrai o conteúdo do certificado entre as marcas BEGIN e END
         $pemData1 = substr($pemData, strpos($pemData, $begin) + strlen($begin));
         $pemData2 = substr($pemData1, 0, strpos($pemData1, $end));
-        //converte o resultado para binÃ¡rio obtendo um certificado em formato DER
+        //converte o resultado para binário obtendo um certificado em formato DER
         $derData = base64_decode((string) $pemData2);
         return $derData;
     }
     
     /**
      * oidtoHex
-     * Converte o numero de identificaÃ§Ã£o do OID em uma representaÃ§Ã£o asc,
+     * Converte o numero de identificação do OID em uma representação asc,
      * coerente com o formato do certificado
      *
-     * @param  string $oid numero OID (com os pontos de separaÃ§Ã£o)
+     * @param  string $oid numero OID (com os pontos de separação)
      * @return string sequencia em hexadecimal
      */
     protected static function oidtoHex($oid)
@@ -117,10 +117,10 @@ class Base
     }
     
     /**
-     * ObtÃªm o comprimento do conteÃºdo de uma sequÃªncia de dados do certificado
+     * Obtêm o comprimento do conteúdo de uma sequência de dados do certificado
      *
-     * @param  integer $len   variÃ¡vel passada por referÃªncia
-     * @param  integer $bytes variÃ¡vel passada por referÃªncia
+     * @param  integer $len   variável passada por referência
+     * @param  integer $bytes variável passada por referência
      * @param  string  $data  campo a
      * @return void
      */
@@ -129,15 +129,15 @@ class Base
         $len = ord($data[1]);
         $bytes = 0;
         // Testa se tamanho menor/igual a 127 bytes,
-        // se for, entÃ£o $len jÃ¡ Ã© o tamanho do conteÃºdo
+        // se for, então $len já é o tamanho do conteúdo
         if ($len & 0x80) {
-            // Testa se tamanho indefinido (nao deve ocorrer em uma codificaÃ§Ã£o DER)
+            // Testa se tamanho indefinido (nao deve ocorrer em uma codificação DER)
             if ($len == chr(0x80)) {
                 // Tamanho indefinido, limitado por 0x0000h
                 $len = strpos($data, chr(0x00).chr(0x00));
                 $bytes = 0;
             } else {
-                //Ã© tamanho definido. diz quantos bytes formam o tamanho
+                //é tamanho definido. diz quantos bytes formam o tamanho
                 $bytes = $len & 0x0f;
                 $len = 0;
                 for ($i = 0; $i < $bytes; $i++) {
