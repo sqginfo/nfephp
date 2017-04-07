@@ -106,6 +106,10 @@ class BaseMail
         if (is_file($pathFile)) {
             $this->template = Files\FilesFolders::readFile($pathFile);
         }
+        else
+        {
+            $this->template = $pathFile;
+        }
     }
     
     /**
