@@ -678,6 +678,36 @@ class Danfe extends CommonNFePHP implements DocumentoNFePHP
             $this->textoAdic .= "LOCAL DE ENTREGA : ".$txRetCNPJ.'-'.$txRetxLgr.', '.$txRetnro.' '.$txRetxCpl.
                ' - '.$txRetxBairro.' '.$txRetxMun.' - '.$txRetUF."\r\n";
         }
+        
+        // Dados dos volumes        
+        if ($this->transp->getElementsByTagName("vol")->length > 1)
+        {
+            foreach ($this->transp->getElementsByTagName("vol") as $nodeVolume)
+            {            
+                if ($nodeVolume->getElementsByTagName("qVol")->item(0)->nodeValue > 0)
+                    $this->textoAdic .= "Qtd.: " . $nodeVolume->getElementsByTagName("qVol")->item(0)->nodeValue . " ";
+
+                if ($nodeVolume->getElementsByTagName("esp")->item(0)->nodeValue != "")
+                    $this->textoAdic .= "Esp.: " . $nodeVolume->getElementsByTagName("esp")->item(0)->nodeValue . " ";
+
+                if ($nodeVolume->getElementsByTagName("marca")->item(0)->nodeValue != "")
+                    $this->textoAdic .= "Marca: " . $nodeVolume->getElementsByTagName("marca")->item(0)->nodeValue . " ";
+
+                if ($nodeVolume->getElementsByTagName("nVol")->item(0)->nodeValue != "")
+                    $this->textoAdic .= "Num.: " . $nodeVolume->getElementsByTagName("nVol")->item(0)->nodeValue . " ";
+                
+                if ($nodeVolume->getElementsByTagName("pesoB")->item(0)->nodeValue > 0)
+                    $this->textoAdic .= "PesoB: " . $nodeVolume->getElementsByTagName("pesoB")->item(0)->nodeValue . " ";
+
+                if ($nodeVolume->getElementsByTagName("pesoL")->item(0)->nodeValue > 0)
+                    $this->textoAdic .= "PesoL: " . $nodeVolume->getElementsByTagName("pesoL")->item(0)->nodeValue . " ";
+
+                
+
+                $this->textoAdic .= "\r\n";
+
+            }
+        }
         //informações adicionais
         $this->textoAdic .= $this->pGeraInformacoesDasNotasReferenciadas();
         if (isset($this->infAdic)) {
@@ -2248,27 +2278,28 @@ class Danfe extends CommonNFePHP implements DocumentoNFePHP
                     $volume->getElementsByTagName("pesoB")->item(0)->nodeValue : 0;
             $pesoLiquido += ! empty($volume->getElementsByTagName("pesoL")->item(0)->nodeValue) ?
                     $volume->getElementsByTagName("pesoL")->item(0)->nodeValue : 0;
-            $texto = ! empty($this->transp->getElementsByTagName("esp")->item(0)->nodeValue) ?
-                    $this->transp->getElementsByTagName("esp")->item(0)->nodeValue : '';
+            $texto = ! empty($volume->getElementsByTagName("esp")->item(0)->nodeValue) ?
+                    $volume->getElementsByTagName("esp")->item(0)->nodeValue : '';
             if ($texto != $especie && $especie != '') {
                 //tem várias especies
-                $especie = 'VARIAS';
+                $especie = 'VER INF. COMP.';
             } else {
                 $especie = $texto;
             }
-            $texto = ! empty($this->transp->getElementsByTagName("marca")->item(0)->nodeValue) ?
-                    $this->transp->getElementsByTagName("marca")->item(0)->nodeValue : '';
+            $texto = ! empty($volume->getElementsByTagName("marca")->item(0)->nodeValue) ?
+                    $volume->getElementsByTagName("marca")->item(0)->nodeValue : '';
+            
             if ($texto != $marca && $marca != '') {
                 //tem várias especies
-                $marca = 'VARIAS';
+                $marca = 'VER INF. COMP.';
             } else {
                 $marca = $texto;
             }
-            $texto = ! empty($this->transp->getElementsByTagName("nVol")->item(0)->nodeValue) ?
-                    $this->transp->getElementsByTagName("nVol")->item(0)->nodeValue : '';
+            $texto = ! empty($volume->getElementsByTagName("nVol")->item(0)->nodeValue) ?
+                    $volume->getElementsByTagName("nVol")->item(0)->nodeValue : '';
             if ($texto != $numero && $numero != '') {
                 //tem várias especies
-                $numero = 'VARIOS';
+                $numero = 'VER INF. COMP.';
             } else {
                 $numero = $texto;
             }
@@ -2302,8 +2333,7 @@ class Danfe extends CommonNFePHP implements DocumentoNFePHP
         $texto = 'MARCA';
         $aFont = array('font'=>$this->fontePadrao, 'size'=>6, 'style'=>'');
         $this->pTextBox($x, $y, $w2, $h, $texto, $aFont, 'T', 'L', 1, '');
-        $texto = ! empty($this->transp->getElementsByTagName("marca")->item(0)->nodeValue) ?
-                $this->transp->getElementsByTagName("marca")->item(0)->nodeValue : '';
+        $texto = $marca;
         $aFont = array('font'=>$this->fontePadrao, 'size'=>10, 'style'=>'B');
         $this->pTextBox($x, $y, $w2, $h, $texto, $aFont, 'B', 'C', 0, '');
         //NUMERAÇÃO
