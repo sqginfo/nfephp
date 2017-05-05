@@ -1136,4 +1136,48 @@ class PdfNFePHP extends FPDF
         fclose($f);
         return array('w' => $w, 'h' => $h, 'cs' => $colspace, 'bpc' => $bpc, 'f' => 'FlateDecode', 'parms' => $parms, 'pal' => $pal, 'trns' => $trns, 'data' => $data);
     }
+    
+    public function Text($x, $y, $txt)
+    {
+	$txtConvertido = $this->getStringAnsi($txt);
+	
+	parent::Text($x, $y, $txtConvertido);
+    }
+    
+    public function Cell($w, $h = 0, $txt = '', $border = 0, $ln = 0, $align = '', $fill = false, $link = '')
+    {
+	$txtConvertido = $this->getStringAnsi($txt);
+	
+	parent::Cell($w, $h, $txtConvertido, $border, $ln, $align, $fill, $link);
+    }
+    
+    public function MultiCell($w, $h, $txt, $border = 0, $align = 'J', $fill = false)
+    {
+	$txtConvertido = $this->getStringAnsi($txt);
+	
+	parent::MultiCell($w, $h, $txtConvertido, $border, $align, $fill);
+    }
+
+    public function Write($h, $txt, $link = '')
+    {
+	$txtConvertido = $this->getStringAnsi($txt);
+	
+	parent::Write($h, $txtConvertido, $link = '');
+    }
+    
+    private function getStringAnsi($txt)
+    {
+	$qtdCaracterEspecial = substr_count($txt, "?");
+	
+	$txtConvertido = utf8_decode($txt);
+	
+	$qtdCaracterEspecialTxtConvertido = substr_count($txtConvertido, "?");
+	
+	if($qtdCaracterEspecialTxtConvertido == $qtdCaracterEspecial)
+	{
+	    $txt = $txtConvertido;
+	}
+	
+	return $txt;
+    }
 }
