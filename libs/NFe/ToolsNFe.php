@@ -225,7 +225,7 @@ class ToolsNFe extends BaseTools
      * @return boolean
      * @throws Exception\RuntimeException
      */
-    public function enviaMail($pathXml = '', $aMails = array(), $templateFile = '', $comPdf = false, $pathPdf = '')
+    public function enviaMail($pathXml = '', $aMails = array(), $templateFile = '', $comPdf = false, $pathPdf = '', &$erro = null)
     {
         $mail = new MailNFe($this->aMailConf);
         // Se não for informado o caminho do PDF, monta um através do XML
@@ -246,7 +246,8 @@ class ToolsNFe extends BaseTools
             $mail->setTemplate($templateFile);
         }
         if ($mail->envia($pathXml, $aMails, $comPdf, $pathPdf) === false) {
-            throw new Exception\RuntimeException('Email não enviado. '.$mail->error);
+            $erro = $mail->error;
+            throw new Exception\RuntimeException('E-mail não enviado. Verifique os parâmetros do e-mail.');
         }
         return true;
     }
