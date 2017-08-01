@@ -474,45 +474,52 @@ class ToolsNFe extends BaseTools
             //carrega o XML pelo conteúdo
             $doccanc->loadXMLString($pathCancfile);
         }
-        $retEvento = $doccanc->getElementsByTagName('retEvento')->item(0);
-        $eventos = $retEvento->getElementsByTagName('infEvento');
-        foreach ($eventos as $evento) {
-            //evento
-            $cStat = $evento->getElementsByTagName('cStat')->item(0)->nodeValue;
-            $tpAmb = $evento->getElementsByTagName('tpAmb')->item(0)->nodeValue;
-            $chaveEvento = $evento->getElementsByTagName('chNFe')->item(0)->nodeValue;
-            $tpEvento = $evento->getElementsByTagName('tpEvento')->item(0)->nodeValue;
-            //$nProtEvento = $evento->getElementsByTagName('nProt')->item(0)->nodeValue;
-            //verifica se conferem os dados
-            //cStat = 135 ==> evento homologado
-            //cStat = 136 ==> vinculação do evento à respectiva NF-e prejudicada
-            //cStat = 155 ==> Cancelamento homologado fora de prazo
-            //tpEvento = 110111 ==> Cancelamento
-            //chave do evento == chave da NFe
-            //protocolo do evneto ==  protocolo da NFe
-            if (($cStat == '135' || $cStat == '136' || $cStat == '155')
-                && $tpEvento == '110111'
-                && $chaveEvento == $chaveNFe
-            ) {
-                $proNFe->getElementsByTagName('cStat')->item(0)->nodeValue = '101';
-                $proNFe->getElementsByTagName('xMotivo')->item(0)->nodeValue = 'Cancelamento de NF-e homologado';
-                $procXML = $docnfe->saveXML();
-                //remove as informações indesejadas
-                $procXML = Strings::clearProt($procXML);
-                if ($saveFile) {
-                    $filename = "$chaveNFe-protNFe.xml";
-                    $this->zGravaFile(
-                        'nfe',
-                        $tpAmb,
-                        $filename,
-                        $procXML,
-                        'canceladas',
-                        $anomes
-                    );
-                }
-                break;
-            }
-        }
+		
+        $retEventos = $doccanc->getElementsByTagName('retEvento');
+        	
+	foreach ($retEventos as $retEvento)
+	{
+	    $eventos = $retEvento->getElementsByTagName('infEvento');
+	
+	    foreach ($eventos as $evento) {
+		//evento
+		$cStat = $evento->getElementsByTagName('cStat')->item(0)->nodeValue;
+		$tpAmb = $evento->getElementsByTagName('tpAmb')->item(0)->nodeValue;
+		$chaveEvento = $evento->getElementsByTagName('chNFe')->item(0)->nodeValue;
+		$tpEvento = $evento->getElementsByTagName('tpEvento')->item(0)->nodeValue;
+		//$nProtEvento = $evento->getElementsByTagName('nProt')->item(0)->nodeValue;
+		//verifica se conferem os dados
+		//cStat = 135 ==> evento homologado
+		//cStat = 136 ==> vinculação do evento à respectiva NF-e prejudicada
+		//cStat = 155 ==> Cancelamento homologado fora de prazo
+		//tpEvento = 110111 ==> Cancelamento
+		//chave do evento == chave da NFe
+		//protocolo do evneto ==  protocolo da NFe
+		if (($cStat == '135' || $cStat == '136' || $cStat == '155')
+		    && $tpEvento == '110111'
+		    && $chaveEvento == $chaveNFe
+		) {
+		    $proNFe->getElementsByTagName('cStat')->item(0)->nodeValue = '101';
+		    $proNFe->getElementsByTagName('xMotivo')->item(0)->nodeValue = 'Cancelamento de NF-e homologado';
+		    $procXML = $docnfe->saveXML();
+		    //remove as informações indesejadas
+		    $procXML = Strings::clearProt($procXML);
+		    if ($saveFile) {
+			$filename = "$chaveNFe-protNFe.xml";
+			$this->zGravaFile(
+			    'nfe',
+			    $tpAmb,
+			    $filename,
+			    $procXML,
+			    'canceladas',
+			    $anomes
+			);
+		    }
+		    break;
+		}
+	    }
+	    
+	}
         return (string) $procXML;
     }
 
