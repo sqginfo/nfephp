@@ -83,12 +83,16 @@ class BaseMail
             $connConfig['ssl'] = $this->aMailConf['mailProtocol'];
         }
         $this->transport = new SmtpTransport();
+		$connection_class = 'plain';
+        if(array_key_exists('mailConnectionClass', $this->aMailConf)){
+            $connection_class = $this->aMailConf['mailConnectionClass'];
+        }
         $options = new SmtpOptions(
             array(
                 'name'              => $domain,
                 'host'              => $this->aMailConf['mailSmtp'],
                 'port'              => $this->aMailConf['mailPort'],
-                'connection_class'  => 'plain',
+                'connection_class'  => $connection_class,
                 'connection_config' => $connConfig,
             )
         );
