@@ -702,8 +702,8 @@ class Pkcs12
         // compara a data de validade com a data atual
         $this->expireTimestamp = $dValid;
         if ($dHoje > $dValid) {
-            $this->zRemovePemFiles();
-            $this->zLeaveParam();
+            //$this->zRemovePemFiles();
+            //$this->zLeaveParam();
             $msg = "Data de validade vencida! [Valido até $dia/$mes/$ano]";
             $this->error = $msg;
             return false;
