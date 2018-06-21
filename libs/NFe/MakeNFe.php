@@ -2148,12 +2148,12 @@ class MakeNFe extends BaseMake
                 $icms = $this->dom->createElement("ICMS90");
                 $this->dom->addChild($icms, 'orig', $orig, true, "$identificador [item $nItem] Origem da mercadoria");
                 $this->dom->addChild($icms, 'CST', $cst, true, "$identificador [item $nItem] Tributação do ICMS = 90");
-                $this->dom->addChild($icms, 'modBC', $modBC, true, "$identificador [item $nItem] Modalidade de determinação da BC do ICMS");
-                $this->dom->addChild($icms, 'vBC', $vBC, true, "$identificador [item $nItem] Valor da BC do ICMS");
+                $this->dom->addChild($icms, 'modBC', $modBC, false, "$identificador [item $nItem] Modalidade de determinação da BC do ICMS");
+                $this->dom->addChild($icms, 'vBC', $vBC, false, "$identificador [item $nItem] Valor da BC do ICMS");
                 $this->dom->addChild($icms, 'pRedBC', $pRedBC, false, "$identificador [item $nItem] Percentual da Redução de BC");
-                $this->dom->addChild($icms, 'pICMS', $pICMS, true, "$identificador [item $nItem] Alíquota do imposto");
-                $this->dom->addChild($icms, 'vICMS', $vICMS, true, "$identificador [item $nItem] Valor do ICMS");
-                $this->dom->addChild($icms, 'modBCST', $modBCST, true, "$identificador [item $nItem] Modalidade de determinação da BC do ICMS ST");
+                $this->dom->addChild($icms, 'pICMS', $pICMS, false, "$identificador [item $nItem] Alíquota do imposto");
+                $this->dom->addChild($icms, 'vICMS', $vICMS, false, "$identificador [item $nItem] Valor do ICMS");
+                $this->dom->addChild($icms, 'modBCST', $modBCST, false, "$identificador [item $nItem] Modalidade de determinação da BC do ICMS ST");
                 $this->dom->addChild(
                     $icms,
                     'pMVAST',
@@ -2162,9 +2162,9 @@ class MakeNFe extends BaseMake
                     "$identificador [item $nItem] Percentual da margem de valor Adicionado do ICMS ST"
                 );
                     $this->dom->addChild($icms, 'pRedBCST', $pRedBCST, false, "$identificador [item $nItem] Percentual da Redução de BC do ICMS ST");
-                    $this->dom->addChild($icms, 'vBCST', $vBCST, true, "$identificador [item $nItem] Valor da BC do ICMS ST");
-                    $this->dom->addChild($icms, 'pICMSST', $pICMSST, true, "$identificador [item $nItem] Alíquota do imposto do ICMS ST");
-                    $this->dom->addChild($icms, 'vICMSST', $vICMSST, true, "$identificador [item $nItem] Valor do ICMS ST");
+                    $this->dom->addChild($icms, 'vBCST', $vBCST, false, "$identificador [item $nItem] Valor da BC do ICMS ST");
+                    $this->dom->addChild($icms, 'pICMSST', $pICMSST, false, "$identificador [item $nItem] Alíquota do imposto do ICMS ST");
+                    $this->dom->addChild($icms, 'vICMSST', $vICMSST, false, "$identificador [item $nItem] Valor do ICMS ST");
                     $this->dom->addChild($icms, 'vICMSDeson', $vICMSDeson, false, "$identificador [item $nItem] Valor do ICMS desonerado");
                     $this->dom->addChild($icms, 'motDesICMS', $motDesICMS, false, "$identificador [item $nItem] Motivo da desoneração do ICMS");
                 break;
